@@ -20,13 +20,8 @@
     <!-- Font Awesome JS -->
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
-	<!-- Unity -->
-    <link rel="stylesheet" href="TemplateData/style.css">
-    <script src="TemplateData/UnityProgress.js"></script>
-    <script src="Build/UnityLoader.js"></script>
-    <script>
-      var gameInstance = UnityLoader.instantiate("unityContainer", "Build/InteractiveCV.json", {onProgress: UnityProgress});
-    </script>
+	<!-- Add icon library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -35,7 +30,7 @@
         <!-- Sidebar  -->
         <nav id="sidebar">
             <div class="sidebar-header">
-                <h3>Dawid Jonczak</h3>
+                <h3>Portfolio</h3>
             </div>
 
             <ul class="list-unstyled components">
@@ -61,13 +56,16 @@
             <button type="button" id="sidebarCollapse" class="btn btn-info">
                 <i class="fas fa-align-left"></i>
             </button>
-			
-			<div class="webgl-content">
-				<div id="unityContainer"></div>
-					<div class="footer">
-							<div class="fullscreen" onclick="unityInstance.SetFullscreen(1)"></div>				
-					</div>					
+						
+		<div class="card">
+			<div class="card-body">
+				<h5 class="card-title">Shock;Gate</h5>
+				<p class="card-text">Coperative top-down shooter set in cyberpunk.</p>
+				<p class="card-text"><small class="text-muted">Last updated this week</small></p>
 			</div>
+				<img src="Screen2.png" class="card-img-top" alt="...">
+			</div>
+			
 			<article id="lightings">
 				<section id="one">
 					<section id="two">

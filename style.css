@@ -43,6 +43,46 @@ a:focus {
     margin: 40px 0;
 }
 
+.card{
+	 padding: 10px;
+	 margin: 5px 2px;
+}
+
+.parallax {
+
+  /* Set a specific height */
+  min-height: 500px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+/* ---------------------------------------------------
+    GALLERY
+----------------------------------------------------- */
+
+.roww {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.columnn {
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+.columnn img {
+  margin-top: 8px;
+  vertical-align: middle;
+}
+
 /* ---------------------------------------------------
     SIDEBAR STYLE
 ----------------------------------------------------- */
@@ -95,7 +135,7 @@ a:focus {
 }
 
 #sidebar .social {
-    font-size: 40px;
+    font-size: 50px;
     text-align: center;
     text-decoration: none;
     padding: 10px;
@@ -165,6 +205,84 @@ a.article:hover {
 
 #content.active {
     width: 100%;
+}
+
+
+/* ---------------------------------------------------
+    PROGRESS BAR
+----------------------------------------------------- */
+
+
+.content {
+    width: 80%;
+    margin: 0;
+    position: relative;
+    float: left;
+    font-size: 15px;
+    line-height: 10em;
+    padding: 30px 0 100;
+}
+
+.col {
+    width: 80vm;
+}
+
+#skill {
+    list-style: none;
+    padding-top: 30px;
+}
+
+#skill li {
+    margin-bottom: 70px;
+    background: #000;
+    height: 5px;
+    border-radius: 3px;
+    border-left: 1px solid #111;
+    border-top: 1px solid #111;
+    border-right: 1px solid #333;
+    border-bottom: 1px solid #333;
+}
+
+.expand {
+    height: 1px;
+    margin: 2px 0;
+    background: #2187e7;
+    position: absolute;
+    box-shadow: 0px 0px 10px 1px rgba(0,198,255,0.4);
+}
+
+.c {
+    width: 70%;
+    -moz-animation: c 2s ease-out;
+    -webkit-animation: c 2s ease-out;
+}
+
+.git {
+    width: 50%;
+    -moz-animation: git 2s ease-out;
+    -webkit-animation: git 2s ease-out;
+}
+
+
+
+@-moz-keyframes c {
+    0% {
+        width: 0px;
+    }
+
+    100% {
+        width: 70%;
+    };
+}
+
+@-moz-keyframes git {
+    0% {
+        width: 0px;
+    }
+
+    100% {
+        width: 50%;
+    };
 }
 
 /* ---------------------------------------------------
@@ -269,6 +387,29 @@ box-shadow: 0 0 250px 20px #18C499;
 to { box-shadow: 0 0 100px 15px #D8F05E; }
 }
 
+
+h1 {
+	font-weight: bold;
+	text-align: center;
+	padding-top: 25px;
+	padding-bottom: 25px;
+	color: #acd1b2;
+}
+h2 {
+	font-weight: bold;
+	text-align: center;
+	padding-top: 25px;
+	padding-bottom: 25px;
+	color: #acd1b2;
+}
+#name {
+	position: relative;
+	top: -10px;
+	font-color:
+	border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
+}
+
 /* ---------------------------------------------------
     MEDIAQUERIES
 ----------------------------------------------------- */
@@ -289,5 +430,17 @@ to { box-shadow: 0 0 100px 15px #D8F05E; }
     #sidebarCollapse span {
         display: none;
     }
-
+	
+	#sidebar .social {
+    font-size: 25px;
+    text-align: center;
+    text-decoration: none;
+    padding: 5px;
+	margin: 5px 2px;
+	}
+	
+	.column {
+    flex: 50%;
+    max-width: 50%;
+  }
 }
