@@ -45,7 +45,12 @@ a:focus {
 
 .card{
 	 padding: 10px;
-	 margin: 5px 2px;
+	 margin: 10px;
+}
+
+.card img{
+	width: 100%; 
+    height: auto; 
 }
 
 .parallax {
@@ -65,24 +70,28 @@ a:focus {
     GALLERY
 ----------------------------------------------------- */
 
-.roww {
+.galery { 
+  padding: .5vw;
+  font-size: 0;
+  display: -ms-flexbox;
+  -ms-flex-wrap: wrap;
+  -ms-flex-direction: column;
+  -webkit-flex-flow: row wrap; 
+  flex-flow: row wrap; 
+  display: -webkit-box;
   display: flex;
-  flex-wrap: wrap;
-  padding: 0 4px;
 }
-
-/* Create four equal columns that sits next to each other */
-.columnn {
-  flex: 25%;
-  max-width: 25%;
-  padding: 0 4px;
+.galery div { 
+  -webkit-box-flex: auto;
+  -ms-flex: auto;
+  flex: auto; 
+  width: 200px; 
+  margin: .5vw; 
 }
-
-.columnn img {
-  margin-top: 8px;
-  vertical-align: middle;
+.galery div img { 
+  width: 100%; 
+  height: auto; 
 }
-
 /* ---------------------------------------------------
     SIDEBAR STYLE
 ----------------------------------------------------- */
@@ -99,7 +108,7 @@ a:focus {
     left: 0;
     height: 100vh;
     z-index: 999;
-    background: #7386D5;
+    background: #17A2B8;
     color: #fff;
     transition: all 0.3s;
 }
@@ -110,12 +119,12 @@ a:focus {
 
 #sidebar .sidebar-header {
     padding: 20px;
-    background: #6d7fcc;
+    background: #17A2B8;
 }
 
 #sidebar ul.components {
     padding: 20px 0;
-    border-bottom: 1px solid #47748b;
+    border-bottom: 1px solid #17A2B8;
 }
 
 #sidebar ul p {
@@ -263,8 +272,6 @@ a.article:hover {
     -webkit-animation: git 2s ease-out;
 }
 
-
-
 @-moz-keyframes c {
     0% {
         width: 0px;
@@ -387,6 +394,10 @@ box-shadow: 0 0 250px 20px #18C499;
 to { box-shadow: 0 0 100px 15px #D8F05E; }
 }
 
+/* ---------------------------------------------------
+    About
+----------------------------------------------------- */
+
 
 h1 {
 	font-weight: bold;
@@ -401,6 +412,12 @@ h2 {
 	padding-top: 25px;
 	padding-bottom: 25px;
 	color: #acd1b2;
+}
+
+h3{
+	
+	
+	
 }
 #name {
 	position: relative;
@@ -439,8 +456,6 @@ h2 {
 	margin: 5px 2px;
 	}
 	
-	.column {
-    flex: 50%;
-    max-width: 50%;
-  }
+	.galery div { margin: 0; }
+    .galery { padding: 0; }
 }
