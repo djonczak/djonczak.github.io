@@ -54,15 +54,30 @@ a:focus {
 }
 
 .parallax {
-
-  /* Set a specific height */
-  min-height: 500px; 
-
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
   background-position: center;
-  background-repeat: no-repeat;
+  width: 100%;
   background-size: cover;
+  display: flex;
+}
+
+.parallax .caption {
+
+    position: absolute;
+     top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+    text-align: center;
+    color: #000;
+}
+
+.caption span.border {
+    background-color: #111;
+    color: #fff;
+    padding: 18px;
+    font-size: 25px;
+    letter-spacing: 10px;
 }
 
 
@@ -216,24 +231,17 @@ a.article:hover {
     width: 100%;
 }
 
+.card img {
+	height: 150px;
+}
+
 
 /* ---------------------------------------------------
     PROGRESS BAR
 ----------------------------------------------------- */
 
-
-.content {
-    width: 80%;
-    margin: 0;
-    position: relative;
-    float: left;
-    font-size: 15px;
-    line-height: 10em;
-    padding: 30px 0 100;
-}
-
 .col {
-    width: 80vm;
+    width: 70vm;
 }
 
 #skill {
@@ -254,7 +262,7 @@ a.article:hover {
 
 .expand {
     height: 1px;
-    margin: 2px 0;
+    margin: 0px 0;
     background: #2187e7;
     position: absolute;
     box-shadow: 0px 0px 10px 1px rgba(0,198,255,0.4);
@@ -414,17 +422,11 @@ h2 {
 	color: #acd1b2;
 }
 
-h3{
+h4{
+	font-family: 'Poppins', sans-serif;
+	font-weight: bold;
+	text-align: center;
 	
-	
-	
-}
-#name {
-	position: relative;
-	top: -10px;
-	font-color:
-	border-top-left-radius: 15px;
-	border-top-right-radius: 15px;
 }
 
 /* ---------------------------------------------------
