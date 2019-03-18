@@ -27,7 +27,6 @@
 </head>
 
 <body>
-
     <div class="wrapper">
         <!-- Sidebar  -->
         <nav id="sidebar">
@@ -37,44 +36,112 @@
 
             <ul class="list-unstyled components">
 				<li>
-                    <a href="index.html">Home</a>
+                    <a href="#about_me">About Me</a>
                 </li>
 				
                 <li>
-                    <a href="about.html">About me</a>
+                    <a href="#portfolio">Portfolio</a>
                 </li>
-                <li>
-                    <a href="portfolio.html">Portfolio</a>
-                </li>
+				
             </ul>
 			<div class="div-social">
-				<a href="https://github.com/Sanchez4561" class="fab fa-github-square social" target="_blank"></a>
+				<a href="https://github.com/djonczak" class="fab fa-github-square social" target="_blank"></a>
 				<a href="https://pl.linkedin.com/in/dawid-jonczak-725553157" class="fab fa-linkedin social" target="_blank"></a>
 			</div>
 			<div style="padding:10px;">
 			<span>Made by Dawid Jonczak</span>
 			</div>
         </nav>
-
         <!-- Page Content  -->
         <div id="content">
-			<div class="alert alert-warning alert-dismissible fade show" role="alert">
-				<strong>By The Emperor !</strong> Check my portfolio !!!
-				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-					<span aria-hidden="true">&times;</span>
-				</button>
+            <button type="button" id="sidebarCollapse" class="btn btn-info"style="position:fixed">
+                <i class="fas fa-align-left" style="position:relative"></i>
+            </button>
+						
+		<div id="header">
+			<h1 class="hover">Hello there</h1>
+		</div>
+		<h2 id="about_me">About Me</h2>
+		<div class="clearfix">
+		<p><img src="img/jonczak.jpg" style="width:200px;height:300px;margin-right:10px;float: left;">
+
+			My name is Dawid and I'm Unity Developing Enthusiast with great passion for GameDev.
+			I'm reliable, punctual and motivated individual. I work well in a team but also on my own. I'm always looking for new things to learn.</p>
+		</div>
+		
+		<h2>Things I like to do</h2>			
+
+			<div class="gallery">
+
+				<div class="gallery-item">
+					<img class="gallery-image" src="img/bond.jpg">
+				</div>
+
+				<div class="gallery-item">
+					<img class="gallery-image" src="img/warfarmer.png">
+				</div>
+
+				<div class="gallery-item">
+					<img class="gallery-image" src="img/pew.jpg">
+				</div>
+				
+				<div class="gallery-item">
+					<img class="gallery-image" src="img/bond.jpg">
+				</div>
+				
+			</div>
+			
+		<h2>Experience</h2>
+			<div class="media">
+			<img src="img/monstercouch.png" class="mr-3" alt="...">
+				<div class="media-body">
+				<h5 class="mt-0"><p>Monster Couch</p></h5>
+				<p>May - June 2018 </p>
+				<p> Marketing master and Tester.</p>
+				</div>
 			</div>
 				
-            <button type="button" id="sidebarCollapse" class="btn btn-info">
-                <i class="fas fa-align-left"></i>
-            </button>
-			
-			<div class="webgl-content">
-				<div id="unityContainer"></div>
-					<div class="footer">
-							<div class="fullscreen" onclick="gameInstance.SetFullscreen(1)"></div>				
-					</div>					
+		<h2>My Skills</h2>
+			<div class="col">
+				<ul id="skill">
+					<p>C#</p>
+					<li><span class="expand c"></span></li>
+					<p>GIT</p>
+					<li><span class="expand git"></span></li>
+				</ul>
 			</div>
+		
+		<h2 id="portfolio">Portfolio</h2>
+		<div class="grid-container">
+		<picture>
+			<div class="location-listing">
+				<a class="location-title" href="shockgate.html">Shock;Gate</a>
+					<div class="location-image">
+						<a href="shockgate.html">
+							<img width="300" height="250" src="img/par1.png"></a>
+					</div>
+			</div>
+		</picture>		
+		<picture>
+			<div class="location-listing">
+				<a class="location-title" href="criticalVector.html">Critical Vector</a>
+					<div class="location-image">
+						<a href="#">
+							<img width="300" height="250" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/san-fransisco-768x432.jpg"></a>
+					</div>
+			</div>
+			</picture>
+		</div>
+	
+		<h2>Contact</h2>
+			<p>djonczak1@gmail.com</p>
+			
+			<!-- <div class="webgl-content"> -->
+				<!-- <div id="unityContainer"></div> -->
+					<!-- <div class="footer"> -->
+							<!-- <div class="fullscreen" onclick="gameInstance.SetFullscreen(1)"></div>				 -->
+					<!-- </div>					 -->
+			<!-- </div> -->
 			
 			<article id="lightings">
 				<section id="one">

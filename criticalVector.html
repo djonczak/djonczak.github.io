@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,15 +16,21 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
 	<!-- Social Icon -->
 	<link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"crossorigin="anonymous">  	
-</head>
-<body>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"crossorigin="anonymous">  
+	   <link rel="stylesheet" href="TemplateData/style.css">
+    <script src="TemplateData/UnityProgress.js"></script>
+    <script src="Build/UnityLoader.js"></script>
+    <script>
+      var gameInstance = UnityLoader.instantiate("unityContainer", "Build/InteractiveCV.json", {onProgress: UnityProgress});
+    </script>
+	</head>
 
+<body>
     <div class="wrapper">
         <!-- Sidebar  -->
         <nav id="sidebar">
             <div class="sidebar-header">
-                <h3>About me</h3>
+                <h3>Shock;Gate</h3>
             </div>
 
             <ul class="list-unstyled components">
@@ -32,11 +39,9 @@
                 </li>
 				
                 <li>
-                    <a href="about.html">About me</a>
+                    <a href="about.html">Game</a>
                 </li>
-                <li>
-                    <a href="portfolio.html">Portfolio</a>
-                </li>
+
             </ul>
 			<div class="div-social">
 				<a href="https://github.com/Sanchez4561" class="fab fa-github-square social" target="_blank"></a>
@@ -48,59 +53,31 @@
         </nav>
 
         <!-- Page Content  -->
+
         <div id="content">
             <button type="button" id="sidebarCollapse" class="btn btn-info">
                 <i class="fas fa-align-left"></i>
             </button>
-						
-		<div id="header">
-			<h1 class="hover">Hello there</h1>
-		</div>
-		<h2>About Me</h2>
-			<p>My name is Dawid and I'm Unity Developing Enthusiast with great passion for GameDev.</p>
-			<p>I'm reliable, punctual and motivated individual. I work well in a team but also on my own. I'm always looking for new things to learn.</p>
-		<h2>Things I like to do</h2>
-			<div class="galery">	
-			    <div><img src="img/bond.jpg"></div>				
-				<div><img src="img/warfarmer.png"></div>	
-				<div><img src="img/pew.jpg"></div>	
-			</div>
-			
-		<h2>Experience</h2>
-			<div class="media">
-			<img src="img/monstercouch.png" class="mr-3" alt="...">
-				<div class="media-body">
-				<h5 class="mt-0"><p>Monster Couch</p></h5>
-				<p>May - June 2018 </p>
-				<p> Marketing master and Tester.</p>
+	
+			<div class="parallax" style="background-image: url('img/par1.png'); min-height: 400px;"></div>
+
+			<div style="height:100%px;background-color:white; padding:15px;">
+			<h1>About project</h1>
+				<div class="webgl-content"> 
+					<div id="unityContainer"></div> 
+						<div class="footer"> 
+							<div class="fullscreen" onclick="gameInstance.SetFullscreen(1)"></div>				
+						</div>					 
 				</div>
 			</div>
-				
-		<h2>My Skills</h2>
-			<div class="col">
-				<ul id="skill">
-					<p>C#</p>
-					<li><span class="expand c"></span></li>
-					<p>GIT</p>
-					<li><span class="expand git"></span></li>
-				</ul>
+	
+			<div class="parallax" style="background-image: url('img/par2.png'); min-height: 450px; "></div>
+			
+			<div style="height:20%;background-color:white; padding: 15px;">
+			
 			</div>
 			
-		<h2>Contact</h2>
-			<p>djonczak1@gmail.com</p>
-			<form>
-				<div class="form-group">
-					<label for="exampleInputEmail1"><p>Email address</p></label>
-					<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-				</div>
-				<div class="form-group">
-					<label for="exampleInputPassword1"><p>Password</p></label>
-					<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-				</div>
-				<button type="submit" class="btn btn-primary">Submit</button>
-			</form>
-			
-						
+		
 			<article id="lightings">
 				<section id="one">
 					<section id="two">
