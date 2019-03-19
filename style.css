@@ -65,7 +65,7 @@ a:focus {
 .parallax .caption {
 
     position: absolute;
-     top: 50%;
+    top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
     text-align: center;
@@ -350,6 +350,12 @@ a.article:hover {
     -webkit-animation: git 2s ease-out;
 }
 
+.pixel {
+    width: 70%;
+    -moz-animation: git 2s ease-out;
+    -webkit-animation: git 2s ease-out;
+}
+
 @-moz-keyframes c {
     0% {
         width: 0px;
@@ -367,6 +373,16 @@ a.article:hover {
 
     100% {
         width: 50%;
+    };
+}
+
+@-moz-keyframes pixel {
+    0% {
+        width: 0px;
+    }
+
+    100% {
+        width: 70%;
     };
 }
 
@@ -442,6 +458,7 @@ to {box-shadow: 0 0 100px 15px #F72A3B; }
 	-o-animation: two 4s ease-in-out infinite alternate;
 	animation: two 4s ease-in-out infinite alternate;
 }
+
 @-webkit-keyframes 
 two { from {
 -webkit-box-shadow: 0 0 250px 20px #18C499;

@@ -30,16 +30,16 @@
         <!-- Sidebar  -->
         <nav id="sidebar">
             <div class="sidebar-header">
-                <h3>Shock;Gate</h3>
+                <h3>Critical Vector</h3>
             </div>
 
             <ul class="list-unstyled components">
 				<li>
                     <a href="index.html">Home</a>
                 </li>
-				
+
                 <li>
-                    <a href="about.html">Game</a>
+                    <a href="#game_description">Game</a>
                 </li>
 
             </ul>
@@ -51,32 +51,28 @@
 			<span>Made by Dawid Jonczak</span>
 			</div>
         </nav>
-
+</div>
         <!-- Page Content  -->
 
         <div id="content">
-            <button type="button" id="sidebarCollapse" class="btn btn-info">
+             <button type="button" id="sidebarCollapse" class="btn btn-info"style="position:fixed">
                 <i class="fas fa-align-left"></i>
             </button>
-	
-			<div class="parallax" style="background-image: url('img/par1.png'); min-height: 400px;"></div>
-
-			<div style="height:100%px;background-color:white; padding:15px;">
-			<h1>About project</h1>
-				<div class="webgl-content"> 
+			
+			<div class="parallax" style="background-image: url('img/par1.png'); min-height: 600px; position:relative;">
+			<div class="webgl-content" style="width:50%;"> 
 					<div id="unityContainer"></div> 
 						<div class="footer"> 
 							<div class="fullscreen" onclick="gameInstance.SetFullscreen(1)"></div>				
 						</div>					 
 				</div>
-			</div>
-	
-			<div class="parallax" style="background-image: url('img/par2.png'); min-height: 450px; "></div>
+				</div>
+			<div style="height:20%;background-color:white; padding: 15px;"> 
+				<h2 id="game_description">About game</h2>
+				<p>Something</p>
+			</div> 
 			
-			<div style="height:20%;background-color:white; padding: 15px;">
-			
-			</div>
-			
+			<div class="parallax" style="background-image: url('img/par2.png'); min-height: 450px; "></div> 		
 		
 			<article id="lightings">
 				<section id="one">
@@ -86,7 +82,7 @@
 				</section>
 			</article>
         </div>		
-	</div>
+	
 
     <!-- jQuery CDN - Slim version (=without AJAX) -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
