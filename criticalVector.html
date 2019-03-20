@@ -35,11 +35,11 @@
 
             <ul class="list-unstyled components">
 				<li>
-                    <a href="index.html">Home</a>
+                    <a href="index.html">Strona główna</a>
                 </li>
 
                 <li>
-                    <a href="#game_description">Game</a>
+                    <a href="#game_description">Gra</a>
                 </li>
 
             </ul>
@@ -48,7 +48,10 @@
 				<a href="https://pl.linkedin.com/in/dawid-jonczak-725553157" class="fab fa-linkedin social" target="_blank"></a>
 			</div>
 			<div style="padding:10px;">
-			<span>Made by Dawid Jonczak</span>
+			<span>djonczak1@gmail.com</span>
+			</div>
+			<div style="padding:10px;">
+			<span>Dawid Jonczak | 2019</span>
 			</div>
         </nav>
 </div>
@@ -58,21 +61,29 @@
              <button type="button" id="sidebarCollapse" class="btn btn-info"style="position:fixed">
                 <i class="fas fa-align-left"></i>
             </button>
-			
-			<div class="parallax" style="background-image: url('img/par1.png'); min-height: 600px; position:relative;">
-			<div class="webgl-content" style="width:50%;"> 
-					<div id="unityContainer"></div> 
+			<div style="background-color:white; padding: 80px;"> 	
+				<div class="webgl-content"> 
+					<div id="unityContainer"></div>
 						<div class="footer"> 
 							<div class="fullscreen" onclick="gameInstance.SetFullscreen(1)"></div>				
 						</div>					 
 				</div>
-				</div>
-			<div style="height:20%;background-color:white; padding: 15px;"> 
-				<h2 id="game_description">About game</h2>
-				<p>Something</p>
-			</div> 
+		    </div>
 			
-			<div class="parallax" style="background-image: url('img/par2.png'); min-height: 450px; "></div> 		
+			<!-- <div class="parallax" style="background-image: url('img/6.jpg');"></div> -->
+			<div style="height:20%;background-color:white; padding: 15px;"> 
+				<h2>O grze</h2>
+				<p>Wykonałem to jako zaliczenie w formie interaktywnego CV, gdzie po pokonaniu przeciwników na mapcę, wyświetlą się informacje o mnie.</p>
+				<h2 id="game_description">Sterowanie</h2>
+				<ul>
+					<li>
+					<p>LShift - bieg postaci</p>
+					</li>
+					<li>
+					<p>Prawy przycisk myszy - dash postaci/atak</p>
+					</li>
+				</ul>
+			</div> 	
 		
 			<article id="lightings">
 				<section id="one">
