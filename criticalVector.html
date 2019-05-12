@@ -26,41 +26,22 @@
 	</head>
 
 <body>
-    <div class="wrapper">
-        <!-- Sidebar  -->
-        <nav id="sidebar">
-            <div class="sidebar-header">
-                <h3>Critical Vector</h3>
-            </div>
 
-            <ul class="list-unstyled components">
-				<li>
-                    <a href="index.html">Strona główna</a>
-                </li>
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+	<span class="navbar-toggler-icon"></span>
+	</button>
+	<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link active" href="#">Critical Vector <span class="sr-only">(current)</span></a>
+      <a class="nav-item nav-link" href="index.html">Strona główna</a>
 
-                <li>
-                    <a href="#game_description">Gra</a>
-                </li>
-
-            </ul>
-			<div class="div-social">
-				<a href="https://github.com/Sanchez4561" class="fab fa-github-square social" target="_blank"></a>
-				<a href="https://pl.linkedin.com/in/dawid-jonczak-725553157" class="fab fa-linkedin social" target="_blank"></a>
 			</div>
-			<div style="padding:10px;">
-			<span>djonczak1@gmail.com</span>
-			</div>
-			<div style="padding:10px;">
-			<span>Dawid Jonczak | 2019</span>
-			</div>
-        </nav>
-</div>
+		</div>
+	</nav>
         <!-- Page Content  -->
 
         <div id="content">
-             <button type="button" id="sidebarCollapse" class="btn btn-info"style="position:fixed">
-                <i class="fas fa-align-left"></i>
-            </button>
 			<div style="background-color:white; padding: 80px;"> 	
 				<div class="webgl-content"> 
 					<div id="unityContainer"></div>
@@ -95,28 +76,6 @@
         </div>		
 	
 
-    <!-- jQuery CDN - Slim version (=without AJAX) -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <!-- Popper.JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
-    <!-- Bootstrap JS -->
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
-    <!-- jQuery Custom Scroller CDN -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
-
-    <script type="text/javascript">
-        $(document).ready(function () {
-            $("#sidebar").mCustomScrollbar({
-                theme: "minimal"
-            });
-
-            $('#sidebarCollapse').on('click', function () {
-                $('#sidebar, #content').toggleClass('active');
-                $('.collapse.in').toggleClass('in');
-                $('a[aria-expanded=true]').attr('aria-expanded', 'false');
-            });
-        });
-    </script>
 </body>
 
 </html>
