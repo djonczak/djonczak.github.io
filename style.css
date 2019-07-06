@@ -2,7 +2,7 @@
 @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
 body {
     font-family: 'Poppins', sans-serif;
-    background: #000000;
+    background-color:rgb(240, 240, 240);
 }
 
 p {
@@ -10,7 +10,7 @@ p {
     font-size: 1.1em;
     font-weight: 300;
     line-height: 1.7em;
-    color: #999;
+    color: rgb(120, 120, 120);
 }
 
 a,
@@ -110,6 +110,7 @@ a:focus {
     position: absolute;
     right: 0;
 	overflow: hidden;
+	width: 100%;
 }
 
 /* ---------------------------------------------------
@@ -167,6 +168,20 @@ a:focus {
   filter: blur(2px);
 }
 
+.info-left{
+	float: left;
+	width: 75%;
+	background-color:white;	
+	padding: 20px;
+}
+
+.info-right{
+	float: left;
+	width: 25%;
+	padding: 20px;
+	position:center;
+}
+
 /* ---------------------------------------------------
     PROGRESS BAR
 ----------------------------------------------------- */
@@ -182,20 +197,20 @@ a:focus {
 
 #skill li {
     margin-bottom: 70px;
-    background: #000;
-    height: 5px;
+    background: #666666;
+    height: 10px;
     border-radius: 3px;
-    border-left: 1px solid #111;
-    border-top: 1px solid #111;
-    border-right: 1px solid #333;
-    border-bottom: 1px solid #333;
+    border-left: 2px solid #111;
+    border-top: 2px solid #111;
+    border-right: 2px solid #333;
+    border-bottom: 2px solid #333;
 }
 
 .expand {
-    height: 1px;
-    background: #2187e7;
+    height: 4px;
+    background: #ff9900;
     position: absolute;
-    box-shadow: 0px 0px 10px 1px rgba(0,198,255,0.4);
+    box-shadow: 0px 0px 10px 1px #804d00;
 }
 
 .c {
@@ -268,9 +283,9 @@ a:focus {
 
 #lightings
 {
-	bottom: -60px;
-	position: absolute;
+	bottom: -20px;
 	width: 100%;
+	position: fixed;
 }
 
 section
@@ -375,14 +390,14 @@ h1 {
 	text-align: center;
 	padding-top: 25px;
 	padding-bottom: 25px;
-	color: #acd1b2;
+	color: #6bae76;
 }
 h2 {
 	font-family: 'Poppins', sans-serif;
 	text-align: center;
 	padding-top: 25px;
 	padding-bottom: 25px;
-	color: #acd1b2;
+	color: #6bae76;
 }
 
 	.social {
