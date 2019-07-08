@@ -26,20 +26,19 @@
 			</button>
 			<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
 				<div class="navbar-nav">
-					<a class="nav-item nav-link active" href="#">Shock;Gate <span class="sr-only">(current)</span></a>
-					<a class="nav-item nav-link" href="index.html">Strona główna</a>
+					<a class="nav-item nav-link active" href="#">Dungeon<span class="sr-only">(current)</span></a>
 				</div>
 			</div>
 		</nav>
 
         <!-- Page Content  -->
-
         <div id="content">
+			<div class="back-arrow">
+				<a href="index.html" class="fas fa-arrow-circle-left" style="font-size:50px; position: fixed;"></a>
+			</div>		
 			<div class ="info-left">
 			<h1>O grze</h1>
 			<p>Miała być to gra o odwróconej kooperacji, gdzie jeden z graczy poruszał, by się "awanturnikiem" (steorwanie padem lub klawiatura+mysz), a drugi gracz w VR zrzucałby na pierwszego gracza przeciwników, czary, klątwy i pułapki. Celem awanturnika było, by odnalezienie czarnoksiężnika (gracz w VR) i zabicie go, ten byłby umieszczony na planszy.</p>
-	
-		 <!--	<div class="parallax" style="background-image: url('img/dungeon1.png');"></div> -->
 					<h1>Zakres obowiązków:</h1>
 					<ul>
 						<li>
@@ -58,12 +57,28 @@
 							<p>tworzenie poziomów w Unity</p>
 						</li>
 					</ul>
+				<h2 id="portfolio">Galeria</h2>
+				<div class="grid-container">
+					<picture>
+						<div class="location-listing">
+								<div class="location-image">
+										<img src="img/dungeon1.png" width="300" height="250" onclick="myFunction(this)">
+								</div>
+						</div>
+					</picture>
+					
+				</div>	
+				
+				<div class="img-container">
+					<span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+					<img id="expandedImg" style="width:100%">
 				</div>
-				<div class ="info-right">
-					<p><button type="button" class="btn btn-primary btn-lg" style="  margin-right:auto;" onclick="window.open('https://drive.google.com/open?id=1FLDFes6SBGqKN-dlVukVnKQzJm_Q-Z7u')">Build</button></p>
+				<div class ="info-button">
+					<p><button type="button" class="btn btn-secondary btn-block" style="  margin-right:auto;" onclick="window.open('https://drive.google.com/open?id=1FLDFes6SBGqKN-dlVukVnKQzJm_Q-Z7u')">Build</button></p>
 					<p>
-					<button type="button" class="btn btn-primary btn-lg" style="  margin-right:auto;" onclick="window.open('https://github.com/Expedis/DungeonVR/tree/master/Assets')">Repozytorium</button>
-					</p>					
+					<button type="button" class="btn btn-secondary btn-block" style="  margin-right:auto;" onclick="window.open('https://github.com/Expedis/DungeonVR/tree/master/Assets')">Repozytorium</button>
+					</p>
+				</div>					
 				</div>
 	
 			
@@ -76,7 +91,13 @@
 				</section>
 			</article>
         </div>		
-
+	<script>
+		function myFunction(imgs) {
+			var expandImg = document.getElementById("expandedImg");
+			expandImg.src = imgs.src;
+			expandImg.parentElement.style.display = "block";
+		}
+	</script>
 </body>
 
 </html>

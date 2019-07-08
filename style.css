@@ -170,16 +170,36 @@ a:focus {
 
 .info-left{
 	float: left;
-	width: 75%;
+	width: 100%;
 	background-color:white;	
 	padding: 20px;
 }
 
-.info-right{
-	float: left;
-	width: 25%;
-	padding: 20px;
-	position:center;
+.info-button{
+	padding: 40px;
+}
+
+.back_arrow{
+	position: fixed;
+    top: 100px;
+    right: 1px;
+    width: 100px;
+    height: 100px;
+}
+
+.closebtn {
+  position: absolute;
+  top: 0px;
+  right:10px;
+  display: block;
+  color: white;
+  font-size: 35px;
+  cursor: pointer;
+}
+
+.img-container {
+  position: relative;
+  display: none;
 }
 
 /* ---------------------------------------------------

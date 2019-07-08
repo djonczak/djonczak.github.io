@@ -27,14 +27,17 @@
 			<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
 				<div class="navbar-nav">
 					<a class="nav-item nav-link active" href="#">Shock;Gate <span class="sr-only">(current)</span></a>
-					<a class="nav-item nav-link" href="index.html">Strona główna</a>
 				</div>
 			</div>
 		</nav>
 
-        <!-- Page Content  -->
-
+        <!-- Page Content  -->		
         <div id="content">
+		
+			<div class="back-arrow">
+				<a href="index.html" class="fas fa-arrow-circle-left" style="font-size:50px; position: fixed;"></a>
+			</div>
+		
 			<div class ="info-left">
 			<h1>O grze</h1>
 				<p>Jest to gra nastawiona na kooperacyjną rozgrywkę. Gracze mają dostęp do bogatego wachlarzu broni i granatów, które pozwalają dostosować styl gry pod swoje upodobania. Kluczowym elementem jest friendly-fire. Z przeciwników wypadają power upy, które modyfikują rozgrywkę poprzez np. zwiększenie szybkości poruszania się gracza, obrażeń zbroni, odnowienia zdrowia itp.</p>	
@@ -59,13 +62,36 @@
 						<p>współpraca z zespołem</p>
 					</li>
 				</ul>
+				
+				<h2 id="portfolio">Galeria</h2>
+				<div class="grid-container">
+					<picture>
+						<div class="location-listing">
+								<div class="location-image">
+										<img src="img/1.png" width="300" height="250" onclick="myFunction(this)">
+								</div>
+						</div>
+					</picture>
+					
+					<picture>
+						<div class="location-listing">
+								<div class="location-image">
+										<img src="img/2.jpg" width="300" height="250" onclick="myFunction(this)">
+								</div>
+						</div>
+					</picture>
+				</div>	
+				
+				<div class="img-container">
+					<span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+					<img id="expandedImg" style="width:100%">
 				</div>
-				<div class ="info-right">
-					<p><button type="button" class="btn btn-primary btn-lg" style=" margin-left:auto; margin-right:auto; display: block;" onclick="window.open('https://drive.google.com/open?id=1wEDruNphDv0pPjX5J5U4B_MTjPssqCwB')">Build</button></p>
-					<p><button type="button" class="btn btn-primary btn-lg" style=" margin-left:auto; margin-right:auto; display: block;" onclick="window.open('https://drive.google.com/drive/folders/1dT6TfZC1jOoNR49cJcN5BU0jfNOhGNAa')">Skrypty</button></p>	
+				
+				<div class="info-button">
+					<p><button type="button" class="btn btn-secondary btn-block" style=" margin-left:auto; margin-right:auto; display: block;" onclick="window.open('https://drive.google.com/open?id=1wEDruNphDv0pPjX5J5U4B_MTjPssqCwB')">Build</button></p>
+					<p><button type="button" class="btn btn-secondary btn-block" style=" margin-left:auto; margin-right:auto; display: block;" onclick="window.open('https://drive.google.com/drive/folders/1dT6TfZC1jOoNR49cJcN5BU0jfNOhGNAa')">Skrypty</button></p>	
+					</div>
 				</div>				
-			</div>
-			
 		
 			<article id="lightings">
 				<section id="one">
@@ -74,7 +100,16 @@
 					</section>
 				</section>
 			</article>
-        </div>		
+			
+        </div>	
+		
+		<script>
+		function myFunction(imgs) {
+			var expandImg = document.getElementById("expandedImg");
+			expandImg.src = imgs.src;
+			expandImg.parentElement.style.display = "block";
+		}
+	</script>
 
 </body>
 
