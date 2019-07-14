@@ -11,10 +11,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
     <!-- Our Custom CSS -->
     <link rel="stylesheet" href="style.css">
-    <!-- Scrollbar Custom CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
 	<!-- Social Icon -->
-	<link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"crossorigin="anonymous">  
 </head>
 
@@ -26,34 +23,62 @@
 			</button>
 			<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
 				<div class="navbar-nav">
-					<a class="nav-item nav-link active" href="#">Shock;Gate <span class="sr-only">(current)</span></a>
+					<a class="nav-item nav-link active"><i class="fas fa-memory"></i> Shock;Gate <span class="sr-only">(current)</span></a>
+					 <a class="nav-item nav-link" href="index.html"><i class="fas fa-home"></i> Strona główna</a>
+					<div class="div-social">
+						<a href="https://github.com/djonczak" class="fab fa-github-square social" target="_blank"></a>
+						<a href="https://pl.linkedin.com/in/dawid-jonczak-725553157" class="fab fa-linkedin social" target="_blank"></a>
+					</div>
 				</div>
 			</div>
 		</nav>
 
         <!-- Page Content  -->		
-        <div id="content">
-		
-			<div class="back-arrow">
-				<a href="index.html" class="fas fa-arrow-circle-left" style="font-size:50px; position: fixed;"></a>
+        <div id="content">		
+			<h1>Shock;Gate</h1>
+			<div style="text-align: center;">
+				<ul style="list-style: none;">
+				<li><b>Status projektu </b> <p>    Wstrzymany</p></li>
+				<li><b>Typ projektu </b> <p>    Studia / zespołowy (3 osoby)</p></li>
+				<li><b>Czas trwania </b> <p>  ~6 miesięcy </p></li>
+				<li><b>Użyte oprogramowanie </b> <p>  Unity Engine, Audacity</p></li>
+				<li><b>Główne role </b> <p>  Lead programmer / Level designe / Game design</p></li>
+				
+				</ul>
 			</div>
-		
-			<div class ="info-left">
-			<h1>O grze</h1>
-				<p>Jest to gra nastawiona na kooperacyjną rozgrywkę. Gracze mają dostęp do bogatego wachlarzu broni i granatów, które pozwalają dostosować styl gry pod swoje upodobania. Kluczowym elementem jest friendly-fire. Z przeciwników wypadają power upy, które modyfikują rozgrywkę poprzez np. zwiększenie szybkości poruszania się gracza, obrażeń zbroni, odnowienia zdrowia itp.</p>	
-				<h1>Zakres obowiązków</h1>
-				<ul>
+			<h2>O Shock;Gate</h2>
+				<p>Shock;Gate jest projektem inżynierskim na czwartym roku w CDV. Byłem odpowiedzialny za implementacje wszystkich funkcjonalności gry.</p>	
+				<h2>Zakres obowiązków</h2>
+				<ul style="float:left; width:50%;">
 					<li>
-						<p>implementacja sterowania dla dwóch graczy oraz rzeczy związanych z gameplayem</p>
+						<p>sterowanie dla dwóch graczy</p>
 					</li>
 					<li>
-						<p>programowanie AI przeciwników oraz projektowanie ich</p>
+						<p>kontrolowanie postaci za pomocą klawiatury lub kontrolera do xboxa</p>
+					</li>
+					<li>
+						<p>implementacja umiejętności postaci, różnych rodzajów broni oraz granatów</p>
+					</li>
+					<li>
+						<p>projektowanie przeciwników</p>
+					</li>
+					<li>
+						<p>programowanie AI przeciwników</p>
+					</li>
+					<li>
+						<p>design gry</p>
+					</li>
+				</ul>
+				
+				<ul style="float:right; width:50%;">
+					<li>
+						<p>level design</p>
 					</li>
 					<li>
 						<p>tworzenie particlów</p>
 					</li>
 					<li>
-						<p>tworzenie poziomów w Unity</p>
+						<p>implementacja oraz edytowanie dzwięków</p>
 					</li>
 					<li>
 						<p>rysowanie wirefremów</p>
@@ -61,9 +86,11 @@
 					<li>
 						<p>współpraca z zespołem</p>
 					</li>
+					<li>
+						<p>prowadzenie testów</p>
+					</li>
 				</ul>
-				
-				<h2 id="portfolio">Galeria</h2>
+				<h2>Galeria</h2>
 				<div class="grid-container">
 					<picture>
 						<div class="location-listing">
@@ -80,17 +107,23 @@
 								</div>
 						</div>
 					</picture>
+					
+					<picture>
+						<div class="location-listing">
+								<div class="location-image">
+										<img src="img/3.png" width="300" height="250" onclick="myFunction(this)">
+								</div>
+						</div>
+					</picture>
 				</div>	
 				
 				<div class="img-container">
 					<span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
 					<img id="expandedImg" style="width:100%">
 				</div>
-				
 				<div class="info-button">
 					<p><button type="button" class="btn btn-secondary btn-block" style=" margin-left:auto; margin-right:auto; display: block;" onclick="window.open('https://drive.google.com/open?id=1wEDruNphDv0pPjX5J5U4B_MTjPssqCwB')">Build</button></p>
 					<p><button type="button" class="btn btn-secondary btn-block" style=" margin-left:auto; margin-right:auto; display: block;" onclick="window.open('https://drive.google.com/drive/folders/1dT6TfZC1jOoNR49cJcN5BU0jfNOhGNAa')">Skrypty</button></p>	
-					</div>
 				</div>				
 		
 			<article id="lightings">

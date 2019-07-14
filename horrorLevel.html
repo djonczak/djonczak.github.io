@@ -11,10 +11,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
     <!-- Our Custom CSS -->
     <link rel="stylesheet" href="style.css">
-    <!-- Scrollbar Custom CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
 	<!-- Social Icon -->
-	<link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"crossorigin="anonymous">  
 </head>
 
@@ -26,7 +23,12 @@
 			</button>
 			<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
 				<div class="navbar-nav">
-					<a class="nav-item nav-link active" href="#">Game Level <span class="sr-only">(current)</span></a>
+					<a class="nav-item nav-link active"><i class="fas fa-map-signs"></i> Poziom <span class="sr-only">(current)</span></a>
+					<a class="nav-item nav-link" href="index.html"><i class="fas fa-home"></i> Strona główna</a>
+				<div class="div-social">
+					<a href="https://github.com/djonczak" class="fab fa-github-square social" target="_blank"></a>
+					<a href="https://pl.linkedin.com/in/dawid-jonczak-725553157" class="fab fa-linkedin social" target="_blank"></a>
+					</div>
 				</div>
 			</div>
 		</nav>
@@ -34,14 +36,20 @@
         <!-- Page Content  -->
 
         <div id="content">
-			<div class="back-arrow">
-				<a href="index.html" class="fas fa-arrow-circle-left" style="font-size:50px; position: fixed;"></a>
-			</div>
 			<div class="parallax" style="background-image: url('img/horrorLevel1.png');"></div>
-			<h1>O poziomie</h1>
-				<p>Jest to poziom zrobiony na zaliczenie zajęć z Level Designu. Żaby ukończyć planszę trzeba zebrać potrzebne przedmioty, dodatkowo można zmienić język w grze oraz zapisać stan gry.</p>
+			<h1>Poziom gry</h1>
+			<div style="text-align: center;">
+				<ul style="list-style: none;">
+					<li><b>Status projektu </b> <p>    Zakończone</p></li>
+					<li><b>Typ projektu </b> <p>	Studia / indywidualny   </p></li>
+					<li><b>Czas trwania </b> <p>  ~tydzień </p></li>
+					<li><b>Użyte oprogramowanie </b> <p>  Unity Engine</p></li>
+				</ul>
+			</div>
+				<h2>O poziomie</h2>
+				<p>Stworzyłem poziom wykorzystując do tego znane mi metody prowadzenia gracza. Gracz porusza się po zamknientym cmentarzu nocą i jego zadaniem jest odnalezienie przedmiotów i odnalezie drogi do mety. Wykorzystujac teren oraz chataktystycze punkty prowadzę gracza do celu. Dodatkowo można zapisać stan gry oraz zmienić język na angielski lub niemiecki.</p>
 				<button type="button" class="btn btn-secondary btn-block" style=" margin-left:auto; margin-right:auto; display: block;"onclick="window.open('https://drive.google.com/open?id=1Ir996nkWQpxJz1-f8677aeG01RwGMpRB')">Build</button>		
-		 </div>
+		</div>
 			<article id="lightings">
 				<section id="one">
 					<section id="two">
