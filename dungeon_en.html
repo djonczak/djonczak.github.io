@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Dawid Jonczak - Dungeon</title>
+	<link rel="shortcut icon" href="logo.ico">
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+	<!-- Social Icon -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"crossorigin="anonymous">  
+</head>
+
+<body>
+
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+				<div class="navbar-nav">
+					<a class="nav-item nav-link active"><i class="fas fa-dungeon"></i> Dungeon<span class="sr-only">(current)</span></a>
+					<a class="nav-item nav-link" href="index_en.html"><i class="fas fa-home"></i> Main page</a>
+					<div class="div-social">
+						<a href="https://github.com/djonczak" class="fab fa-github-square social" target="_blank"></a>
+						<a href="https://pl.linkedin.com/in/dawid-jonczak-725553157" class="fab fa-linkedin social" target="_blank"></a>
+					</div>
+				</div>
+			</div>
+		</nav>
+
+        <!-- Page Content  -->
+        <div id="content">	
+			<h1>Dungeon</h1>
+			<div style="text-align: center;">
+					<b>Project Status </b> <p>    Continued</p>
+					<b>Project Type </b> <p> Group project (2 person)   </p>
+					<b>Project Duration </b> <p>  ~month </p></li>
+					<b>Used Software </b> <p>  Unity Engine</p>
+					<b>Primary Role(s) </b> <p>  Lead programmer / Level designe / Game design</p>
+			</div>
+				<h2>About game</h2>
+				<p>We are currently changing game gameplay loop.</p>
+					<h2>My contribution</h2>
+					<div class="lista" style="height:225px;">
+					<ul style="float:left; width:50%;">
+						<li>
+							<p>character controlls</p>
+						</li>					
+						<li>
+							<p>melee combat system</p>
+						</li>
+						<li>
+							<p>enemy AI programming</p>
+						</li>
+						<li>
+							<p>Mixamo animations implementation</p>
+						</li>
+						<li>
+							<p>Level design</p>
+						</li>
+					</ul>
+					<ul style="float:right; width:50%;">
+						<li>
+							<p>UI programming</p>
+						</li>
+					    					
+					</ul></div>
+				<h2>Gallery</h2>
+				<div class="grid-container">
+					<picture>
+						<div class="location-listing">
+								<div class="location-image">
+										<img src="img/dungeon1.png" width="300" height="250" onclick="myFunction(this)">
+								</div>
+						</div>
+					</picture>
+					
+				</div>	
+				
+				<div class="img-container">
+					<span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+					<img id="expandedImg" style="width:100%">
+				</div>
+				<div class ="info-button">
+					<p><button type="button" class="btn btn-secondary btn-block" style="  margin-right:auto;" onclick="window.open('https://drive.google.com/open?id=1FLDFes6SBGqKN-dlVukVnKQzJm_Q-Z7u')">Build</button></p>
+					<p>
+					<button type="button" class="btn btn-secondary btn-block" style="  margin-right:auto;" onclick="window.open('https://github.com/Expedis/DungeonVR/tree/master/Assets')">Repository</button>
+					</p>
+				</div>					
+	
+			
+		
+			<article id="lightings">
+				<section id="one">
+					<section id="two">
+						
+					</section>
+				</section>
+			</article>
+        </div>		
+	<script>
+		function myFunction(imgs) {
+			var expandImg = document.getElementById("expandedImg");
+			expandImg.src = imgs.src;
+			expandImg.parentElement.style.display = "block";
+		}
+	</script>
+</body>
+
+</html>
