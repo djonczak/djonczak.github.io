@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
     <title>Dawid Jonczak - Shock;Gate</title>
@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
     <!-- Our Custom CSS -->
     <link rel="stylesheet" href="style.css">
+	<!-- Gallery -->
+  <link rel="stylesheet" href="css/gallery.css">
 	<!-- Social Icon -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"crossorigin="anonymous">  
 </head>
@@ -38,6 +40,7 @@
         <div id="content">		
 		<div class="parallax" style="background-image: url('img/5.png');"></div>
 			<h1>Shock;Gate</h1>
+			 <hr class="mt-2 mb-5">
 			<div style="text-align: center;">
 
 				<b>Project Status </b> <p>    On hold</p>
@@ -49,6 +52,7 @@
 			<h2>About Shock;Gate</h2>
 				<p>Shock;Gate is project that started at 4rd year at Collegium Da Vinci. I took the roles as Lead Programmer, Level and Game Designer, I have implemented most of the game's funcionality and designed it. In game there are 3 main mission... To be continue   </p>	
 				<h2>My contribution</h2>
+				 <hr class="mt-2 mb-5">
 				<ul style="float:left; width:50%;">
 					<li>
 						<p>control for two players</p>
@@ -67,6 +71,9 @@
 					</li>
 					<li>
 						<p>game design</p>
+					</li>
+					<li>
+						<p>mixamo animation and Blend Tree</p>
 					</li>
 				</ul>
 				
@@ -89,48 +96,47 @@
 					<li>
 						<p>running game tests</p>
 					</li>
+					
+					<li>
+						<p>HUB weapon selection</p>
+					</li>
 				</ul>
 				<h2>Gallery</h2>
-				<div class="grid-container">
-					<picture>
-						<div class="location-listing">
-								<div class="location-image">
-										<img src="img/1.png" width="300" height="250" onclick="myFunction(this)">
-								</div>
-						</div>
-					</picture>
-					
-					<picture>
-						<div class="location-listing">
-								<div class="location-image">
-										<img src="img/2.jpg" width="300" height="250" onclick="myFunction(this)">
-								</div>
-						</div>
-					</picture>
-					
-					<picture>
-						<div class="location-listing">
-								<div class="location-image">
-										<img src="img/3.png" width="300" height="250" onclick="myFunction(this)">
-								</div>
-						</div>
-					</picture>
-					
-					<picture>
-						<div class="location-listing">
-								<div class="location-image">
-										<img src="img/4.png" width="300" height="250" onclick="myFunction(this)">
-								</div>
-						</div>
-					</picture>
-				</div>	
-				
-				<div class="img-container">
-					<span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
-					<img id="expandedImg" style="width:100%">
-				</div>
+				 <hr class="mt-2 mb-5">
+					<div class="slideshow-container">
+
+					<div class="mySlides">
+					  <div class="numbertext">1 / 3</div>
+					  <img src="img/1.png" style="width:100%">
+					  <div class="text">Mission select</div>
+					</div>
+
+					<div class="mySlides">
+					  <div class="numbertext">2 / 3</div>
+					  <img src="img/2.jpg" style="width:100%">
+					  <div class="text">Crash site</div>
+					</div>
+
+					<div class="mySlides">
+					  <div class="numbertext">3 / 3</div>
+					  <img src="img/3.png" style="width:100%">
+					  <div class="text">Boss fight</div>
+					</div>
+
+					<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+					<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+					</div>
+					<br>
+
+					<div style="text-align:center">
+					  <span class="dot" onclick="currentSlide(1)"></span> 
+					  <span class="dot" onclick="currentSlide(2)"></span> 
+					  <span class="dot" onclick="currentSlide(3)"></span> 
+					</div>
+						
 				<div class="info-button">
-					<p><button type="button" class="btn btn-secondary btn-block" style=" margin-left:auto; margin-right:auto; display: block;" onclick="window.open('https://drive.google.com/open?id=1wEDruNphDv0pPjX5J5U4B_MTjPssqCwB')">Build</button></p>
+					<p><button type="button" class="btn btn-secondary btn-block" style=" margin-left:auto; margin-right:auto; display: block;" onclick="window.open('https://drive.google.com/open?id=1WZ-mIViIvtfDUPobmwIF6bekUAtXJhIw')">Build</button></p>
 					<p><button type="button" class="btn btn-secondary btn-block" style=" margin-left:auto; margin-right:auto; display: block;" onclick="window.open('https://drive.google.com/drive/folders/1dT6TfZC1jOoNR49cJcN5BU0jfNOhGNAa')">Scripts</button></p>	
 				</div>				
 		
@@ -141,17 +147,36 @@
 					</section>
 				</section>
 			</article>
-			
+			 
         </div>	
-		
-		<script>
-		function myFunction(imgs) {
-			var expandImg = document.getElementById("expandedImg");
-			expandImg.src = imgs.src;
-			expandImg.parentElement.style.display = "block";
-		}
-	</script>
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
 
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
 </body>
 
 </html>
