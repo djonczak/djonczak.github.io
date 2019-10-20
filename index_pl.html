@@ -37,9 +37,14 @@
 	
 		<div id="content">
         <!-- Page Content  -->	
+			<div class="parallax" style="background-image: url('img/horrorLevel8.png');"></div>
+			<div class="parallax" style="background-image: url('img/Rabbits9.png');"></div>
+			<div class="parallax" style="background-image: url('img/SG2.png');"></div>
+			<div class="parallax" style="background-image: url('img/dungeon1.png');"></div>
+			
 		<h2 id="about_me">O mnie</h2>
 		<div class="clearfix">
-			Nazywam się Dawid Jonczak jestem absolwentem Collegium Da Vinci na kierunku Informatyka ze specjalizacją "Projektowanie gier komputerowych", gdzie w grupie 3 osobowej wykonaliśmy pracę "Zaprojektowanie i wykonanie gry kooperacyjnej typu "top-down shooter"", w projekcie byłem odpowiedzialny za programowanie, projektowanie poziomów oraz gry.
+			Nazywam się Dawid Jonczak jestem absolwentem Collegium Da Vinci na kierunku Informatyka ze specjalizacją "Projektowanie gier komputerowych", gdzie w grupie 3 osobowej wykonaliśmy pracę "Zaprojektowanie i wykonanie gry kooperacyjnej typu "top-down shooter", w projekcie byłem odpowiedzialny za programowanie, projektowanie poziomów oraz gry.
 			Od zawsze interesowałem się grami komputerowymi, dlatego dążę do zdobycia swojego pierwszego doświadczenia zawodowego w branży gier lub IT jako programista C#, dlatego skupiam się na polepszaniu moich umiejętności związanych z C#, Unity oraz Pixel Art.  
 		</p>
 		</div>
@@ -72,6 +77,18 @@
 		<div class="grid-container">
 		<picture>
 			<div class="location-listing">
+				<a class="location-title" href="rabbits_pl.html">From The Tower It Comes</a>
+					<div class="location-image">
+							<img width="350" height="300" src="img/TitleScreen.png">
+					</div>
+					<figcaption class="portfolio-content">
+					<div class="textbackground" style="background-color: #ff4d4d;"><a> unity </a></div>
+					<div class="textbackground" style="background-color: #79ff4d;"><a> c# </a></div>
+					<p style="font-size:15px; text-align: center; color:black;">2D shoot'em up / endless runner / platformer</p></figcaption>
+			</div>
+		</picture>
+		<picture>
+			<div class="location-listing">
 				<a class="location-title" href="shockgate_pl.html">Shock;Gate</a>
 					<div class="location-image">
 							<img width="350" height="300" src="img/shockGate.PNG">
@@ -79,7 +96,8 @@
 					<figcaption class="portfolio-content">
 					<div class="textbackground" style="background-color: #ff4d4d;"><a> unity </a></div>
 					<div class="textbackground" style="background-color: #79ff4d;"><a> c# </a></div>
-					<div class="textbackground" style="background-color: #00ccff;"><a> game design </a></div>
+					<div class="textbackground" style="background-color: #8c1aff;"><a> game design </a></div>
+					<p><div class="textbackground" style="background-color: #00ccff;"><a> level design </a></div></p>
 					<p style="font-size:15px; text-align: center; color:black;">3D shoot'em up / cooperation</p></figcaption>
 			</div>
 		</picture>		
@@ -101,7 +119,7 @@
 			<div class="location-listing">
 				<a class="location-title" href="horrorLevel_pl.html">Poziom</a>
 					<div class="location-image">
-							<img width="350" height="300" src="img/horrorLevel1.png">
+							<img width="350" height="300" src="img/horrorLevel7.png">
 					</div>
 					<figcaption class="portfolio-content">
 					<div class="textbackground" style="background-color: #ff4d4d;"><a> unity </a></div>
@@ -152,7 +170,22 @@
 				</section>
 			</article>	
 	     </div>
-		<script>
+				<script>
+			var myIndex = 0;
+			carousel();
+
+			function carousel() {
+			  var i;
+			  var x = document.getElementsByClassName("parallax");
+			  for (i = 0; i < x.length; i++) {
+				x[i].style.display = "none";  
+			  }
+			  myIndex++;
+			  if (myIndex > x.length) {myIndex = 1}    
+			  x[myIndex-1].style.display = "block";  
+			  setTimeout(carousel, 2000); // Change image every 2 seconds
+			}
+		</script>
 </body>
 
 </html>

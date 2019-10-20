@@ -37,7 +37,7 @@
 
         <!-- Page Content  -->		
         <div id="content">		
-		<div class="parallax" style="background-image: url('img/5.png');"></div>
+		<div class="parallax" style="background-image: url('img/SG3.png');"></div>
 			<h1>Shock;Gate</h1>
 			<div style="text-align: center;">
 
@@ -48,8 +48,10 @@
 				<b>Główne role </b> <p>  Lead programmer / Level designe / Game design</p>			
 			</div>
 			<h2>O Shock;Gate</h2>
-				<p>Shock;Gate jest projektem inżynierskim na czwartym roku w CDV. Byłem odpowiedzialny za implementacje wszystkich funkcjonalności gry. Grze znajdują się 3 misje </p>	
-				<h2>Zakres obowiązków</h2>
+				<p>Shock;Gate jest projektem inżynierskim rozpoczętym pod koniec trzeciego roku w Collegium Da Vinci. Zespół składał się z dwóch programistów oraz jednego grafika 3D. Byłem odpowiedzialny za implementacje wszystkich funkcjonalności gry oraz za tworzenie poziomów w Unity Engine.
+				Jest to mój pierwszy "profesjonalny" projekt w 3D, które pomógł mi rozwinąć moje umiejętności w Unity oraz C#.</p>
+				<p>W grę można zagrać samodzielnie lub z pomocą drugiego gracza, w grze znajdują się 3 różne misje, a ukończenie ostatniej odblokowuje dwie nowe bronie. Dodatkowo jest strzelnia, gdzie można przetestować wszystkie bronie w grze. Podczas rozgrywki można spotkać 6 rodzajów przeciwników.</p>	
+				<h2>Rzeczy, które zrobiłem:</h2>
 				<ul style="float:left; width:50%;">
 					<li>
 						<p>sterowanie dla dwóch graczy</p>
@@ -67,16 +69,16 @@
 						<p>programowanie AI przeciwników</p>
 					</li>
 					<li>
-						<p>design gry</p>
+						<p>design mechanik gry</p>
 					</li>
 					<li>
-						<p>animacje z mixamo oraz Blend Tree</p>
+						<p>animacje z mixamo oraz Blend Tree animacji</p>
 					</li>
 				</ul>
 				
 				<ul style="float:right; width:50%;">
 					<li>
-						<p>level design</p>
+						<p>tworzenie poziomów w Unity</p>
 					</li>
 					<li>
 						<p>wybór broni w HUB-ie</p>
@@ -97,6 +99,69 @@
 						<p>prowadzenie testów gry</p>
 					</li>
 				</ul>
+				
+				<button class="accordion"> Przeciwnicy</button>
+						<div class="field">
+							<h3>AI przeciwnika</h3>
+							<img src="img/ShockGate/SG1.png" style="width: 1000px;">
+							<p>Jak widać na załączonym obrazku przeciwnicy posiadąją dwie sfery, pierwsza <a style="color: #006600;"> zielona </a> pokazuje zasięg widzenia przeciwnika, a druga <a style="color: #e6b800;"> żółta </a> przedstawia zasięg broni przeciwnika. 
+							Dodatkowo przeciwnik ma kąt widzenia, pokazany przez dwie <a style="color: red;"> czerwone </a> linie. Gdy gracz wejdzie w zasięg widzenia ten sprawdza najpierw czy jest on w kącie widzenia przeciwnika, a następnie używa raycasta, by sprawdzić czy pomiędzy nim, a graczem nie znajduje się
+							żaden element otoczenia. Następnie jeśli nic nie zasłania gracza przechodzi on w stan "Follow". Przeciwnicy mają cztery stany:</p>
+							<ul>
+								<li>
+									<p> Patrol - stoją w miejscu lub patrolują okolice, kolor Boxa na ich plecach jest wtedy zielony.</p>
+								</li>
+								<li>
+									<p> Follow - w momencie zauważenia gracza, zbliżaja się do niego aż nie będzie w zasiegu broni. Kolor wskaznika zmienia się wtedy na żółty.</p>
+								</li>
+								<li>
+									<p> Fight - gdy gracz znajduje się w zasiegu broni, przeciwnik się zatrzymuje i zaczyna strzelać, ewentualnie może rzucić też granatem. Gdy wracz wyjdzie poza zasięg, przechodzi on wtedy w Follow. Kolor wskaznika zmienia się na czerwony.</p>
+								</li>
+								<li>
+									<p> Alarmed - przeciwnik dostał sygnał od swojego kolegi z drużyna i zmierza w miejsce w którym zauważono gracza. Kolor wskaznika pomarańczowy.</p>
+								</li>
+							</ul>
+							<h3>Alarm</h3>
+							<img src="img/ShockGate/enemyAlert.gif" style="width: 1000px;">
+							<p> Na gifie widać jak przeciwnik w momencie dostania obrażeń od gracza, pobiera z pocisku informacje od kogo dostał i bierze go sobie za cel daje, a następnie wchodzi w stan "Follow", a następnie przekazuje jego pozycję reszcie z grupy, dodatkowo wyda on dzwięk, który da graczowi znać, że go zauważyli. Przeciwnicy także nie mogą strzelić do gracza, gdy nie jest w odpowiednim koncie do nich.</p>  
+						</div>
+						
+						<button class="accordion"> Blendowanie animacji gracza oraz kontroler animacji </button>
+						<div class="field">
+						<h3>Kontroler animacjii dla pistoletu</h3>
+							<img src="img/ShockGate/SG3.PNG" style="width: 1000px;">
+							<p>Na obrazku widać połaczenia między animacjami dla pistoletu. Kontroler gracza posiada dwa Animation Controllery jeden dla pistoletów (broni bocznej), a drugi dla karabinów i reszty (broń główna). Przy zmianie broni przełącza się między tymi dwoma drzewkami. Po lewej widać wszystkie parametry od których uzależnione są przejścia pomiędzy animacjami, takie jak np. 
+							jak bardzo mają być połączone ze sobą animacje przeładowania i rzucania granatów w Blend Tree.</p>
+						<h3>Blend Tree dla biegu</h3>
+							<img src="img/ShockGate/SG4.png" style="width: 1000px;">
+							<p> Łączę ze sobą pięć animacji dla biegu postaci z pistoletem w Blend Tree. Używam parametru VelX, który odpowiada za oś X na analogu kotrolera lub A/D na klawiaturze, a VelY dla osi Y. Po prawej w motion widać wartości, które podałem by została włączona odpowiednia animacja. 
+						</div>
+						
+						<button class="accordion">Gameplay mechanics</button>
+						<div class="field">
+							<h3>Dash</h3>
+							<p>Jest z jedną z mechanik, która pozwala ci uniknąć pocisków, granatów oraz przeciwników.</p>
+							<img src="img/ShockGate/dash.gif" style="width: 1000px;">
+							<h3>Zdalne wysadzenie granatu</h3>
+							<p>Możesz także zdetonować granat szybciej, zamiast czekać aż minie czas do wybuchu.</p>
+							<img src="img/ShockGate/grenadeAuto.gif" style="width: 1000px;">
+							<h3>Wskrzeszanie drugiego gracza</h3>
+							<p>Gdy gracz polegnie podczas gry, można do niego podejść i wskrzecić go, ale trzeba uważać bo zajmuje to trochę czasu.</p>
+							<img src="img/ShockGate/revive.gif" style="width: 1000px;">
+							<h3>Leczenie drugiego gracza</h3>
+							<p>Możesz także przekazać drugiemu graczowi, część swojego zdrowia, aby go wyleczyć. Nie możesz przekazać swoje zdrowie, gdy masz mniej niż 50% punktów życia.</p>
+							<img src="img/ShockGate/healShell.gif" style="width: 1000px;">
+							<h3>Skrzynka z amunicją</h3>
+							<p>Gdy zabraknie ci amunicji możesz podejść do skrzynki, by uzupełnić swoją amunicję.</p>
+							<img src="img/ShockGate/ammorBox.gif" style="width: 1000px;">
+							<h3>Dopalacze</h3>
+							<p>Podczas rozgrywki z przeciwników mogą wybaść dopalacze, które np. zwiększą twoją szybkość poruszania się, obrażenia, odnowią granaty lub tarczę. W przypadku gifa gracz uzyskał zwiększone obrażenia.</p>
+							<img src="img/ShockGate/powerUp.gif" style="width: 1000px;">
+							<h3>Poruszanie się motocyklem</h3>
+							<p>W drugiej misji znajdują się dwa motory dla graczy. Motor posiada dwa tryby, pierwszy pozwala motorowi celować i strzelać, ale kosztem prędkości. Drugi tryb zwiększa prędkość, ale jest mniej zwrotny i nie można celować.</p>
+							<img src="img/ShockGate/bikeControll.gif" style="width: 1000px;">
+						</div>
+				
 				<h2>Galeria</h2>
 				<div class="w3-content w3-display-container">
 
@@ -123,9 +188,8 @@
 
 					<button class="w3-button w3-display-left w3-black" style="color:white;" onclick="plusDivs(-1)">&#10094;</button>
 					<button class="w3-button w3-display-right w3-black" onclick="plusDivs(1)">&#10095;</button>
-
-					</div>
-
+			    </div>
+					
 					<script>
 					var slideIndex = 1;
 					showDivs(slideIndex);
@@ -144,11 +208,26 @@
 					  }
 					  x[slideIndex-1].style.display = "block";  
 					}
+					
+					var acc = document.getElementsByClassName("accordion");
+					var i;
+
+					for (i = 0; i < acc.length; i++) {
+						acc[i].addEventListener("click", function() {
+							this.classList.toggle("active");
+							var panel = this.nextElementSibling;
+							if (panel.style.maxHeight){
+								panel.style.maxHeight = null;
+							} else {
+								panel.style.maxHeight = panel.scrollHeight + "px";
+							} 
+						});
+					}
 					</script>	
 	
 				<div class="info-button">
 					<p><button type="button" class="btn btn-secondary btn-block" style=" margin-left:auto; margin-right:auto; display: block;" onclick="window.open('https://drive.google.com/open?id=1WZ-mIViIvtfDUPobmwIF6bekUAtXJhIw')">Build</button></p>
-					<p><button type="button" class="btn btn-secondary btn-block" style=" margin-left:auto; margin-right:auto; display: block;" onclick="window.open('https://drive.google.com/drive/folders/1dT6TfZC1jOoNR49cJcN5BU0jfNOhGNAa')">Skrypty</button></p>	
+					<p><button type="button" class="btn btn-secondary btn-block" style=" margin-left:auto; margin-right:auto; display: block;" onclick="window.open('https://drive.google.com/drive/folders/1dT6TfZC1jOoNR49cJcN5BU0jfNOhGNAa')">Niektóre skrypty (resztę wrzucę póżniej)</button></p>	
 				</div>				
 		
 			<article id="lightings">

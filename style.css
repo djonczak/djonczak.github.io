@@ -60,9 +60,10 @@ a:focus {
 }
 
 .parallax {
-  height: 600px; 
-  background-repeat: no-repeat;
-  background-size: cover;
+  height: 500px; 
+  background-size: 100% 100%;
+  width: 100%;
+  margin-top: 40px;
 }
 
 /* ---------------------------------------------------
@@ -554,6 +555,12 @@ h2 {
 	text-align: center;
 	padding-top: 25px;
 	padding-bottom: 15px;
+	color: #6bae76;
+}
+
+h3 {
+	font-family: 'Poppins', sans-serif;
+	padding-top: 25px;
 	color: #6bae76;
 }
 
