@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
     <!-- Our Custom CSS -->
     <link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 	<!-- Social Icon -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"crossorigin="anonymous">  
 </head>
@@ -53,7 +54,7 @@
 							<p>character controlls</p>
 						</li>					
 						<li>
-							<p>melee combat system</p>
+							<p>melee and range combat system</p>
 						</li>
 						<li>
 							<p>enemy AI programming</p>
@@ -72,21 +73,34 @@
 					    					
 					</ul></div>
 				<h2>Gallery</h2>
-				<div class="grid-container">
-					<picture>
-						<div class="location-listing">
-								<div class="location-image">
-										<img src="img/dungeon1.png" width="300" height="250" onclick="myFunction(this)">
-								</div>
-						</div>
-					</picture>
+				<div class="w3-content w3-display-container">
+
+					<div class="w3-display-container mySlides">
+					  <img src="img/Dungeon/worldMap.png" style="width:100%">
+					   <div class="w3-display-top w3-large w3-container w3-padding-16 w3-black">
+						World map
+					  </div>
+					</div>
+
+					<div class="w3-display-container mySlides">
+					  <img src="img/Dungeon/castle.PNG" style="width:100%">
+					   <div class="w3-display-top w3-large w3-container w3-padding-16 w3-black">
+						Abandoned castle
+					  </div>
+					</div>
+
+					<div class="w3-display-container mySlides">
+					  <img src="img/Dungeon/combatDungeon.gif" style="width:100%">
+					   <div class="w3-display-top w3-large w3-container w3-padding-16 w3-black">
+						Combat
+					  </div>
+					</div>
 					
-				</div>	
-				
-				<div class="img-container">
-					<span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
-					<img id="expandedImg" style="width:100%">
+					<button class="w3-button w3-display-left w3-black" style="color:white;" onclick="plusDivs(-1)">&#10094;</button>
+					<button class="w3-button w3-display-right w3-black" onclick="plusDivs(1)">&#10095;</button>
 				</div>
+				
+				
 				<div class ="info-button">
 					<p><button type="button" class="btn btn-secondary btn-block" style="  margin-right:auto;" onclick="window.open('https://drive.google.com/open?id=1FLDFes6SBGqKN-dlVukVnKQzJm_Q-Z7u')">Old combat</button></p>
 					<p><button type="button" class="btn btn-secondary btn-block" style="  margin-right:auto;" onclick="window.open('https://drive.google.com/open?id=1ukbmKxluC9frIVzUJM5RN735NnIW2LV5')">New combat</button></p>
@@ -104,11 +118,24 @@
 			</article>
         </div>		
 	<script>
-		function myFunction(imgs) {
-			var expandImg = document.getElementById("expandedImg");
-			expandImg.src = imgs.src;
-			expandImg.parentElement.style.display = "block";
+		var slideIndex = 1;
+		showDivs(slideIndex);
+
+		function plusDivs(n) {
+			showDivs(slideIndex += n);
 		}
+
+		function showDivs(n) {
+			var i;
+			var x = document.getElementsByClassName("mySlides");
+			if (n > x.length) {slideIndex = 1}
+			if (n < 1) {slideIndex = x.length}
+			for (i = 0; i < x.length; i++) {
+				x[i].style.display = "none";  
+			}
+			x[slideIndex-1].style.display = "block";  
+		}
+		
 	</script>
 </body>
 
