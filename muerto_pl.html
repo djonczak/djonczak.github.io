@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html lang="en-us">
   <head>
-     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>Dawid Jonczak</title>
+    <title>Dawid Jonczak - Muerto</title>
 	<link rel="shortcut icon" href="logo.ico">
     <!-- Bootstrap CSS CDN -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
     <!-- Our Custom CSS -->
     <link rel="stylesheet" href="style.css">
+	<!-- Gallery -->
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 	<!-- Social Icon -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"crossorigin="anonymous">  
     <title>Project Muerto </title>
 	<link rel="stylesheet" href="TemplateData/style.css">
     <script src="TemplateData/UnityProgress.js"></script>
@@ -45,22 +47,47 @@
         <div id="content">	
 			<h1>Muerto</h1>
 			<div style="text-align: center;">
-					<b>Status projektu </b> <p> Kontynuowane</p>
+					<b>Status projektu </b> <p> Zakończony</p>
 					<b>Typ projektu </b> <p> Solo   </p>
-					<b>Czas trwania </b> <p>  ~ 3 tygodnie </p></li>
+					<b>Czas trwania </b> <p>  ~ 4 tygodnie </p></li>
 					<b>Użyte oprogramowanie </b> <p>  Unity Engine, GIMP, Photoshop</p>
 			</div>
 				<h2>O grze</h2>
 				<p>Wkrótce zostanie uaktualnione. Tryb areny nie został jeszcze ukończony.</p>
-						
+				<!--
+				<button class="accordion"> Niektóre efekty pixelowe</button>
+						<div class="field">
+								<h3>Zniszczenie filaru</h3>
+								<img src="img/Muerto/PillarDestruction.gif" style="width: 50%;">
+								<h3>Przybycie bossa</h3>
+								<img src="img/Muerto/BossScene.gif" style="width: 50%;">
+						</div>
+						-->
 						<div class="webgl-content">
 								<div id="unityContainer" style="width: 960px; height: 600px"></div>
 									<div class="footer">
 										<div class="webgl-logo"></div>
 											<div class="fullscreen" onclick="unityInstance.SetFullscreen(1)"></div>
-												<div class="title">Project Muerto</div>
+												<div class="title">Muerto</div>
 									</div>
 								</div>
+								
+			<script>
+				var acc = document.getElementsByClassName("accordion");
+					var i;
+
+					for (i = 0; i < acc.length; i++) {
+						acc[i].addEventListener("click", function() {
+							this.classList.toggle("active");
+							var panel = this.nextElementSibling;
+							if (panel.style.maxHeight){
+								panel.style.maxHeight = null;
+							} else {
+								panel.style.maxHeight = panel.scrollHeight + "px";
+							} 
+						});
+					}
+			</script>	
 		</div>
 	</div>
   </body>
