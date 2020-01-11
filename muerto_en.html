@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>Dawid Jonczak</title>
+    <title>Day Of The Dead - Dawid Jonczak</title>
 	<link rel="shortcut icon" href="logo.ico">
     <!-- Bootstrap CSS CDN -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
@@ -13,12 +13,12 @@
     <link rel="stylesheet" href="style.css">
 	<!-- Social Icon -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"crossorigin="anonymous">
-    <title>Project Muerto </title>
+    <title>Day Of The Dead </title>
   <link rel="stylesheet" href="TemplateData/style.css">
     <script src="TemplateData/UnityProgress.js"></script>
-    <script src="Build/UnityLoader.js"></script>
+	<script src="Build/UnityLoader.js"></script>
     <script>
-      var unityInstance = UnityLoader.instantiate("unityContainer", "Build/Web.json", {onProgress: UnityProgress});
+      UnityLoader.instantiate("unityContainer", "Build/Web.json");
     </script>
   </head>
   <body>
@@ -38,28 +38,68 @@
 					</div>
 				</div>
 			</div>
-			<a href="muerto_pl.html" style="float:right;"><img width="35" height="35" src="img/en.png"></a>
+			<a href="muerto_pl.html" style="float:right;"><img width="35" height="35" src="img/pl.png"></a>
 		</nav>
 
         <!-- Page Content  -->
         <div id="content">	
-			<h1>Muerto</h1>
+			<h1>Day Of The Dead</h1>
 			<div style="text-align: center;">
 				<b>Project Status </b> <p>    Finished</p>
 				<b>Project Type </b> <p>   Solo</p>
-				<b>Project Duration </b> <p>  ~4 weeks </p></li>
+				<b>Project Duration </b> <p>  ~ month </p></li>
 				<b>Software Used </b> <p>  Unity Engine, GIMP, Photoshop</p>		
 			</div>
-				<h2>About game</h2>
-				<p>More informations soon. Arena mode isn't finised.</p>
-			<div class="webgl-content">
-						<div id="unityContainer" style="width: 960px; height: 600px"></div>
-							<div class="footer">
-								<div class="webgl-logo"></div>
-									<div class="fullscreen" onclick="unityInstance.SetFullscreen(1)"></div>
-										<div class="title">Project Muerto</div>
-							</div>
-						</div>
-					</div>
+			
+			<h2>About game</h2>
+			<p>The project was initially created for classes in 2D Graphics, the goals were to show the Mexican holiday of Día de Muertos (Day of the Dead), which was presented in Story mode. In addition, I did the Arena mode, which was based on<a target="_blank" href="https://pietro-ferrantelli.itch.io/mobs-inc" style="color:#9784BA; font-weight: bold;"> Mobs Inc</a>, where you have to survive 14 waves of enemies, fight 4 types of enemies and finally face the boss. After defeating the boss, an additional skin is unlocked.</p>
+			
+			<button class="accordion"> Some effects/animations</button>
+							<div class="field">
+								<h3>Boss arriving</h3>
+									<video width="60%" controls>
+										<source src="img/Muerto/BossSummon.mp4" type="video/mp4">
+									</video>
+								<h3>Boss second ability</h3>
+									<video width="60%" controls>
+										<source src="img/Muerto/BloodAttack.mp4" type="video/mp4">
+									</video>
+								<h3>Chupacabra</h3>
+									<video width="60%" controls>
+										<source src="img/Muerto/chupacabra.mp4" type="video/mp4">
+									</video>
+								<h3>Enemy summon </h3>
+									<video width="60%" controls>
+										<source src="img/Muerto/EnemySummon.mp4" type="video/mp4">
+									</video>
+								<h3>Landing shock wave</h3>
+									<video width="60%" controls>
+										<source src="img/Muerto/Wave.mp4" type="video/mp4">
+									</video>
+				</div>
+				
+				<div id="unityContainer" style="width: 960px; height: 600px; margin: auto"></div>
+						
+				<div class="info-button">
+					<p><button type="button" class="btn btn-secondary btn-block" style=" margin-left:auto; margin-right:auto; display: block;" onclick="window.open('https://github.com/djonczak/Muerto')">Repository</button></p>
+				</div>
+						
+				<script>
+				var acc = document.getElementsByClassName("accordion");
+					var i;
+
+					for (i = 0; i < acc.length; i++) {
+						acc[i].addEventListener("click", function() {
+							this.classList.toggle("active");
+							var panel = this.nextElementSibling;
+							if (panel.style.maxHeight){
+								panel.style.maxHeight = null;
+							} else {
+								panel.style.maxHeight = panel.scrollHeight + "px";
+							} 
+						});
+					}
+				</script>	
+		</div>
   </body>
 </html>

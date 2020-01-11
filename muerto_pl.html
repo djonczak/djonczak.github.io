@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>Dawid Jonczak - Muerto</title>
+    <title>Day Of The Dead - Dawid Jonczak</title>
 	<link rel="shortcut icon" href="logo.ico">
     <!-- Bootstrap CSS CDN -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
@@ -15,12 +15,12 @@
 	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 	<!-- Social Icon -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"crossorigin="anonymous">  
-    <title>Project Muerto </title>
+    <title>Day Of The Dead </title>
 	<link rel="stylesheet" href="TemplateData/style.css">
     <script src="TemplateData/UnityProgress.js"></script>
     <script src="Build/UnityLoader.js"></script>
     <script>
-      var unityInstance = UnityLoader.instantiate("unityContainer", "Build/Web.json", {onProgress: UnityProgress});
+      UnityLoader.instantiate("unityContainer", "Build/Web.json");
     </script>
   </head>
   <body>
@@ -32,7 +32,7 @@
 			</button>
 			<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
 				<div class="navbar-nav">
-					<a class="nav-item nav-link active"><img src="img/Muerto/luchador.png" style="width:22px;"> Muerto<span class="sr-only">(current)</span></a>
+					<a class="nav-item nav-link active"><img src="img/Muerto/luchador.png" style="width:22px;"> Day Of The Dead<span class="sr-only">(current)</span></a>
 					<a class="nav-item nav-link" href="index_pl.html"><i class="fas fa-home"></i> Strona główna</a>
 					<div class="div-social">
 						<a href="https://github.com/djonczak" class="fab fa-github-square social" target="_blank"></a>
@@ -45,32 +45,44 @@
 
         <!-- Page Content  -->
         <div id="content">	
-			<h1>Muerto</h1>
+			<h1>Day Of The Dead</h1>
 			<div style="text-align: center;">
 					<b>Status projektu </b> <p> Zakończony</p>
 					<b>Typ projektu </b> <p> Solo   </p>
-					<b>Czas trwania </b> <p>  ~ 4 tygodnie </p></li>
+					<b>Czas trwania </b> <p>  ~ miesiąc </p></li>
 					<b>Użyte oprogramowanie </b> <p>  Unity Engine, GIMP, Photoshop</p>
 			</div>
 				<h2>O grze</h2>
-				<p>Wkrótce zostanie uaktualnione. Tryb areny nie został jeszcze ukończony.</p>
-				<!--
-				<button class="accordion"> Niektóre efekty pixelowe</button>
+				<p>Projekt początkowo był tworzony na zajęcia z Grafiki 2D, cele było ukazanie meksykańskie święto Día de Muertos(Dzień Zmarłych), które zostało przedstawiony w trybie Story. Dodatkowow zrobiłem tryb Areny, który był wzorownay na grze <a target="_blank" href="https://pietro-ferrantelli.itch.io/mobs-inc" style="color:#9784BA; font-weight: bold;"> Mobs Inc</a>, gdzie musisz przetrwać 14 fal przeciwników, walcząć z 4 typami przeciwników, by na końcu zmierzyć się z bossem. Po pokonaniu bossa zostaje odblokowany dodatkowego skin. </p>
+				
+				<button class="accordion"> Niektóre efekty/animacje</button>
 						<div class="field">
-								<h3>Zniszczenie filaru</h3>
-								<img src="img/Muerto/PillarDestruction.gif" style="width: 50%;">
 								<h3>Przybycie bossa</h3>
-								<img src="img/Muerto/BossScene.gif" style="width: 50%;">
+									<video width="60%" controls>
+										<source src="img/Muerto/BossSummon.mp4" type="video/mp4">
+									</video>
+								<h3>Druga umiejętność bossa</h3>
+									<video width="60%" controls>
+										<source src="img/Muerto/BloodAttack.mp4" type="video/mp4">
+									</video>
+								<h3>Chupacabra</h3>
+									<video width="60%" controls>
+										<source src="img/Muerto/chupacabra.mp4" type="video/mp4">
+									</video>
+								<h3>Efekt przy pojawieniu się przeciwnika</h3>
+									<video width="60%" controls>
+										<source src="img/Muerto/EnemySummon.mp4" type="video/mp4">
+									</video>
+								<h3>Fala przy lądowaniu</h3>
+									<video width="60%" controls>
+										<source src="img/Muerto/Wave.mp4" type="video/mp4">
+									</video>
 						</div>
-						-->
-						<div class="webgl-content">
-								<div id="unityContainer" style="width: 960px; height: 600px"></div>
-									<div class="footer">
-										<div class="webgl-logo"></div>
-											<div class="fullscreen" onclick="unityInstance.SetFullscreen(1)"></div>
-												<div class="title">Muerto</div>
-									</div>
-								</div>
+						<div id="unityContainer" style="width: 960px; height: 600px; margin: auto"></div>
+								
+				<div class="info-button">
+					<p><button type="button" class="btn btn-secondary btn-block" style=" margin-left:auto; margin-right:auto; display: block;" onclick="window.open('https://github.com/djonczak/Muerto')">Repository</button></p>
+				</div>	
 								
 			<script>
 				var acc = document.getElementsByClassName("accordion");
