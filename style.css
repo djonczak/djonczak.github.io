@@ -119,6 +119,20 @@ a:focus {
 	width: 100%;
 }
 
+#content-narrow{
+	position: fixed;
+	background: rgba(0, 0, 0, 0.5);
+	color: #f1f1f1; 
+	width: 60%; 
+	padding: 20px; 
+	padding-top:100px; 
+	height:100%; 
+	padding-right: 
+	40px;padding-left: 
+	40px;
+	margin-left:18%;
+}
+
 
 
 .gallery-image:hover {
@@ -579,6 +593,20 @@ h3 {
     padding: 5px;
 	margin: 5px 2px;
 	}
+	
+
+/* ---------------------------------------------------
+    Video full screen
+----------------------------------------------------- */
+
+#fullVideo{
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	min-width: 100%;
+	min-height: 100%;
+
+}
 	
 	/* 100% Image Width on Smaller Screens */
 @media only screen and (max-width: 700px){
