@@ -123,30 +123,41 @@ a:focus {
 }
 
 #content-narrow{
-	position: fixed;
-	top:0;
-	bottom:0;
+	position: absolute;
 	left:24%;
 	background: rgba(0, 0, 0, 0.8);
 	color: #f1f1f1; 
 	width: 50%; 
 	padding: 60px; 
-	height:100%; 
 	transition: all 0.3s;
 	overflow: hidden;
 }
+
+#content-narrowBig{
+	padding: 20px;
+	padding-top:45px;
+	padding: 60px; 
+    position: absolute;
+	left:13%;
+	overflow: hidden;
+	width: 75%;
+	
+	background: rgba(0, 0, 0, 0.7);
+}
+
 
 
 /* ---------------------------------------------------
     WebGL container
 ----------------------------------------------------- */
 
-#unityContainer{
+.containerUnity{
+	position:fixed;
 	width: 960px;
 	height:600px;
-	margin-left: auto;
-	margin-right: auto; 
+	left:24%;
 	padding-top:15px; 
+	padding-bottom:15px;
 	display: block;
 }
 
@@ -652,12 +663,13 @@ h3 {
 }
 
 #fullImage{
-	position: fixed;
-	right: 0;
-	bottom: 0;
-	min-width: 100%;
-	min-height: 100%;
+	  height: 80%;
 
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 	
 	/* 100% Image Width on Smaller Screens */
