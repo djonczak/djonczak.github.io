@@ -67,7 +67,7 @@ a:focus {
 }
 
 /* ---------------------------------------------------
-    GALLERY
+    GALLERY main Hobby
 ----------------------------------------------------- */
 
 *,
@@ -132,11 +132,30 @@ a:focus {
 	margin-left:18%;
 }
 
-.unityContainer * {border: 0; margin: 0; padding: 0}
+
+/* ---------------------------------------------------
+    WebGL container
+----------------------------------------------------- */
 
 .unityContainer{
+	display: block;
 	width: 80%;
-	margin-left: 8%;
+	margin-left: auto;
+	margin-right: auto; 
+}
+
+
+
+/* ---------------------------------------------------
+    PSN Account Image
+----------------------------------------------------- */
+
+.psnCard{
+	margin-left: auto;
+	margin-right: auto; 
+	padding-top:15px; 
+	width: 40%;   
+	display: block;
 }
 
 /* ---------------------------------------------------
