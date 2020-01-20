@@ -132,7 +132,15 @@ a:focus {
 	margin-left:18%;
 }
 
+#unityContainer{
+	position:relative;
+	width: 80%;
+	margin-left: 8%;
+}
 
+/* ---------------------------------------------------
+    Gallery
+----------------------------------------------------- */
 
 .gallery-image:hover {
 	transform: scale(1.1);
