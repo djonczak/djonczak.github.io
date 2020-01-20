@@ -132,8 +132,9 @@ a:focus {
 	margin-left:18%;
 }
 
-#unityContainer{
-	position:relative;
+.unityContainer * {border: 0; margin: 0; padding: 0}
+
+.unityContainer{
 	width: 80%;
 	margin-left: 8%;
 }
