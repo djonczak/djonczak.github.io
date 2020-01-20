@@ -1,5 +1,10 @@
 
 @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+
+html{
+	 scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Poppins', sans-serif;
     background-color:rgb(240, 240, 240);
@@ -111,7 +116,6 @@ a:focus {
 #content {
     padding: 20px;
 	padding-top:30px;
-    transition: all 0.3s;
     position: absolute;
     right: 0;
 	overflow: hidden;
@@ -120,15 +124,16 @@ a:focus {
 
 #content-narrow{
 	position: fixed;
-	background: rgba(0, 0, 0, 0.5);
+	top:0;
+	bottom:0;
+	left:24%;
+	background: rgba(0, 0, 0, 0.8);
 	color: #f1f1f1; 
-	width: 60%; 
-	padding: 20px; 
-	padding-top:100px; 
+	width: 50%; 
+	padding: 60px; 
 	height:100%; 
-	padding-right: 40px;
-	padding-left: 40px;
-	margin-left:18%;
+	transition: all 0.3s;
+	overflow: hidden;
 }
 
 
@@ -597,11 +602,27 @@ h1 {
 	color: #6bae76;
 }
 
+.bigHeaderFont{
+	text-align: center;
+	padding-top: 25px;
+	padding-bottom: 25px;
+	color: #6bae76;
+	font-size:50px;
+}
+
 h2 {
 	text-align: center;
 	padding-top: 25px;
 	padding-bottom: 15px;
 	color: #6bae76;
+}
+
+.smallHeaderFont{
+	text-align: center;
+	padding-top: 25px;
+	padding-bottom: 15px;
+	color: #6bae76;
+	font-size:35px;
 }
 
 h3 {
@@ -623,6 +644,14 @@ h3 {
 ----------------------------------------------------- */
 
 #fullVideo{
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	min-width: 100%;
+	min-height: 100%;
+}
+
+#fullImage{
 	position: fixed;
 	right: 0;
 	bottom: 0;
