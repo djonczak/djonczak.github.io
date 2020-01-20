@@ -138,13 +138,13 @@ a:focus {
 ----------------------------------------------------- */
 
 .unityContainer{
-	display: block;
-	width: 80%;
+	width: 960px;
+	height:600px;
 	margin-left: auto;
 	margin-right: auto; 
+	padding-top:15px; 
+	display: block;
 }
-
-
 
 /* ---------------------------------------------------
     PSN Account Image
