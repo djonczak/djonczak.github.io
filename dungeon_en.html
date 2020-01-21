@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="style.css">
 	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 	<!-- Social Icon -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"crossorigin="anonymous">  
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"crossorigin="anonymous">
 </head>
 
 <body>
@@ -26,17 +26,14 @@
 				<div class="navbar-nav">
 					<a class="nav-item nav-link active"><i class="fas fa-dungeon"></i> Dungeon<span class="sr-only">(current)</span></a>
 					<a class="nav-item nav-link" href="index_en.html"><i class="fas fa-home"></i> Main page</a>
-					<div class="div-social">
-						<a href="https://github.com/djonczak" class="fab fa-github-square social" target="_blank"></a>
-						<a href="https://pl.linkedin.com/in/dawid-jonczak-725553157" class="fab fa-linkedin social" target="_blank"></a>
-					</div>
 				</div>
 			</div>
 			<a href="dungeon_pl.html" style="float:right;"><img width="35" height="35" src="img/pl.png"></a>
 		</nav>
 
         <!-- Page Content  -->
-        <div id="content">	
+        <div id="content">
+			<div id="content-main">
 			<h1>Dungeon</h1>
 			<div style="text-align: center;">
 					<b>Project Status </b> <p>    Continued</p>
@@ -52,7 +49,7 @@
 					<ul style="float:left; width:50%;">
 						<li>
 							<p>character controlls using new Unity Input System</p>
-						</li>					
+						</li>
 						<li>
 							<p>programming Ai and creating their state machine in Animator Controller</p>
 						</li>
@@ -67,12 +64,12 @@
 						<li>
 							<p>Quest System using ScriptableObject</p>
 						</li>
-						<li> 
+						<li>
 							<p>Gameplay, Level and Enemy design </p></li>
 						<li>
 							<p>UI Implementation</p>
 						</li>
-					    					
+
 					</ul></div>
 				<h2>Gallery</h2>
 				<div class="w3-content w3-display-container">
@@ -90,8 +87,8 @@
 						Abandoned castle
 					  </div>
 					</div>
-					
-										
+
+
 					<div class="w3-display-container mySlides">
 					  <img src="img/Dungeon/tavernMap.png" style="width:100%">
 					   <div class="w3-display-top w3-large w3-container w3-padding-16 w3-black">
@@ -105,41 +102,32 @@
 						Combat
 					  </div>
 					</div>
-					
+
 					<div class="w3-display-container mySlides">
 					  <img src="img/Dungeon/someEnemies.png" style="width:100%">
 					   <div class="w3-display-top w3-large w3-container w3-padding-16 w3-black">
 						Some enemies
 					  </div>
 					</div>
-					
+
 					<div class="w3-display-container mySlides">
 					  <img src="img/Dungeon/golemBoss.png" style="width:100%">
 					   <div class="w3-display-top w3-large w3-container w3-padding-16 w3-black">
 						Boss
 					  </div>
 					</div>
-					
+
 					<button class="w3-button w3-display-left w3-black" style="color:white;" onclick="plusDivs(-1)">&#10094;</button>
 					<button class="w3-button w3-display-right w3-black" onclick="plusDivs(1)">&#10095;</button>
 				</div>
-				
-				
+
+
 				<div class ="info-button">
 					<p><button type="button" class="btn btn-secondary btn-block" style="  margin-right:auto;" onclick="window.open('https://drive.google.com/open?id=1ukbmKxluC9frIVzUJM5RN735NnIW2LV5')">New combat</button></p>
 					<p><button type="button" class="btn btn-secondary btn-block" style="  margin-right:auto;" onclick="window.open('https://github.com/Expedis/DungeonVR/tree/Dawid')">Repository</button></p>
-				</div>					
-	
-			
-		
-			<article id="lightings">
-				<section id="one">
-					<section id="two">
-						
-					</section>
-				</section>
-			</article>
-        </div>		
+				</div>
+				</div>
+        </div>
 	<script>
 		var slideIndex = 1;
 		showDivs(slideIndex);
@@ -154,11 +142,11 @@
 			if (n > x.length) {slideIndex = 1}
 			if (n < 1) {slideIndex = x.length}
 			for (i = 0; i < x.length; i++) {
-				x[i].style.display = "none";  
+				x[i].style.display = "none";
 			}
-			x[slideIndex-1].style.display = "block";  
+			x[slideIndex-1].style.display = "block";
 		}
-		
+
 	</script>
 </body>
 

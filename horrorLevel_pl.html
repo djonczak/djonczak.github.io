@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>Dawid Jonczak - Poziom</title>
+    <title>Game Level</title>
 	<link rel="shortcut icon" href="logo.ico">
     <!-- Bootstrap CSS CDN -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
     <!-- Our Custom CSS -->
     <link rel="stylesheet" href="style.css">
 	<!-- Social Icon -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"crossorigin="anonymous">  
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"crossorigin="anonymous">
 </head>
 
 <body>
@@ -23,12 +23,8 @@
 			</button>
 			<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
 				<div class="navbar-nav">
-					<a class="nav-item nav-link active"><i class="fas fa-map-signs"></i> Poziom <span class="sr-only">(current)</span></a>
+					<a class="nav-item nav-link active"><i class="fas fa-map-signs"></i> Game Level <span class="sr-only">(current)</span></a>
 					<a class="nav-item nav-link" href="index_pl.html"><i class="fas fa-home"></i> Strona główna</a>
-				<div class="div-social">
-					<a href="https://github.com/djonczak" class="fab fa-github-square social" target="_blank"></a>
-					<a href="https://pl.linkedin.com/in/dawid-jonczak-725553157" class="fab fa-linkedin social" target="_blank"></a>
-					</div>
 				</div>
 			</div>
 			<a href="horrorLevel_en.html" style="float:right;"><img width="35" height="35" src="img/en.png"></a>
@@ -37,8 +33,8 @@
         <!-- Page Content  -->
 
         <div id="content">
-		
-			<div id="parallax" style="background-image: url('img/GameLevel/horrorLevel1.png');"></div>
+
+			<div class="parallax" style="background-image: url('img/GameLevel/horrorLevel1.png');"></div>
 			<div class="parallax" style="background-image: url('img/GameLevel/horrorLevel2.png');"></div>
 			<div class="parallax" style="background-image: url('img/GameLevel/horrorLevel3.png');"></div>
 			<div class="parallax" style="background-image: url('img/GameLevel/horrorLevel4.png');"></div>
@@ -48,26 +44,21 @@
 			<div class="parallax" style="background-image: url('img/GameLevel/horrorLevel8.png');"></div>
 			<div class="parallax" style="background-image: url('img/GameLevel/horrorLevel9.png');"></div>
 			
-			<h1>Poziom</h1>
+		<div id="content-main">
+			<h1>Game Level</h1>
 			<div style="text-align: center;">
 					<b>Status projektu </b> <p>    Zakończone</p>
 					<b>Typ projektu </b> <p>	Studia / indywidualny   </p>
 					<b>Czas trwania </b> <p>  ~tydzień </p>
 					<b>Użyte oprogramowanie </b> <p>  Unity Engine</p>
 			</div>
-				<h2>O poziomie</h2>
+				<h2>O stworzonym poziomie</h2>
 				<p>Stworzyłem poziom wykorzystując do tego znane mi metody prowadzenia gracza. Gracz porusza się po zamknientym cmentarzu nocą i jego zadaniem jest odnalezienie przedmiotów i odnalezie drogi do mety. Wykorzystujac teren oraz chataktystycze punkty prowadzę gracza do celu. Dodatkowo można zapisać stan gry oraz zmienić język z polskiego na angielski lub niemiecki.</p>
-				<button type="button" class="btn btn-secondary btn-block" style=" margin-left:auto; margin-right:auto; display: block;"onclick="window.open('https://drive.google.com/open?id=1Ir996nkWQpxJz1-f8677aeG01RwGMpRB')">Build</button>	
-				<button type="button" class="btn btn-secondary btn-block" style=" margin-left:auto; margin-right:auto; display: block;"onclick="window.open('https://drive.google.com/open?id=1dp-Mb47BSfg9x0UyCmG9A2x0J0uUlyTw')">Skrypty</button>				
+				<button type="button" class="btn btn-secondary btn-block" style=" margin-left:auto; margin-right:auto; display: block;"onclick="window.open('https://drive.google.com/open?id=1Ir996nkWQpxJz1-f8677aeG01RwGMpRB')">Build</button>
+				<button type="button" class="btn btn-secondary btn-block" style=" margin-left:auto; margin-right:auto; display: block;"onclick="window.open('https://drive.google.com/open?id=1dp-Mb47BSfg9x0UyCmG9A2x0J0uUlyTw')">Skrypty</button>
 		</div>
-			<article id="lightings">
-				<section id="one">
-					<section id="two">
-						
-					</section>
-				</section>
-			</article>
-     	<script>
+		</div>
+		<script>
 			var myIndex = 0;
 			carousel();
 
@@ -75,13 +66,15 @@
 			  var i;
 			  var x = document.getElementsByClassName("parallax");
 			  for (i = 0; i < x.length; i++) {
-				x[i].style.display = "none";  
+				x[i].style.display = "none";
 			  }
 			  myIndex++;
-			  if (myIndex > x.length) {myIndex = 1}    
-			  x[myIndex-1].style.display = "block";  
+			  if (myIndex > x.length) {myIndex = 1}
+			  x[myIndex-1].style.display = "block";
 			  setTimeout(carousel, 3000); // Change image every 2 seconds
 			}
+			
+			
 		</script>
 
 </body>

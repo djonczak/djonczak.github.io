@@ -14,7 +14,7 @@
 	<!-- Gallery -->
 	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 	<!-- Social Icon -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"crossorigin="anonymous">  
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"crossorigin="anonymous">
     <title>Day Of The Dead </title>
 	<link rel="stylesheet" href="TemplateData/style.css">
     <script src="TemplateData/UnityProgress.js"></script>
@@ -34,17 +34,14 @@
 				<div class="navbar-nav">
 					<a class="nav-item nav-link active"><img src="img/Muerto/luchador.png" style="width:22px;"> Day Of The Dead<span class="sr-only">(current)</span></a>
 					<a class="nav-item nav-link" href="index_pl.html"><i class="fas fa-home"></i> Strona główna</a>
-					<div class="div-social">
-						<a href="https://github.com/djonczak" class="fab fa-github-square social" target="_blank"></a>
-						<a href="https://pl.linkedin.com/in/dawid-jonczak-725553157" class="fab fa-linkedin social" target="_blank"></a>
-					</div>
 				</div>
 			</div>
 			<a href="muerto_en.html" style="float:right;"><img width="35" height="35" src="img/en.png"></a>
 		</nav>
 
         <!-- Page Content  -->
-        <div id="content">	
+        <div id="content">
+		<div id="content-main">
 			<h1>Day Of The Dead</h1>
 			<div style="text-align: center;">
 					<b>Status projektu </b> <p> Zakończony</p>
@@ -54,7 +51,7 @@
 			</div>
 				<h2>O grze</h2>
 				<p>Projekt początkowo był tworzony na zajęcia z Grafiki 2D, cele było ukazanie meksykańskie święto Día de Muertos(Dzień Zmarłych), które zostało przedstawiony w trybie Story. Dodatkowow zrobiłem tryb Areny, który był wzorownay na grze <a target="_blank" href="https://pietro-ferrantelli.itch.io/mobs-inc" style="color:#9784BA; font-weight: bold;"> Mobs Inc</a>, gdzie musisz przetrwać 14 fal przeciwników, walcząć z 4 typami przeciwników, by na końcu zmierzyć się z bossem. Po pokonaniu bossa zostaje odblokowany dodatkowego skin. </p>
-				
+
 				<button class="accordion"> Niektóre rzeczy, które zrobiłem</button>
 						<div class="field">
 								<h3>Przywołanie bossa</h3>
@@ -89,11 +86,12 @@
 						<div class="containerUnity">
 							<div id="unityContainer"></div>
 						</div>
-								
+
 				<div class="info-button">
 					<p><button type="button" class="btn btn-secondary btn-block" style=" margin-left:auto; margin-right:auto; display: block;" onclick="window.open('https://github.com/djonczak/Muerto')">Repository</button></p>
-				</div>	
-								
+				</div>
+			</div>
+			</div>
 			<script>
 				var acc = document.getElementsByClassName("accordion");
 					var i;
@@ -106,10 +104,10 @@
 								panel.style.maxHeight = null;
 							} else {
 								panel.style.maxHeight = panel.scrollHeight + "px";
-							} 
+							}
 						});
 					}
-			</script>	
+			</script>
 		</div>
 	</div>
   </body>

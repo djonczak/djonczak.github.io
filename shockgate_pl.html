@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="style.css">
 	 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 	<!-- Social Icon -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"crossorigin="anonymous">  
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"crossorigin="anonymous">
 </head>
 
 <body>
@@ -26,18 +26,16 @@
 				<div class="navbar-nav">
 					<a class="nav-item nav-link active"><i class="fas fa-memory"></i> Shock;Gate <span class="sr-only">(current)</span></a>
 					 <a class="nav-item nav-link" href="index_pl.html"><i class="fas fa-home"></i> Strona główna</a>
-					<div class="div-social">
-						<a href="https://github.com/djonczak" class="fab fa-github-square social" target="_blank"></a>
-						<a href="https://pl.linkedin.com/in/dawid-jonczak-725553157" class="fab fa-linkedin social" target="_blank"></a>
-					</div>
 				</div>
 			</div>
 			<a href="shockgate_en.html" style="float:right;"><img width="35" height="35" src="img/en.png"></a>
 		</nav>
 
-        <!-- Page Content  -->		
-        <div id="content">		
+        <!-- Page Content  -->
+        <div id="content">
 		<div class="parallax" style="background-image: url('img/ShockGate/SGscreen3.png');"></div>
+		
+		<div id="content-main">
 			<h1>Shock;Gate</h1>
 			<div style="text-align: center;">
 
@@ -45,12 +43,12 @@
 				<b>Typ projektu </b> <p>    Studia / zespołowy (3 osoby)</p>
 				<b>Czas trwania </b> <p>  ~6 miesięcy </p></li>
 				<b>Użyte oprogramowanie </b> <p>  Unity Engine, Audacity</p>
-				<b>Główne role </b> <p>  Lead programmer / Level designe / Game design</p>			
+				<b>Główne role </b> <p>  Lead programmer / Level designe / Game design</p>
 			</div>
 			<h2>O Shock;Gate</h2>
 				<p>Shock;Gate jest projektem inżynierskim rozpoczętym pod koniec trzeciego roku w Collegium Da Vinci. Zespół składał się z dwóch programistów oraz jednego grafika 3D. Byłem odpowiedzialny za implementacje wszystkich funkcjonalności gry oraz za tworzenie poziomów w Unity Engine.
 				Jest to mój pierwszy "profesjonalny" projekt w 3D, które pomógł mi rozwinąć moje umiejętności w Unity oraz C#.</p>
-				<p>W grę można zagrać samodzielnie lub z drugim gracza, można rozegrać 3 różne misje, a ukończenie ostatniej odblokowuje dwie nowe bronie. Dodatkowo jest strzelnia, gdzie można przetestować wszystkie dostępne w grze bronie. W grze można napotkać 6 rodzajów przeciwników.</p>	
+				<p>W grę można zagrać samodzielnie lub z drugim gracza, można rozegrać 3 różne misje, a ukończenie ostatniej odblokowuje dwie nowe bronie. Dodatkowo jest strzelnia, gdzie można przetestować wszystkie dostępne w grze bronie. W grze można napotkać 6 rodzajów przeciwników.</p>
 				<h2>Rzeczy, które zrobiłem:</h2>
 				<ul style="float:left; width:50%;">
 					<li>
@@ -75,7 +73,7 @@
 						<p>wybór broni w HUB-ie</p>
 					</li>
 				</ul>
-				
+
 				<ul style="float:right; width:50%;">
 					<li>
 						<p>tworzenie poziomów w Unity</p>
@@ -96,12 +94,12 @@
 						<p>prowadzenie testów gry</p>
 					</li>
 				</ul>
-				
+
 				<button class="accordion"> Przeciwnicy</button>
 						<div class="field">
 							<h3>AI przeciwnika</h3>
 							<img src="img/ShockGate/SG1.png" style="width: 70%;">
-							<p>Jak widać na załączonym obrazku przeciwnicy posiadąją dwie sfery, pierwsza <a style="color: #006600;"> zielona </a> pokazuje zasięg widzenia przeciwnika, a druga <a style="color: #e6b800;"> żółta </a> przedstawia zasięg broni przeciwnika. 
+							<p>Jak widać na załączonym obrazku przeciwnicy posiadąją dwie sfery, pierwsza <a style="color: #006600;"> zielona </a> pokazuje zasięg widzenia przeciwnika, a druga <a style="color: #e6b800;"> żółta </a> przedstawia zasięg broni przeciwnika.
 							Dodatkowo przeciwnik ma kąt widzenia, pokazany przez dwie <a style="color: red;"> czerwone </a> linie. Gdy gracz wejdzie w zasięg widzenia ten sprawdza najpierw czy jest on w kącie widzenia przeciwnika, a następnie używa raycasta, by sprawdzić czy pomiędzy nim, a graczem nie znajduje się
 							żaden element otoczenia. Następnie jeśli nic nie zasłania gracza przechodzi on w stan "Follow". Przeciwnicy mają cztery stany:</p>
 							<ul>
@@ -120,20 +118,20 @@
 							</ul>
 							<h3>Alarm</h3>
 							<img src="img/ShockGate/enemyAlert.gif" style="width: 70%;">
-							<p> Na gifie widać jak przeciwnik w momencie dostania obrażeń od gracza, pobiera z pocisku informacje od kogo dostał i bierze go sobie za cel daje, a następnie wchodzi w stan "Follow", a następnie przekazuje jego pozycję reszcie z grupy, dodatkowo wyda on dzwięk, który da graczowi znać, że go zauważyli. Przeciwnicy także nie mogą strzelić do gracza, gdy nie jest w odpowiednim koncie do nich.</p>  
+							<p> Na gifie widać jak przeciwnik w momencie dostania obrażeń od gracza, pobiera z pocisku informacje od kogo dostał i bierze go sobie za cel daje, a następnie wchodzi w stan "Follow", a następnie przekazuje jego pozycję reszcie z grupy, dodatkowo wyda on dzwięk, który da graczowi znać, że go zauważyli. Przeciwnicy także nie mogą strzelić do gracza, gdy nie jest w odpowiednim koncie do nich.</p>
 						</div>
-						
+
 						<button class="accordion"> Blendowanie animacji gracza oraz kontroler animacji </button>
 						<div class="field">
 						<h3>Kontroler animacjii dla pistoletu</h3>
 							<img src="img/ShockGate/SG3.PNG" style="width: 70%;">
-							<p>Na obrazku widać połaczenia między animacjami dla pistoletu. Kontroler gracza posiada dwa Animation Controllery jeden dla pistoletów (broni bocznej), a drugi dla karabinów i reszty (broń główna). Przy zmianie broni przełącza się między tymi dwoma drzewkami. Po lewej widać wszystkie parametry od których uzależnione są przejścia pomiędzy animacjami, takie jak np. 
+							<p>Na obrazku widać połaczenia między animacjami dla pistoletu. Kontroler gracza posiada dwa Animation Controllery jeden dla pistoletów (broni bocznej), a drugi dla karabinów i reszty (broń główna). Przy zmianie broni przełącza się między tymi dwoma drzewkami. Po lewej widać wszystkie parametry od których uzależnione są przejścia pomiędzy animacjami, takie jak np.
 							jak bardzo mają być połączone ze sobą animacje przeładowania i rzucania granatów w Blend Tree.</p>
 						<h3>Blend Tree dla biegu</h3>
 							<img src="img/ShockGate/SG4.png" style="width: 70%;">
-							<p> Łączę ze sobą pięć animacji dla biegu postaci z pistoletem w Blend Tree. Używam parametru VelX, który odpowiada za oś X na analogu kotrolera lub A/D na klawiaturze, a VelY dla osi Y. Po prawej w motion widać wartości, które podałem by została włączona odpowiednia animacja. 
+							<p> Łączę ze sobą pięć animacji dla biegu postaci z pistoletem w Blend Tree. Używam parametru VelX, który odpowiada za oś X na analogu kotrolera lub A/D na klawiaturze, a VelY dla osi Y. Po prawej w motion widać wartości, które podałem by została włączona odpowiednia animacja.
 						</div>
-						
+
 						<button class="accordion">Gameplay mechanics</button>
 						<div class="field">
 							<h3>Dash</h3>
@@ -158,7 +156,7 @@
 							<p>W drugiej misji znajdują się dwa motory dla graczy. Motor posiada dwa tryby, pierwszy pozwala motorowi celować i strzelać, ale kosztem prędkości. Drugi tryb zwiększa prędkość, ale jest mniej zwrotny i nie można celować.</p>
 							<img src="img/ShockGate/bikeControll.gif" style="width: 70%;">
 						</div>
-				
+
 				<h2>Galeria</h2>
 				<div class="w3-content w3-display-container">
 
@@ -182,61 +180,52 @@
 						Strzelnica
 					  </div>
 					</div>
-			
-				
+
+
 					<button class="w3-button w3-display-left w3-black" style="color:white;" onclick="plusDivs(-1)">&#10094;</button>
 					<button class="w3-button w3-display-right w3-black" onclick="plusDivs(1)">&#10095;</button>
 					</div>
-					<script>
-					var slideIndex = 1;
-					showDivs(slideIndex);
+				
 
-					function plusDivs(n) {
-					  showDivs(slideIndex += n);
-					}
-
-					function showDivs(n) {
-					  var i;
-					  var x = document.getElementsByClassName("mySlides");
-					  if (n > x.length) {slideIndex = 1}
-					  if (n < 1) {slideIndex = x.length}
-					  for (i = 0; i < x.length; i++) {
-						 x[i].style.display = "none";  
-					  }
-					  x[slideIndex-1].style.display = "block";  
-					}
-					
-					var acc = document.getElementsByClassName("accordion");
-					var i;
-
-					for (i = 0; i < acc.length; i++) {
-						acc[i].addEventListener("click", function() {
-							this.classList.toggle("active");
-							var panel = this.nextElementSibling;
-							if (panel.style.maxHeight){
-								panel.style.maxHeight = null;
-							} else {
-								panel.style.maxHeight = panel.scrollHeight + "px";
-							} 
-						});
-					}
-					</script>	
-	
 				<div class="info-button">
 					<p><button type="button" class="btn btn-secondary btn-block" style=" margin-left:auto; margin-right:auto; display: block;" onclick="window.open('https://drive.google.com/open?id=1WZ-mIViIvtfDUPobmwIF6bekUAtXJhIw')">Build</button></p>
-				<!--	<p><button type="button" class="btn btn-secondary btn-block" style=" margin-left:auto; margin-right:auto; display: block;" onclick="window.open('https://drive.google.com/drive/folders/1dT6TfZC1jOoNR49cJcN5BU0jfNOhGNAa')">Niektóre skrypty (resztę wrzucę póżniej)</button></p> -->
-				</div>				
-		
-			<article id="lightings">
-				<section id="one">
-					<section id="two">
-						
-					</section>
-				</section>
-			</article>
-			
-        </div>	
+				</div>
+        </div>
+		</div>
+<script>
+		var slideIndex = 1;
+		showDivs(slideIndex);
 
+		function plusDivs(n) {
+			showDivs(slideIndex += n);
+		}
+
+		function showDivs(n) {
+			var i;
+			var x = document.getElementsByClassName("mySlides");
+			if (n > x.length) {slideIndex = 1}
+				if (n < 1) {slideIndex = x.length}
+					for (i = 0; i < x.length; i++) {
+						x[i].style.display = "none";
+					}
+					x[slideIndex-1].style.display = "block";
+				}
+
+		var acc = document.getElementsByClassName("accordion");
+		var i;
+
+		for (i = 0; i < acc.length; i++) {
+			acc[i].addEventListener("click", function() {
+				this.classList.toggle("active");
+				var panel = this.nextElementSibling;
+				if (panel.style.maxHeight){
+					panel.style.maxHeight = null;
+				} else {
+					panel.style.maxHeight = panel.scrollHeight + "px";
+				}
+			});
+		}
+</script>
 
 </body>
 

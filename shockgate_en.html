@@ -14,7 +14,7 @@
 	<!-- Gallery -->
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 	<!-- Social Icon -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"crossorigin="anonymous">  
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"crossorigin="anonymous">
 </head>
 
 <body>
@@ -27,18 +27,15 @@
 				<div class="navbar-nav">
 					<a class="nav-item nav-link active"><i class="fas fa-memory"></i> Shock;Gate <span class="sr-only">(current)</span></a>
 					 <a class="nav-item nav-link" href="index_en.html"><i class="fas fa-home"></i> Main page</a>
-					<div class="div-social">
-						<a href="https://github.com/djonczak" class="fab fa-github-square social" target="_blank"></a>
-						<a href="https://pl.linkedin.com/in/dawid-jonczak-725553157" class="fab fa-linkedin social" target="_blank"></a>
-					</div>
 				</div>
 			</div>
 			<a href="shockgate_pl.html" style="float:right;"><img width="35" height="35" src="img/pl.png"></a>
 		</nav>
 
-        <!-- Page Content  -->		
-        <div id="content">		
+        <!-- Page Content  -->
+        <div id="content">
 		<div class="parallax" style="background-image: url('img/ShockGate/SGscreen3.png');"></div>
+		<div id="content-main">
 			<h1>Shock;Gate</h1>
 			<div style="text-align: center;">
 
@@ -46,11 +43,11 @@
 				<b>Project Type </b> <p>    University / group project (3 person)</p>
 				<b>Project Duration </b> <p>  ~6 moths </p></li>
 				<b>Software Used </b> <p>  Unity Engine, Audacity</p>
-				<b>Primary Role(s) </b> <p>  Lead programmer / Level designer / Game designer</p>			
+				<b>Primary Role(s) </b> <p>  Lead programmer / Level designer / Game designer</p>
 			</div>
 			<h2>About Shock;Gate</h2>
-				<p>Shock;Gate is project that started at the end of 3rd year at Collegium Da Vinci. The team is consistend of two programmers and one 3D graphic designer. My roles in team were a lead programmer, level designer and game designer. I have implemented most of the game's funcionality and for creating levels in Unity. This project is my first "profesiona" take on 3D project in Unity, working on it helped me to develop better skills in Unity and C#.</p>	
-				
+				<p>Shock;Gate is project that started at the end of 3rd year at Collegium Da Vinci. The team is consistend of two programmers and one 3D graphic designer. My roles in team were a lead programmer, level designer and game designer. I have implemented most of the game's funcionality and for creating levels in Unity. This project is my first "profesiona" take on 3D project in Unity, working on it helped me to develop better skills in Unity and C#.</p>
+
 				<p>The game can be player alone or with second player, there are 3 diffrent missions in game and completing the last one will unlock two new weapons. In addition there is a shooting range where you can test all weapons that are in game. During playthrough you can meet 6 types of enemies.</p>
 				<h2>My contribution:</h2>
 				<ul style="float:left; width:50%;">
@@ -72,12 +69,12 @@
 					<li>
 						<p>implementing mixamo animations and Blend Tree for player character</p>
 					</li>
-										
+
 					<li>
 						<p>eapon selection in HUB</p>
 					</li>
 				</ul>
-				
+
 				<ul style="float:right; width:50%;">
 					<li>
 						<p>creating levels in Unity</p>
@@ -98,12 +95,12 @@
 						<p>running game tests</p>
 					</li>
 				</ul>
-				
+
 				<button class="accordion"> Enemies</button>
 						<div class="field">
 							<h3>Enemy AI</h3>
 							<img src="img/ShockGate/SG1.png" style="width: 70%;">
-							<p>As seen in the attached picture, enemy have two spheres, first one which is<a style="color: #006600;"> green </a>, shows his eyes range and second <a style="color: #e6b800;"> yellow </a> shows his weapon range. 
+							<p>As seen in the attached picture, enemy have two spheres, first one which is<a style="color: #006600;"> green </a>, shows his eyes range and second <a style="color: #e6b800;"> yellow </a> shows his weapon range.
 							In addition opponent has an view angle shown by two <a style="color: red;"> red </a> lines. When player enters his first sphere, enemy check if player is in his view angle, then use raycast to determine, if there is object between him and the player. If nothing is between, he switch his state to "Follow" and go towards player. Enemies have four states:</p>
 							<ul>
 								<li>
@@ -121,9 +118,9 @@
 							</ul>
 							<h3>Alarm</h3>
 							<img src="img/ShockGate/enemyAlert.gif" style="width: 70%;">
-							<p> On the gif, you can see how opponent takes damage from the player, he takes from information bullet who shoot him and makes him a target, then switch his state to "Follow". Additionaly he will alarmy his group members an play sound to let the player he was noticed. Enemies cannot shot at player, if he is not in enought angle for them to shoot.</p>  
+							<p> On the gif, you can see how opponent takes damage from the player, he takes from information bullet who shoot him and makes him a target, then switch his state to "Follow". Additionaly he will alarmy his group members an play sound to let the player he was noticed. Enemies cannot shot at player, if he is not in enought angle for them to shoot.</p>
 						</div>
-						
+
 						<button class="accordion"> Animation Blend and animation controller </button>
 						<div class="field">
 						<h3>Animation controller for sidearm</h3>
@@ -133,7 +130,7 @@
 							<img src="img/ShockGate/SG4.png" style="width: 70%;">
 							<p>Here i combine five animations for character run with a pistol in Blend Tree. I use the VelX paramteter, which is responsible for the X axis on controller analog or A/D, if player use keyboard and mouse. VelY is used for Y axis. On the right side in Motion window, you can see values which triggers the appopriate animation. </p>
 						</div>
-						
+
 						<button class="accordion">Gameplay mechanics</button>
 						<div class="field">
 							<h3>Dash</h3>
@@ -158,9 +155,9 @@
 							<p>In the second mission there are bikes waiting for players. Bikes have two modes, first one allow bike to aim and shoot to enemies, but at the expense of speed. Second mode increase bike speed, but is less manoeuvrable and is harder to aim.</p>
 							<img src="img/ShockGate/bikeControll.gif" style="width: 70%;">
 						</div>
-				
+
 				<h2>Gallery</h2>
-						
+
 					<div class="w3-content w3-display-container">
 
 					<div class="w3-display-container mySlides">
@@ -189,7 +186,14 @@
 
 					</div>
 
-					<script>
+				<div class="info-button">
+					<p><button type="button" class="btn btn-secondary btn-block" style=" margin-left:auto; margin-right:auto; display: block;" onclick="window.open('https://drive.google.com/open?id=1p12DL7fJNf3ehrGkqhuJyydX8Mio0Apd')">Build</button></p>
+				</div>
+
+		</div>
+        </div>
+		
+			<script>
 					var slideIndex = 1;
 					showDivs(slideIndex);
 
@@ -203,11 +207,11 @@
 					  if (n > x.length) {slideIndex = 1}
 					  if (n < 1) {slideIndex = x.length}
 					  for (i = 0; i < x.length; i++) {
-						 x[i].style.display = "none";  
+						 x[i].style.display = "none";
 					  }
-					  x[slideIndex-1].style.display = "block";  
+					  x[slideIndex-1].style.display = "block";
 					}
-					
+
 					var acc = document.getElementsByClassName("accordion");
 					var i;
 
@@ -219,27 +223,10 @@
 								panel.style.maxHeight = null;
 							} else {
 								panel.style.maxHeight = panel.scrollHeight + "px";
-							} 
+							}
 						});
 					}
-					</script>	
-						
-						
-				<div class="info-button">
-					<p><button type="button" class="btn btn-secondary btn-block" style=" margin-left:auto; margin-right:auto; display: block;" onclick="window.open('https://drive.google.com/open?id=1p12DL7fJNf3ehrGkqhuJyydX8Mio0Apd')">Build</button></p>
-				<!--	<p><button type="button" class="btn btn-secondary btn-block" style=" margin-left:auto; margin-right:auto; display: block;" onclick="window.open('https://drive.google.com/drive/folders/1dT6TfZC1jOoNR49cJcN5BU0jfNOhGNAa')">Some scripts (I will upload later)</button></p>	-->
-				</div>	
-				
-		
-			<article id="lightings">
-				<section id="one">
-					<section id="two">
-						
-					</section>
-				</section>
-			</article>
-			 
-        </div>	
+					</script>
 
 </body>
 

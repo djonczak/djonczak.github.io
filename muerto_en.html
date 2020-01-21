@@ -32,28 +32,25 @@
 				<div class="navbar-nav">
 					<a class="nav-item nav-link active"><img src="img/Muerto/luchador.png" style="width:22px;"> Muerto<span class="sr-only">(current)</span></a>
 					<a class="nav-item nav-link" href="index_en.html"><i class="fas fa-home"></i> Main page</a>
-					<div class="div-social">
-						<a href="https://github.com/djonczak" class="fab fa-github-square social" target="_blank"></a>
-						<a href="https://pl.linkedin.com/in/dawid-jonczak-725553157" class="fab fa-linkedin social" target="_blank"></a>
-					</div>
 				</div>
 			</div>
 			<a href="muerto_pl.html" style="float:right;"><img width="35" height="35" src="img/pl.png"></a>
 		</nav>
 
         <!-- Page Content  -->
-        <div id="content">	
+        <div id="content">
+		<div id="content-main">
 			<h1>Day Of The Dead</h1>
 			<div style="text-align: center;">
 				<b>Project Status </b> <p>    Finished</p>
 				<b>Project Type </b> <p>   Solo</p>
 				<b>Project Duration </b> <p>  ~ month </p></li>
-				<b>Software Used </b> <p>  Unity Engine, GIMP, Photoshop</p>		
+				<b>Software Used </b> <p>  Unity Engine, GIMP, Photoshop</p>
 			</div>
-			
+
 			<h2>About game</h2>
 			<p>The project was initially created for classes in 2D Graphics, the goals were to show the Mexican holiday of Día de Muertos (Day of the Dead), which was presented in Story mode. In addition, I did the Arena mode, which was based on<a target="_blank" href="https://pietro-ferrantelli.itch.io/mobs-inc" style="color:#9784BA; font-weight: bold;"> Mobs Inc</a>, where you have to survive 14 waves of enemies, fight 4 types of enemies and finally face the boss. After defeating the boss, an additional skin is unlocked.</p>
-			
+
 			<button class="accordion"> Some stuff I made</button>
 							<div class="field">
 								<h3>Boss arriving</h3>
@@ -85,15 +82,16 @@
 										<source src="img/Muerto/Mariachi.mp4" type="video/mp4">
 									</video>
 				</div>
-				
+
 						<div class="containerUnity">
 							<div id="unityContainer"></div>
 						</div>
-						
+
 				<div class="info-button">
 					<p><button type="button" class="btn btn-secondary btn-block" style=" margin-left:auto; margin-right:auto; display: block;" onclick="window.open('https://github.com/djonczak/Muerto')">Repository</button></p>
 				</div>
-						
+	</div>
+	</div>
 				<script>
 				var acc = document.getElementsByClassName("accordion");
 					var i;
@@ -106,10 +104,10 @@
 								panel.style.maxHeight = null;
 							} else {
 								panel.style.maxHeight = panel.scrollHeight + "px";
-							} 
+							}
 						});
 					}
-				</script>	
+				</script>
 		</div>
   </body>
 </html>
