@@ -263,13 +263,11 @@ a:focus {
 ----------------------------------------------------- */
 
 .accordion {
-  background-color: rgb(120, 120, 120);
+  background-color: #6bae76;
   color: white;
   cursor: pointer;
   padding: 18px;
   width: 100%;
-  border: 2px solid;
-  border-radius: 5px;
   text-align: left;
   outline: none;
   font-size: 15px;
@@ -277,12 +275,12 @@ a:focus {
 }
 
 .accordion:hover {
-  background-color: #ccc;
+  background-color: rgba(59, 52, 73);
 }
 
 .accordion:after {
   content: '\002B';
-  color: white;
+  color: rgba(59, 52, 73);
   font-weight: bold;
   float: right;
   margin-left: 5px;
@@ -294,7 +292,7 @@ a:focus {
 
 .field {
   padding: 0 18px;
-  background-color: white;
+  background: rgba(0, 0, 0, 1);
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-out;

@@ -11,9 +11,35 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
     <!-- Our Custom CSS -->
     <link rel="stylesheet" href="style.css">
-	 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link href='http://fonts.googleapis.com/css?family=Changa&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 	<!-- Social Icon -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"crossorigin="anonymous">
+	
+	<style>
+
+	b{
+	color:white;
+	}
+
+	li{
+	color:white;
+	}
+		
+	body{
+	background-image: url(img/ShockGate/backGround.PNG);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	font-family: 'Changa', sans-serif;
+	}
+	
+	#content-narrowBig{
+	
+	background: rgba(0, 0, 0, 0.9);
+	}
+	</style>
 </head>
 
 <body>
@@ -25,18 +51,16 @@
 			<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
 				<div class="navbar-nav">
 					<a class="nav-item nav-link active"><i class="fas fa-memory"></i> Shock;Gate <span class="sr-only">(current)</span></a>
-					 <a class="nav-item nav-link" href="index_pl.html"><i class="fas fa-home"></i> Strona główna</a>
-				</div>
+					<a class="nav-item nav-link" href="index_pl.html"><i class="fas fa-home"></i> Strona główna</a>
+			</div>
 			</div>
 			<a href="shockgate_en.html" style="float:right;"><img width="35" height="35" src="img/en.png"></a>
 		</nav>
 
         <!-- Page Content  -->
-        <div id="content">
-		<div class="parallax" style="background-image: url('img/ShockGate/SGscreen3.png');"></div>
-		
+        <div id="content-narrowBig">		
 		<div id="content-main">
-			<h1>Shock;Gate</h1>
+			<div class="bigHeaderFont">Shock;Gate</div>
 			<div style="text-align: center;">
 
 				<b>Status projektu </b> <p>    Wstrzymany</p>
@@ -45,11 +69,11 @@
 				<b>Użyte oprogramowanie </b> <p>  Unity Engine, Audacity</p>
 				<b>Główne role </b> <p>  Lead programmer / Level designe / Game design</p>
 			</div>
-			<h2>O Shock;Gate</h2>
-				<p>Shock;Gate jest projektem inżynierskim rozpoczętym pod koniec trzeciego roku w Collegium Da Vinci. Zespół składał się z dwóch programistów oraz jednego grafika 3D. Byłem odpowiedzialny za implementacje wszystkich funkcjonalności gry oraz za tworzenie poziomów w Unity Engine.
-				Jest to mój pierwszy "profesjonalny" projekt w 3D, które pomógł mi rozwinąć moje umiejętności w Unity oraz C#.</p>
+			<div class="smallHeaderFont">O Shock;Gate</div>
+				<p>Shock;Gate jest projektem inżynierskim rozpoczętym pod koniec trzeciego roku w Collegium Da Vinci. Zespół składał się z dwóch programistów oraz grafika 3D. Byłem odpowiedzialny za implementacje wszystkich funkcjonalności gry oraz za tworzenie poziomów w Unity Engine.
+				Jest to mój pierwszy "profesjonalny" projekt w Unity, który pomógł mi rozwinąć umiejętności w Unity oraz C#.</p>
 				<p>W grę można zagrać samodzielnie lub z drugim gracza, można rozegrać 3 różne misje, a ukończenie ostatniej odblokowuje dwie nowe bronie. Dodatkowo jest strzelnia, gdzie można przetestować wszystkie dostępne w grze bronie. W grze można napotkać 6 rodzajów przeciwników.</p>
-				<h2>Rzeczy, które zrobiłem:</h2>
+				<div class="smallHeaderFont">Rzeczy, które zrobiłem:</div>
 				<ul style="float:left; width:50%;">
 					<li>
 						<p>sterowanie dla dwóch graczy</p>
@@ -97,7 +121,7 @@
 
 				<button class="accordion"> Przeciwnicy</button>
 						<div class="field">
-							<h3>AI przeciwnika</h3>
+							<div class="smallHeaderFont">AI przeciwnika</div>
 							<img src="img/ShockGate/SG1.png" style="width: 70%;">
 							<p>Jak widać na załączonym obrazku przeciwnicy posiadąją dwie sfery, pierwsza <a style="color: #006600;"> zielona </a> pokazuje zasięg widzenia przeciwnika, a druga <a style="color: #e6b800;"> żółta </a> przedstawia zasięg broni przeciwnika.
 							Dodatkowo przeciwnik ma kąt widzenia, pokazany przez dwie <a style="color: red;"> czerwone </a> linie. Gdy gracz wejdzie w zasięg widzenia ten sprawdza najpierw czy jest on w kącie widzenia przeciwnika, a następnie używa raycasta, by sprawdzić czy pomiędzy nim, a graczem nie znajduje się
@@ -116,50 +140,57 @@
 									<p> Alarmed - przeciwnik dostał sygnał od swojego kolegi z drużyna i zmierza w miejsce w którym zauważono gracza. Kolor wskaznika pomarańczowy.</p>
 								</li>
 							</ul>
-							<h3>Alarm</h3>
+							<div class="smallHeaderFont">Alarm</div>
 							<img src="img/ShockGate/enemyAlert.gif" style="width: 70%;">
 							<p> Na gifie widać jak przeciwnik w momencie dostania obrażeń od gracza, pobiera z pocisku informacje od kogo dostał i bierze go sobie za cel daje, a następnie wchodzi w stan "Follow", a następnie przekazuje jego pozycję reszcie z grupy, dodatkowo wyda on dzwięk, który da graczowi znać, że go zauważyli. Przeciwnicy także nie mogą strzelić do gracza, gdy nie jest w odpowiednim koncie do nich.</p>
 						</div>
 
 						<button class="accordion"> Blendowanie animacji gracza oraz kontroler animacji </button>
 						<div class="field">
-						<h3>Kontroler animacjii dla pistoletu</h3>
+						<div class="smallHeaderFont">Kontroler animacji dla pistoletu</div>
 							<img src="img/ShockGate/SG3.PNG" style="width: 70%;">
 							<p>Na obrazku widać połaczenia między animacjami dla pistoletu. Kontroler gracza posiada dwa Animation Controllery jeden dla pistoletów (broni bocznej), a drugi dla karabinów i reszty (broń główna). Przy zmianie broni przełącza się między tymi dwoma drzewkami. Po lewej widać wszystkie parametry od których uzależnione są przejścia pomiędzy animacjami, takie jak np.
 							jak bardzo mają być połączone ze sobą animacje przeładowania i rzucania granatów w Blend Tree.</p>
-						<h3>Blend Tree dla biegu</h3>
+						<div class="smallHeaderFont">Blend Tree dla biegu</div
 							<img src="img/ShockGate/SG4.png" style="width: 70%;">
 							<p> Łączę ze sobą pięć animacji dla biegu postaci z pistoletem w Blend Tree. Używam parametru VelX, który odpowiada za oś X na analogu kotrolera lub A/D na klawiaturze, a VelY dla osi Y. Po prawej w motion widać wartości, które podałem by została włączona odpowiednia animacja.
 						</div>
 
 						<button class="accordion">Gameplay mechanics</button>
 						<div class="field">
-							<h3>Dash</h3>
+							<div class="smallHeaderFont">Dash</div>
 							<p>Jest z jedną z mechanik, która pozwala ci uniknąć pocisków, granatów oraz przeciwników.</p>
 							<img src="img/ShockGate/dash.gif" style="width: 70%;">
-							<h3>Zdalne wysadzenie granatu</h3>
+							<div class="smallHeaderFont">Zdalne wysadzenie granatu</div>
 							<p>Możesz także zdetonować granat szybciej, zamiast czekać aż minie czas do wybuchu.</p>
 							<img src="img/ShockGate/grenadeAuto.gif" style="width: 70%;">
-							<h3>Wskrzeszanie drugiego gracza</h3>
+							<div class="smallHeaderFont">Wskrzeszanie drugiego gracza</div>
 							<p>Gdy gracz polegnie podczas gry, można do niego podejść i wskrzecić go, ale trzeba uważać bo zajmuje to trochę czasu.</p>
 							<img src="img/ShockGate/revive.gif" style="width: 70%;">
-							<h3>Leczenie drugiego gracza</h3>
+							<div class="smallHeaderFont">Leczenie drugiego gracza</div>
 							<p>Możesz także przekazać drugiemu graczowi, część swojego zdrowia, aby go wyleczyć. Nie możesz przekazać swoje zdrowie, gdy masz mniej niż 50% punktów życia.</p>
 							<img src="img/ShockGate/healShell.gif" style="width: 70%;">
-							<h3>Skrzynka z amunicją</h3>
+							<div class="smallHeaderFont">Skrzynka z amunicją</div>
 							<p>Gdy zabraknie ci amunicji możesz podejść do skrzynki, by uzupełnić swoją amunicję.</p>
 							<img src="img/ShockGate/ammorBox.gif" style="width: 70%;">
-							<h3>Dopalacze</h3>
+							<div class="smallHeaderFont">Dopalacze</div>
 							<p>Podczas rozgrywki z przeciwników mogą wybaść dopalacze, które np. zwiększą twoją szybkość poruszania się, obrażenia, odnowią granaty lub tarczę. W przypadku gifa gracz uzyskał zwiększone obrażenia.</p>
 							<img src="img/ShockGate/powerUp.gif" style="width: 70%;">
-							<h3>Poruszanie się motocyklem</h3>
+							<div class="smallHeaderFont">Poruszanie się motocyklem</div>
 							<p>W drugiej misji znajdują się dwa motory dla graczy. Motor posiada dwa tryby, pierwszy pozwala motorowi celować i strzelać, ale kosztem prędkości. Drugi tryb zwiększa prędkość, ale jest mniej zwrotny i nie można celować.</p>
 							<img src="img/ShockGate/bikeControll.gif" style="width: 70%;">
 						</div>
 
-				<h2>Galeria</h2>
+				<div class="smallHeaderFont">Galeria</div>
 				<div class="w3-content w3-display-container">
 
+					<div class="w3-display-container mySlides">
+					  <img src="img/ShockGate/mainMenu.png" style="width:100%">
+					  <div class="w3-display-top w3-large w3-container w3-padding-16 w3-black">
+						Główne menu
+					  </div>
+					</div>
+					
 					<div class="w3-display-container mySlides">
 					  <img src="img/ShockGate/SGscreen1.png" style="width:100%">
 					   <div class="w3-display-top w3-large w3-container w3-padding-16 w3-black">
@@ -173,11 +204,32 @@
 						Wybór broni
 					  </div>
 					</div>
+					
+					<div class="w3-display-container mySlides">
+					  <img src="img/ShockGate/loadingScreen.png" style="width:100%">
+					   <div class="w3-display-top w3-large w3-container w3-padding-16 w3-black">
+						Ładowanie gry
+					  </div>
+					</div>
 
 					<div class="w3-display-container mySlides">
 					  <img src="img/ShockGate/SGscreen3.png" style="width:100%">
-					   <div class="w3-display-top w3-large w3-container w3-padding-16 w3-black">
+					  <div class="w3-display-top w3-large w3-container w3-padding-16 w3-black">
 						Strzelnica
+					  </div>
+					</div>
+					
+					<div class="w3-display-container mySlides">
+					  <img src="img/ShockGate/defenceMission.png" style="width:100%">
+					  <div class="w3-display-top w3-large w3-container w3-padding-16 w3-black">
+						Obronna punktu
+					  </div>
+					</div>
+					
+					<div class="w3-display-container mySlides">
+					  <img src="img/ShockGate/unfinishedMission.png" style="width:100%">
+					  <div class="w3-display-top w3-large w3-container w3-padding-16 w3-black">
+						Niedokończona misja
 					  </div>
 					</div>
 

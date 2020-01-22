@@ -12,9 +12,36 @@
     <!-- Our Custom CSS -->
     <link rel="stylesheet" href="style.css">
 	<!-- Gallery -->
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link href='http://fonts.googleapis.com/css?family=Changa&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 	<!-- Social Icon -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"crossorigin="anonymous">
+	
+	<style>
+	
+	b{
+	color:white;
+	}
+
+	li{
+	color:white;
+	}
+		
+	body{
+	background-image: url(img/ShockGate/backGround.PNG);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	font-family: 'Changa', sans-serif;
+	}
+	
+	#content-narrowBig{
+	
+	background: rgba(0, 0, 0, 0.9);
+	}
+	</style>
+	
 </head>
 
 <body>
@@ -33,10 +60,9 @@
 		</nav>
 
         <!-- Page Content  -->
-        <div id="content">
-		<div class="parallax" style="background-image: url('img/ShockGate/SGscreen3.png');"></div>
+    <div id="content-narrowBig">
 		<div id="content-main">
-			<h1>Shock;Gate</h1>
+			<div class="bigHeaderFont">Shock;Gate</div>
 			<div style="text-align: center;">
 
 				<b>Project Status </b> <p>    On hold</p>
@@ -45,11 +71,11 @@
 				<b>Software Used </b> <p>  Unity Engine, Audacity</p>
 				<b>Primary Role(s) </b> <p>  Lead programmer / Level designer / Game designer</p>
 			</div>
-			<h2>About Shock;Gate</h2>
-				<p>Shock;Gate is project that started at the end of 3rd year at Collegium Da Vinci. The team is consistend of two programmers and one 3D graphic designer. My roles in team were a lead programmer, level designer and game designer. I have implemented most of the game's funcionality and for creating levels in Unity. This project is my first "profesiona" take on 3D project in Unity, working on it helped me to develop better skills in Unity and C#.</p>
+			<div class="smallHeaderFont">About Shock;Gate</div>
+				<p>Shock;Gate is project that started at the end of 3rd year at Collegium Da Vinci. The team is consistend of two programmers and 3D graphic designer. My roles in team were a lead programmer, level designer and game designer. I have implemented most of the game's funcionality and for creating levels in Unity. This project is my first "profesiona" take on Unity, working on it helped me to develop better skills in Unity and C#.</p>
 
 				<p>The game can be player alone or with second player, there are 3 diffrent missions in game and completing the last one will unlock two new weapons. In addition there is a shooting range where you can test all weapons that are in game. During playthrough you can meet 6 types of enemies.</p>
-				<h2>My contribution:</h2>
+				<div class="smallHeaderFont">My contribution:</div>
 				<ul style="float:left; width:50%;">
 					<li>
 						<p>controls for two players</p>
@@ -61,7 +87,7 @@
 						<p>implementation of character abilities, weapons and granades</p>
 					</li>
 					<li>
-						<p>enemy desing and AI programming</p>
+						<p>enemy design and AI programming</p>
 					</li>
 					<li>
 						<p>game design</p>
@@ -71,7 +97,7 @@
 					</li>
 
 					<li>
-						<p>eapon selection in HUB</p>
+						<p>weapon selection in HUB</p>
 					</li>
 				</ul>
 
@@ -98,7 +124,7 @@
 
 				<button class="accordion"> Enemies</button>
 						<div class="field">
-							<h3>Enemy AI</h3>
+							<div class="smallHeaderFont">Enemy AI</div>
 							<img src="img/ShockGate/SG1.png" style="width: 70%;">
 							<p>As seen in the attached picture, enemy have two spheres, first one which is<a style="color: #006600;"> green </a>, shows his eyes range and second <a style="color: #e6b800;"> yellow </a> shows his weapon range.
 							In addition opponent has an view angle shown by two <a style="color: red;"> red </a> lines. When player enters his first sphere, enemy check if player is in his view angle, then use raycast to determine, if there is object between him and the player. If nothing is between, he switch his state to "Follow" and go towards player. Enemies have four states:</p>
@@ -116,50 +142,58 @@
 									<p> Alarmed - enemies got a signal form their group member and will head towards place where player was noticed. Indicator color change to orange.</p>
 								</li>
 							</ul>
-							<h3>Alarm</h3>
+							<div class="smallHeaderFont">Alarm</div>
 							<img src="img/ShockGate/enemyAlert.gif" style="width: 70%;">
 							<p> On the gif, you can see how opponent takes damage from the player, he takes from information bullet who shoot him and makes him a target, then switch his state to "Follow". Additionaly he will alarmy his group members an play sound to let the player he was noticed. Enemies cannot shot at player, if he is not in enought angle for them to shoot.</p>
 						</div>
 
 						<button class="accordion"> Animation Blend and animation controller </button>
 						<div class="field">
-						<h3>Animation controller for sidearm</h3>
+						<div class="smallHeaderFont">Animation controller for sidearm</div>
 							<img src="img/ShockGate/SG3.PNG" style="width: 70%;">
 							<p>The picture shows the connections between the animations for player, if he holds a sidearm. In game player have two Animation Controllers, one for pistols (sidearms) and other for rifles and rest (primary weapons). When player is switching weapons, player controller switch between those controlers. On the left you can see parameters, which triggers transitions between animation. Some parameters control how much animations are blend.</p>
-						<h3>Blend Tree for run</h3>
+						<div class="smallHeaderFont">Blend Tree for run</div>
 							<img src="img/ShockGate/SG4.png" style="width: 70%;">
 							<p>Here i combine five animations for character run with a pistol in Blend Tree. I use the VelX paramteter, which is responsible for the X axis on controller analog or A/D, if player use keyboard and mouse. VelY is used for Y axis. On the right side in Motion window, you can see values which triggers the appopriate animation. </p>
 						</div>
 
 						<button class="accordion">Gameplay mechanics</button>
 						<div class="field">
-							<h3>Dash</h3>
+							<div class="smallHeaderFont">Dash</div>
 							<p>It's one of the core mechanics that allows, player to avoid bullets, grenades and enemies.</p>
 							<img src="img/ShockGate/dash.gif" style="width: 70%;">
-							<h3>Manual grenade explosion</h3>
+							<div class="smallHeaderFont">Manual grenade explosion</div>
 							<p>You can trigger grenade to explode faster, than wait when he will explode.</p>
 							<img src="img/ShockGate/grenadeAuto.gif" style="width: 70%;">
-							<h3>Reviving second player</h3>
+							<div class="smallHeaderFont">Reviving second player</div>
 							<p>When a player falls during the game, you can go to him and bring him back, but be careful, because it takes some time.</p>
 							<img src="img/ShockGate/revive.gif" style="width: 70%;">
-							<h3>Healing second player</h3>
+							<div class="smallHeaderFont">Healing second player</div>
 							<p>If second player will be on low HP, you can pass to him some of your health, unless you have less than 50%.</p>
 							<img src="img/ShockGate/healShell.gif" style="width: 70%;">
-							<h3>Ammo box</h3>
+							<div class="smallHeaderFont">Ammo box</div>
 							<p>When players run out of ammo, they can refill they ammo using ammo box.</p>
 							<img src="img/ShockGate/ammorBox.gif" style="width: 70%;">
-							<h3>Power Up</h3>
+							<div class="smallHeaderFont">Power Up</div>
 							<p>During game session players can pick from killed enemies boosters. Every booster boost diffrent things like increasing movement speed, bullet damage or shield instant recharg. In case of gif, player got a damage booster.</p>
 							<img src="img/ShockGate/powerUp.gif" style="width: 70%;">
-							<h3>Bike Controls</h3>
+							<div class="smallHeaderFont">Bike Controls</div>
 							<p>In the second mission there are bikes waiting for players. Bikes have two modes, first one allow bike to aim and shoot to enemies, but at the expense of speed. Second mode increase bike speed, but is less manoeuvrable and is harder to aim.</p>
 							<img src="img/ShockGate/bikeControll.gif" style="width: 70%;">
 						</div>
 
-				<h2>Gallery</h2>
+				<div class="smallHeaderFont">Gallery</div>
 
 					<div class="w3-content w3-display-container">
 
+					
+					<div class="w3-display-container mySlides">
+					  <img src="img/ShockGate/mainMenu.png" style="width:100%">
+					  <div class="w3-display-top w3-large w3-container w3-padding-16 w3-black">
+						Main Menu
+					  </div>
+					</div>
+					
 					<div class="w3-display-container mySlides">
 					  <img src="img/ShockGate/SGscreen1.png" style="width:100%">
 					   <div class="w3-display-top w3-large w3-container w3-padding-16 w3-black">
@@ -173,11 +207,32 @@
 						Weapon select
 					  </div>
 					</div>
+					
+					<div class="w3-display-container mySlides">
+					  <img src="img/ShockGate/loadingScreen.png" style="width:100%">
+					   <div class="w3-display-top w3-large w3-container w3-padding-16 w3-black">
+						Loading screen
+					  </div>
+					</div>
 
 					<div class="w3-display-container mySlides">
 					  <img src="img/ShockGate/SGscreen3.png" style="width:100%">
 					  <div class="w3-display-top w3-large w3-container w3-padding-16 w3-black">
 						Shooting range
+					  </div>
+					</div>
+					
+					<div class="w3-display-container mySlides">
+					  <img src="img/ShockGate/defenceMission.png" style="width:100%">
+					  <div class="w3-display-top w3-large w3-container w3-padding-16 w3-black">
+						Defence mission
+					  </div>
+					</div>
+					
+					<div class="w3-display-container mySlides">
+					  <img src="img/ShockGate/unfinishedMission.png" style="width:100%">
+					  <div class="w3-display-top w3-large w3-container w3-padding-16 w3-black">
+						Unfinished mission
 					  </div>
 					</div>
 
