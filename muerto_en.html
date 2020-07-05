@@ -13,15 +13,14 @@
     <link rel="stylesheet" href="style.css">
 	<!-- Social Icon -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"crossorigin="anonymous">
-    <title>Day Of The Dead </title>
-  <link rel="stylesheet" href="TemplateData/style.css">
+	<script src="js/Accordion.js" defer></script>
+    <link rel="stylesheet" href="TemplateData/style.css">
     <script src="TemplateData/UnityProgress.js"></script>
 	<script src="Build/UnityLoader.js"></script>
     <script>
       UnityLoader.instantiate("unityContainer", "Build/Web.json");
     </script>
   </head>
-  <body>
   <body>
 
 		<nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -38,7 +37,7 @@
 		</nav>
 
         <!-- Page Content  -->
-        <div id="content">
+    <div id="content">
 		<div id="content-main">
 			<h1>Day Of The Dead</h1>
 			<div style="text-align: center;">
@@ -81,7 +80,7 @@
 									<video width="60%" controls>
 										<source src="img/Muerto/Mariachi.mp4" type="video/mp4">
 									</video>
-				</div>
+							</div>
 
 						<div class="containerUnity">
 							<div id="unityContainer"></div>
@@ -90,24 +89,7 @@
 				<div class="info-button">
 					<p><button type="button" class="btn btn-secondary btn-block" style=" margin-left:auto; margin-right:auto; display: block;" onclick="window.open('https://github.com/djonczak/Muerto')">Repository</button></p>
 				</div>
-	</div>
-	</div>
-				<script>
-				var acc = document.getElementsByClassName("accordion");
-					var i;
-
-					for (i = 0; i < acc.length; i++) {
-						acc[i].addEventListener("click", function() {
-							this.classList.toggle("active");
-							var panel = this.nextElementSibling;
-							if (panel.style.maxHeight){
-								panel.style.maxHeight = null;
-							} else {
-								panel.style.maxHeight = panel.scrollHeight + "px";
-							}
-						});
-					}
-				</script>
 		</div>
+	</div>
   </body>
 </html>

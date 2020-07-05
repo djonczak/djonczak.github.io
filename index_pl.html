@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="style.css">
 	<!-- Social Icon -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"crossorigin="anonymous">
+	<script src="js/Carousel.js" defer></script>
 </head>
 <body>
 
@@ -35,7 +36,7 @@
 
 		<div id="content">
         <!-- Page Content  -->
-			<div class="parallax" style="background-image: url('img/GameLevel/horrorLevel8.png');"></div>
+			<div class="parallax" style="background-image: url('img/GameLevel/horrorLevel7.png');"></div>
 			<div class="parallax" style="background-image: url('img/Rabbit/Rabbits9.png');"></div>
 			<div class="parallax" style="background-image: url('img/ShockGate/SGscreen2.png');"></div>
 			<div class="parallax" style="background-image: url('img/Dungeon/dungeon1.png');"></div>
@@ -45,19 +46,30 @@
 			Nazywam się Dawid Jonczak jestem absolwentem Collegium Da Vinci na kierunku Informatyka ze specjalizacją "Projektowanie gier komputerowych", gdzie w grupie 3 osobowej wykonaliśmy pracę "Zaprojektowanie i wykonanie gry kooperacyjnej typu "top-down shooter", w projekcie byłem odpowiedzialny za programowanie, projektowanie poziomów oraz gry.
 			Od zawsze interesowałem się grami komputerowymi, dlatego dążę do zdobycia swojego pierwszego doświadczenia zawodowego w branży gier lub IT. W wolnym czasie skupiam się na rozwinięciu swoich umiejętności związanych z C#, Unity oraz Pixel Art.
 		<div id="experience"></div>
-		</p>
 		</div>
 
 		<h2>Doświadczenie</h2>
-			<div class="media">
-			<img src="img/MainPage/monstercouch.png" class="mr-3" alt="...">
+		<ul class="list-unstyled">
+			 <li class="media">
+			<img src="img/MainPage/monstercouch.png" class="align-self-center mr-3" alt="..." style=" padding:1px;	border:1px solid #021a40; border-radius: 8px; width: 150px;">
 				<div class="media-body">
-				<h5 class="mt-0"><p>Monster Couch</p></h5>
+				<h5 class="mt-0"><p><a target="_blank" href="http://monstercouch.com/" style="color: #6bae76; font-weight: bold;">Monster Couch</a></p></h5>
 				<p>Maj - Czerwiec 2018 </p>
 				<div id="portfolio"></div>
 				<p>Testowanie gry "Die For Valhalla", programowanie w C# ( projekt na zaliczenie ), nagrywanie materiałów promocyjnych oraz projektowanie przeciwników.</p>
 				</div>
-			</div>
+			  </li>
+			
+			<li class="media my-4">
+			<img src="img/MainPage/ehsvr.png" class="align-self-center mr-3" alt="..." style=" padding:1px;	border:1px solid #021a40; border-radius: 8px;  width: 150px;">
+				<div class="media-body">
+				<h5 class="mt-0"><p><a target="_blank" href="https://szkoleniabhpvr.pl/" style="color: #6bae76; font-weight: bold;">BHP VR</a></p></h5>
+				<p>Luty 2020 - teraz </p>
+				<div id="portfolio"></div>
+				<p>Programowanie w C#, tworzenie aplikacji VR dla szkoleń BHP. </p>
+				</div>
+			  </li>
+		</ul>
 		<!--
 		<h2>Umiejętności</h2>
 			<div class="col">
@@ -77,7 +89,7 @@
 		<div class="grid-container">
 		<picture>
 			<div class="location-listing">
-				<a class="location-title" href="rabbits_pl.html">From The Tower It Comes</a>
+				<a class="location-title" href="rabbits_pl.html"></a>
 					<div class="location-image">
 							<img width="350" height="300" src="img/Rabbit/TitleScreen.png">
 					</div>
@@ -218,22 +230,6 @@
 		</footer>
 
 	     </div>
-				<script>
-			var myIndex = 0;
-			carousel();
-
-			function carousel() {
-			  var i;
-			  var x = document.getElementsByClassName("parallax");
-			  for (i = 0; i < x.length; i++) {
-				x[i].style.display = "none";
-			  }
-			  myIndex++;
-			  if (myIndex > x.length) {myIndex = 1}
-			  x[myIndex-1].style.display = "block";
-			  setTimeout(carousel, 2000); // Change image every 2 seconds
-			}
-		</script>
 </body>
 
 </html>

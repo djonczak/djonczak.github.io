@@ -15,7 +15,7 @@
 	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 	<!-- Social Icon -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"crossorigin="anonymous">
-    <title>Day Of The Dead </title>
+	<script src="js/Accordion.js" defer></script>
 	<link rel="stylesheet" href="TemplateData/style.css">
     <script src="TemplateData/UnityProgress.js"></script>
     <script src="Build/UnityLoader.js"></script>
@@ -23,7 +23,6 @@
       UnityLoader.instantiate("unityContainer", "Build/Web.json");
     </script>
   </head>
-  <body>
   <body>
 
 		<nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -50,7 +49,7 @@
 					<b>Użyte oprogramowanie </b> <p>  Unity Engine, GIMP, Photoshop</p>
 			</div>
 				<h2>O grze</h2>
-				<p>Projekt początkowo był tworzony na zajęcia z Grafiki 2D, cele było ukazanie meksykańskie święto Día de Muertos(Dzień Zmarłych), które zostało przedstawiony w trybie Story. Dodatkowow zrobiłem tryb Areny, który był wzorownay na grze <a target="_blank" href="https://pietro-ferrantelli.itch.io/mobs-inc" style="color:#9784BA; font-weight: bold;"> Mobs Inc</a>, gdzie musisz przetrwać 14 fal przeciwników, walcząć z 4 typami przeciwników, by na końcu zmierzyć się z bossem. Po pokonaniu bossa zostaje odblokowany dodatkowego skin. </p>
+				<p>Projekt początkowo był tworzony na zajęcia z Grafiki 2D, cele było ukazanie meksykańskie święto Día de Muertos (Dzień Zmarłych), które zostało przedstawiony w trybie Story. Dodatkowow zrobiłem tryb Areny, który był wzorownay na grze <a target="_blank" href="https://pietro-ferrantelli.itch.io/mobs-inc" style="color:#9784BA; font-weight: bold;"> Mobs Inc</a>, gdzie musisz przetrwać 14 fal przeciwników, walcząć z 4 typami przeciwników, by na końcu zmierzyć się z bossem. Po pokonaniu bossa zostaje odblokowany dodatkowego skin. </p>
 
 				<button class="accordion"> Niektóre rzeczy, które zrobiłem</button>
 						<div class="field">
@@ -83,6 +82,7 @@
 										<source src="img/Muerto/Mariachi.mp4" type="video/mp4">
 									</video>
 						</div>
+						
 						<div class="containerUnity">
 							<div id="unityContainer"></div>
 						</div>
@@ -91,24 +91,6 @@
 					<p><button type="button" class="btn btn-secondary btn-block" style=" margin-left:auto; margin-right:auto; display: block;" onclick="window.open('https://github.com/djonczak/Muerto')">Repository</button></p>
 				</div>
 			</div>
-			</div>
-			<script>
-				var acc = document.getElementsByClassName("accordion");
-					var i;
-
-					for (i = 0; i < acc.length; i++) {
-						acc[i].addEventListener("click", function() {
-							this.classList.toggle("active");
-							var panel = this.nextElementSibling;
-							if (panel.style.maxHeight){
-								panel.style.maxHeight = null;
-							} else {
-								panel.style.maxHeight = panel.scrollHeight + "px";
-							}
-						});
-					}
-			</script>
 		</div>
-	</div>
   </body>
 </html>

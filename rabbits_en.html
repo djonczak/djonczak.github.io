@@ -15,14 +15,9 @@
 	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 	<!-- Social Icon -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"crossorigin="anonymous">
-
+	<script src="js/Gallery.js" defer></script>
 	<style>
-
-	@font-face {
-    font-family: myFirstFont;
-    src: url(Fonts/Lucznik1303-5lqx.ttf);
-	}
-
+	
 	@font-face {
 	   font-family: myFirstFont;
 	   src: url(Fonts/Lucznik1303-5lqx.ttf);
@@ -177,27 +172,6 @@
 					<button class="w3-button w3-display-right w3-black" onclick="plusDivs(1)">&#10095;</button>
 
 					</div>
-
-					<script>
-					var slideIndex = 1;
-					showDivs(slideIndex);
-
-					function plusDivs(n) {
-					  showDivs(slideIndex += n);
-					}
-
-					function showDivs(n) {
-					  var i;
-					  var x = document.getElementsByClassName("mySlides");
-					  if (n > x.length) {slideIndex = 1}
-					  if (n < 1) {slideIndex = x.length}
-					  for (i = 0; i < x.length; i++) {
-						 x[i].style.display = "none";
-					  }
-					  x[slideIndex-1].style.display = "block";
-					}
-					</script>
-
 
 				<div class="info-button">
 					<p><button type="button" class="btn btn-secondary btn-block" style=" margin-left:auto; margin-right:auto; display: block;" onclick="window.open('https://drive.google.com/open?id=1_1pvhQliotKDM24PZev_yAqvKTxyrBD6')">Playable build</button></p>

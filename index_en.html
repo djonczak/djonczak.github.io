@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="style.css">
 	<!-- Social Icon -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"crossorigin="anonymous">
+	<script src="js/Carousel.js" defer></script>
 </head>
 <body>
     
@@ -34,7 +35,7 @@
 	</nav>
         <!-- Page Content  -->	
 		<div id="content">
-			<div class="parallax" style="background-image: url('img/GameLevel/horrorLevel8.png');"></div>
+			<div class="parallax" style="background-image: url('img/GameLevel/horrorLevel7.png');"></div>
 			<div class="parallax" style="background-image: url('img/Rabbit/Rabbits9.png');"></div>
 			<div class="parallax" style="background-image: url('img/ShockGate/SGscreen2.png');"></div>
 			<div class="parallax" style="background-image: url('img/Dungeon/dungeon1.png');"></div>
@@ -43,39 +44,37 @@
 		<div class="clearfix">
 			Hi! I'm Dawid, I have recently graduated from Collegium Da Vinci, where I studied computer science with specialization "Game design". I made my thesis "Designing and implementation of cooperative top-down shooter game", in team of 3 people, where I was responsible for programming, level and game design. Currently focused on gaining my first work experience in IT industry or game dev. In the meantime I’m working on improving my C#, Unity and Pixel Art skillset.
 		<div id="experience"></div>
-		</p>
 		</div>
 		
 		<h2>Work experience</h2>
-			<div class="media">
-			<img src="img/MainPage/monstercouch.png" class="mr-3" alt="...">
+		<ul class="list-unstyled">
+			<li class="media">
+			<img src="img/MainPage/monstercouch.png" class="align-self-center mr-3" alt="..." style=" padding:1px;	border:1px solid #021a40; border-radius: 8px;  width: 150px;">
 				<div class="media-body">
-				<h5 class="mt-0"><p>Monster Couch</p></h5>
+				<h5 class="mt-0"><p><a target="_blank" href="http://monstercouch.com/" style="color: #6bae76; font-weight: bold;">Monster Couch</a></p></h5>
 				<p>May - June 2018 </p>
 				<div id="portfolio"></div>
 				<p>Testing the game "Die For Valhalla", programming in C# ( project to pass ), recording of promotional materials and enemy design.</p>
 				</div>
-			</div>
-			<!--	
-		<h2>Skills</h2>
-			<div class="col">
-				<ul id="skill">
-					<p>C#</p>
-					<li><span class="expand c"></span></li>
-					<p>Git</p>
-					<li><span class="expand git"></span></li>
-					<p>Unity Engine</p>
-					<li><span class="expand unity"></span></li>
-					<p>Pixel Art</p>
-					<li><span class="expand pixel"></span></li>
-				</ul>
-			</div>
-		-->
+			</li>
+			
+			<li class="media my-4">
+			<img src="img/MainPage/ehsvr.png" class="align-self-center mr-3" alt="..." style=" padding:1px;	border:1px solid #021a40; border-radius: 8px;  width: 150px;">
+				<div class="media-body">
+				<h5 class="mt-0"><p><a target="_blank" href="https://ehsvr.com/" style="color: #6bae76; font-weight: bold;">EHS VR</a></p></h5>
+				<p>February 2020 - now </p>
+				<div id="portfolio"></div>
+				<p>Programming in C #, creating VR applications for EHS training. </p>
+				</div>
+			  </li>
+			
+		</ul>
+
 		<h2>Projects</h2>
 		<div class="grid-container">
 		<picture>
 			<div class="location-listing">
-				<a class="location-title" href="rabbits_en.html">From The Tower It Comes</a>
+				<a class="location-title" href="rabbits_en.html"></a>
 					<div class="location-image">
 							<img width="350" height="300" src="img/Rabbit/TitleScreen.png">
 					</div>
@@ -214,23 +213,6 @@
 			</div>
 		</footer>
 	     </div>
-		<script>
-			var myIndex = 0;
-			carousel();
-
-			function carousel() {
-			  var i;
-			  var x = document.getElementsByClassName("parallax");
-			  for (i = 0; i < x.length; i++) {
-				x[i].style.display = "none";  
-			  }
-			  myIndex++;
-			  if (myIndex > x.length) {myIndex = 1}    
-			  x[myIndex-1].style.display = "block";  
-			  setTimeout(carousel, 3000); // Change image every 2 seconds
-			}
-					
-		</script>
 </body>
 
 </html>
