@@ -95,6 +95,7 @@ a:focus {
 	flex-wrap: wrap;
 	/* Compensate for excess margin on outer gallery flex items */
 	margin: -1rem -1rem;
+	margin-bottom: 5px;
 }
 
 .gallery-item {
@@ -272,6 +273,7 @@ a:focus {
   outline: none;
   font-size: 15px;
   transition: 0.4s;
+  padding-bottom: 15px;
 }
 
 .accordion:hover {
@@ -296,6 +298,7 @@ a:focus {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
+  margin-bottom: 15px;
 }
 
 

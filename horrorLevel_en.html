@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="style.css">
 	<!-- Social Icon -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"crossorigin="anonymous">
+	<script src="js/Accordion.js" defer></script>
+	<script src="js/Carousel.js" defer></script>	
 </head>
 
 <body>
@@ -41,8 +43,6 @@
 			<div class="parallax" style="background-image: url('img/GameLevel/horrorLevel5.png');"></div>
 			<div class="parallax" style="background-image: url('img/GameLevel/horrorLevel6.png');"></div>
 			<div class="parallax" style="background-image: url('img/GameLevel/horrorLevel7.png');"></div>
-			<div class="parallax" style="background-image: url('img/GameLevel/horrorLevel8.png');"></div>
-			<div class="parallax" style="background-image: url('img/GameLevel/horrorLevel9.png');"></div>
 			
 			<div id="content-main">
 			
@@ -54,28 +54,64 @@
 					<b>Software Used </b> <p>  Unity Engine</p>
 			</div>
 				<h2>About level</h2>
-				<p>I created a level using methods to show player right direction. The player moves around the closed cemetery at night and his goal is to find all items and find the exit . Using level characteristic points, I'm leading player to his goal. In addition, you can save game and change language to Polish, German or English.</p>
-				<button type="button" class="btn btn-secondary btn-block" style=" margin-left:auto; margin-right:auto; display: block;"onclick="window.open('https://drive.google.com/open?id=1Ir996nkWQpxJz1-f8677aeG01RwGMpRB')">Build</button>
-				<button type="button" class="btn btn-secondary btn-block" style=" margin-left:auto; margin-right:auto; display: block;"onclick="window.open('https://drive.google.com/open?id=1dp-Mb47BSfg9x0UyCmG9A2x0J0uUlyTw')">Scripts</button>
+				<p>This is level that was prepared during Level Design classes. The level was to be made using methods from this <a target="_blank" href="https://www.youtube.com/watch?v=k70_jvVOcG0" style="color:#9784BA; font-weight: bold;">video</a> and with using assets from Assets Store. The player moves around the closed cemetery at night and his goal is to find all items and path, that will let him got to the main goal, which is indicated by a large statue highlighted in red. Using level characteristic points, lights, terrain and other visual elements. In addition, we had to let player save the game and add the possibility of changing game language to Polish, German or English. For languages we had to use Scriptable Objects and for game saves we had to save the file in json format, in my case it stored the player position and picked items.</p>
+				
+				<button class="accordion"> Examples of showing path</button>
+					<div class="field">
+					<p> Sample images showing elements whose purpose is to direct or draw players attention to a place.</p>
+								<h3>Illuminated places</h3>				
+								<div class="gallery">
+									<div class="gallery-item">
+										<img class="gallery-image" src="img/GameLevel/Weenies/level1weenie.png" style="border:4px solid #FFFFFF; border-radius: 6px;">
+									</div>
+
+									<div class="gallery-item">
+										<img class="gallery-image" src="img/GameLevel/Weenies/level5weenie.png" style="border:4px solid #FFFFFF; border-radius: 6px;">
+									</div>
+								</div>	
+	
+							<h3>Environment elements</h3>		
+							
+							<div class="gallery">
+									<div class="gallery-item">
+										<img class="gallery-image" src="img/GameLevel/Weenies/level2weenie.png" style="border:4px solid #FFFFFF; border-radius: 6px;">
+									</div>
+
+									<div class="gallery-item">
+										<img class="gallery-image" src="img/GameLevel/Weenies/level4weenie.png" style="border:4px solid #FFFFFF; border-radius: 6px;">
+									</div>
+							</div>	
+							
+							<div class="gallery">
+									<div class="gallery-item">
+										<img class="gallery-image" src="img/GameLevel/Weenies/level8weenie.png" style="border:4px solid #FFFFFF; border-radius: 6px;">
+									</div>
+
+									<div class="gallery-item">
+										<img class="gallery-image" src="img/GameLevel/Weenies/level3weenie.png" style="border:4px solid #FFFFFF; border-radius: 6px;">
+									</div>
+							</div>	
+							
+							<h3>Main Weenie</h3>		
+							<p>The main visual element showing the player where the main target is.</p>
+							<div class="gallery">
+									<div class="gallery-item">
+										<img class="gallery-image" src="img/GameLevel/Weenies/level6weenie.png" style="border:4px solid #FFFFFF; border-radius: 6px;">
+									</div>
+
+									<div class="gallery-item">
+										<img class="gallery-image" src="img/GameLevel/Weenies/level7weenie.png" style="border:4px solid #FFFFFF; border-radius: 6px;">
+									</div>
+							</div>	
+							
+							
+					</div>
+					
+				
+				<button type="button" class="btn btn-secondary btn-block" style=" margin-left:auto; margin-right:auto; display: block;"onclick="window.open('https://drive.google.com/file/d/1tSE22HmFdMPLEB9aHNpT3bxnRnHsPN7t/view?usp=sharing')">Build</button>
+			    <button type="button" class="btn btn-secondary btn-block" style=" margin-left:auto; margin-right:auto; display: block;"onclick="window.open('https://github.com/djonczak/Game-Level')">Repository</button>
 			</div>
 		</div>
-     	<script>
-			var myIndex = 0;
-			carousel();
-
-			function carousel() {
-			  var i;
-			  var x = document.getElementsByClassName("parallax");
-			  for (i = 0; i < x.length; i++) {
-				x[i].style.display = "none";
-			  }
-			  myIndex++;
-			  if (myIndex > x.length) {myIndex = 1}
-			  x[myIndex-1].style.display = "block";
-			  setTimeout(carousel, 2000); // Change image every 2 seconds
-			}
-		</script>
-
 </body>
 
 </html>

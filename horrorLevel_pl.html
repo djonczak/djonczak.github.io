@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="style.css">
 	<!-- Social Icon -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"crossorigin="anonymous">
+	<script src="js/Accordion.js" defer></script>
+	<script src="js/Carousel.js" defer></script>
 </head>
 
 <body>
@@ -33,7 +35,6 @@
         <!-- Page Content  -->
 
         <div id="content">
-
 			<div class="parallax" style="background-image: url('img/GameLevel/horrorLevel1.png');"></div>
 			<div class="parallax" style="background-image: url('img/GameLevel/horrorLevel2.png');"></div>
 			<div class="parallax" style="background-image: url('img/GameLevel/horrorLevel3.png');"></div>
@@ -41,41 +42,73 @@
 			<div class="parallax" style="background-image: url('img/GameLevel/horrorLevel5.png');"></div>
 			<div class="parallax" style="background-image: url('img/GameLevel/horrorLevel6.png');"></div>
 			<div class="parallax" style="background-image: url('img/GameLevel/horrorLevel7.png');"></div>
-			<div class="parallax" style="background-image: url('img/GameLevel/horrorLevel8.png');"></div>
-			<div class="parallax" style="background-image: url('img/GameLevel/horrorLevel9.png');"></div>
-			
+
 		<div id="content-main">
 			<h1>Game Level</h1>
 			<div style="text-align: center;">
-					<b>Status projektu </b> <p>    Zakończone</p>
+					<b>Status projektu </b> <p>    Zakończony</p>
 					<b>Typ projektu </b> <p>	Studia / indywidualny   </p>
 					<b>Czas trwania </b> <p>  ~tydzień </p>
 					<b>Użyte oprogramowanie </b> <p>  Unity Engine</p>
 			</div>
 				<h2>O stworzonym poziomie</h2>
-				<p>Stworzyłem poziom wykorzystując do tego znane mi metody prowadzenia gracza. Gracz porusza się po zamknientym cmentarzu nocą i jego zadaniem jest odnalezienie przedmiotów i odnalezie drogi do mety. Wykorzystujac teren oraz chataktystycze punkty prowadzę gracza do celu. Dodatkowo można zapisać stan gry oraz zmienić język z polskiego na angielski lub niemiecki.</p>
-				<button type="button" class="btn btn-secondary btn-block" style=" margin-left:auto; margin-right:auto; display: block;"onclick="window.open('https://drive.google.com/open?id=1Ir996nkWQpxJz1-f8677aeG01RwGMpRB')">Build</button>
-				<button type="button" class="btn btn-secondary btn-block" style=" margin-left:auto; margin-right:auto; display: block;"onclick="window.open('https://drive.google.com/open?id=1dp-Mb47BSfg9x0UyCmG9A2x0J0uUlyTw')">Skrypty</button>
-		</div>
-		</div>
-		<script>
-			var myIndex = 0;
-			carousel();
+				<p>Jest to projekt poziomu, który miał zostać przyszkykowany na zajęciach z Level Design-u. Poziom miał być wykonany wykorzystując do tego metody z <a target="_blank" href="https://www.youtube.com/watch?v=k70_jvVOcG0" style="color:#9784BA; font-weight: bold;">filmiku</a> w celu prowadzenia gracza oraz darmowych assetów w Asset Store. Gracz porusza się po zamkniętym poziomie ( wybrałem cmentarz nocą), a jego celem jest odnalezienie przedmiotów oraz ścieżki, które pomogą w drodze do celu, gdzie jest wskazywany przez wielki posąg, podświetlony na czerwono. Wykorzystując teren, oświetlenie oraz obiekty staram się poprowadzić gracza po poziomie. Dodatkowo mieliśmy zrobić zapis stanu gry oraz możliwość zmieny języka na polski, angielski lub niemiecki. Dla języków mieliśmy wykorzystać Scriptable Objects, a do zapisu stanu mieliśmy zapisać plik w formacie json, w moim przypadku przechowywał pozycję gracza oraz podniesione przedmioty.</p>
+				
+				<button class="accordion"> Przykłady kierowania gracza </button>
+					<div class="field">
+					<p>Przykładowe zdjęcia przedstawiające elementy, których celem jest skierowanie lub zwrócenie uwagi gracza w dane miejsce podczas rozgrywki.</p>
+								<h3>Oświetlone miejsca</h3>				
+								<div class="gallery">
+									<div class="gallery-item">
+										<img class="gallery-image" src="img/GameLevel/Weenies/level1weenie.png" style="border:4px solid #FFFFFF; border-radius: 6px;">
+									</div>
 
-			function carousel() {
-			  var i;
-			  var x = document.getElementsByClassName("parallax");
-			  for (i = 0; i < x.length; i++) {
-				x[i].style.display = "none";
-			  }
-			  myIndex++;
-			  if (myIndex > x.length) {myIndex = 1}
-			  x[myIndex-1].style.display = "block";
-			  setTimeout(carousel, 3000); // Change image every 2 seconds
-			}
-			
-			
-		</script>
+									<div class="gallery-item">
+										<img class="gallery-image" src="img/GameLevel/Weenies/level5weenie.png" style="border:4px solid #FFFFFF; border-radius: 6px;">
+									</div>
+								</div>	
+	
+							<h3>Elementy otoczenia</h3>		
+							
+							<div class="gallery">
+									<div class="gallery-item">
+										<img class="gallery-image" src="img/GameLevel/Weenies/level2weenie.png" style="border:4px solid #FFFFFF; border-radius: 6px;">
+									</div>
+
+									<div class="gallery-item">
+										<img class="gallery-image" src="img/GameLevel/Weenies/level4weenie.png" style="border:4px solid #FFFFFF; border-radius: 6px;">
+									</div>
+							</div>	
+							
+							<div class="gallery">
+									<div class="gallery-item">
+										<img class="gallery-image" src="img/GameLevel/Weenies/level8weenie.png" style="border:4px solid #FFFFFF; border-radius: 6px;">
+									</div>
+
+									<div class="gallery-item">
+										<img class="gallery-image" src="img/GameLevel/Weenies/level3weenie.png" style="border:4px solid #FFFFFF; border-radius: 6px;">
+									</div>
+							</div>	
+							
+							<h3>Główny Weenie</h3>		
+							<p>Główny element wizualny wskazujący graczowi, gdzie znajduje się cel.</p>
+							<div class="gallery">
+									<div class="gallery-item">
+										<img class="gallery-image" src="img/GameLevel/Weenies/level6weenie.png" style="border:4px solid #FFFFFF; border-radius: 6px;">
+									</div>
+
+									<div class="gallery-item">
+										<img class="gallery-image" src="img/GameLevel/Weenies/level7weenie.png" style="border:4px solid #FFFFFF; border-radius: 6px;">
+									</div>
+							</div>	
+							
+							
+					</div>
+					
+				<button type="button" class="btn btn-secondary btn-block" style=" margin-left:auto; margin-right:auto; display: block;"onclick="window.open('https://drive.google.com/file/d/1tSE22HmFdMPLEB9aHNpT3bxnRnHsPN7t/view?usp=sharing')">Build</button>
+				<button type="button" class="btn btn-secondary btn-block" style=" margin-left:auto; margin-right:auto; display: block;"onclick="window.open('https://github.com/djonczak/Game-Level')">Repozoytorium</button>
+		</div>
+		</div>
 
 </body>
 
