@@ -26,6 +26,10 @@ a:focus {
     transition: all 0.3s;
 }
 
+	a.dropdown-item:hover{
+	background-color: #9784BA;
+	}
+
 .navbar {
     padding: 6px 10px;
     background: #fff;
@@ -712,6 +716,48 @@ a:focus {
 }
 
 /* ---------------------------------------------------
+    Typing
+----------------------------------------------------- */
+
+.typing {
+  height: 40px;
+  white-space: nowrap;
+  overflow: hidden; 
+  font-size: 28px;
+  position: relative;
+}
+
+.typing-border {
+  border-bottom: solid 3px rgba(0,255,0,.75);
+  position: absolute;
+  right: -7px;
+  width: 20px;
+}
+
+/* Animation */
+.typing {
+  animation: animated-text 5s steps(30,end) 1s step-end
+}
+
+.typing-border {
+   animation: animated-cursor 5s steps(30,end) infinite;
+}
+
+/* text animation */
+
+@keyframes animated-text{
+  from{width: 0;}
+  to{width: 480px;}
+}
+
+/* cursor animations */
+
+@keyframes animated-cursor{
+  from{border-bottom-color: rgba(0,255,0,.75);}
+  to{border-bottom-color: transparent;}
+}
+
+/* ---------------------------------------------------
     Header
 ----------------------------------------------------- */
 
@@ -823,6 +869,14 @@ background: url(img/Rabbit/RabbitsBackground.png) center center cover no-repeat 
 .social-card-container .social-card .face.face2 .card-content a {
     font-size: 12px;
 } 
+
+.typewriter-text {
+  	 animation-play-state: paused;
+}
+
+.typewriter-nav {
+  	 animation-play-state: paused;
+}
   
 }
   
