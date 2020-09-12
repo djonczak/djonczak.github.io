@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html>
   <head>
      <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
     <title>Day Of The Dead</title>
@@ -24,8 +24,35 @@
       UnityLoader.instantiate("unityContainer", "Build/Web.json");
     </script>
 	<style>
+	@font-face {
+	   font-family: myFirstFont;
+	   src: url(Fonts/Bahiana-Regular.otf);
+	   font-weight: bold;
+	}
+
+	* {
+	   font-family: myFirstFont;
+	}
+	
 	i{
 	margin-right: 10px;
+	}
+	
+	#content-narrow{
+	left:20%;
+	width: 60%; 
+	}
+	
+	p{
+	font-size:24px;
+	}
+	
+	a{
+	font-size:20px;
+	}
+	
+	b{
+	font-size: 27px;
 	}
 	</style>
   </head>
@@ -64,9 +91,12 @@
 		</nav>
 
         <!-- Page Content  -->
-    <div id="content">
-		<div id="content-main">
-			<h1>Day Of The Dead</h1>
+			<video autoplay muted loop id="fullVideo">
+				<source src="img/Muerto/muertoBackground.mp4" type="video/mp4">
+			</video>
+        <div id="content-narrow">
+			<div class="bigHeaderFont">Day Of The Dead</div>
+
 			<div style="text-align: center;">
 				<b>Project Status </b> <p>    Finished</p>
 				<b>Project Type </b> <p>   Solo</p>
@@ -74,36 +104,44 @@
 				<b>Software Used </b> <p>  Unity Engine, GIMP, Photoshop</p>
 			</div>
 
-			<h2>About game</h2>
+			<div class="smallHeaderFont">About game</div>
+
 			<p>The project was initially created for classes in 2D Graphics, the goals were to show the Mexican holiday of Día de Muertos (Day of the Dead), which was presented in Story mode. In addition, I did the Arena mode, which was based on<a target="_blank" href="https://pietro-ferrantelli.itch.io/mobs-inc" style="color:#9784BA; font-weight: bold;"> Mobs Inc</a>, where you have to survive 14 waves of enemies, fight 4 types of enemies and finally face the boss. After defeating the boss, an additional skin is unlocked.</p>
 
-			<button class="accordion"> Some stuff I made</button>
-							<div class="field">
-								<h3>Boss arriving</h3>
+			<button class="accordion"><a> Some stuff I made</a></button>
+							<div class="field" style="text-align: center;">
+								<div class="smallHeaderFont">Boss arriving</div>
+
 									<video width="60%" controls>
 										<source src="img/Muerto/BossSummon.mp4" type="video/mp4">
 									</video>
-								<h3>Boss second ability</h3>
+								<<div class="smallHeaderFont">Boss second ability</div>
+
 									<video width="60%" controls>
 										<source src="img/Muerto/BloodAttack.mp4" type="video/mp4">
 									</video>
-								<h3>Chupacabra</h3>
+								<div class="smallHeaderFont">Chupacabra</div>
+
 									<video width="60%" controls>
 										<source src="img/Muerto/chupacabra.mp4" type="video/mp4">
 									</video>
-								<h3>Enemy summon </h3>
+								<div class="smallHeaderFont">Enemy summon </div>
+
 									<video width="60%" controls>
 										<source src="img/Muerto/EnemySummon.mp4" type="video/mp4">
 									</video>
-								<h3>Wave</h3>
+								<div class="smallHeaderFont">Wave</div>
+
 									<video width="60%" controls>
 										<source src="img/Muerto/Wave.mp4" type="video/mp4">
 									</video>
-								<h3>Landing shock wave</h3>
+								<div class="smallHeaderFont">Landing shock wave</div>
+
 									<video width="60%" controls>
 										<source src="img/Muerto/FallDawn.mp4" type="video/mp4">
 									</video>
-								<h3>Mariachi band</h3>
+								<div class="smallHeaderFont">Mariachi band</div>
+
 									<video width="60%" controls>
 										<source src="img/Muerto/Mariachi.mp4" type="video/mp4">
 									</video>
@@ -114,9 +152,8 @@
 						</div>
 
 				<div class="info-button">
-					<p><button type="button" class="btn btn-secondary btn-block" style=" margin-left:auto; margin-right:auto; display: block;" onclick="window.open('https://github.com/djonczak/Muerto')">Repository</button></p>
+					<p><button type="button" class="btn btn-secondary btn-block" style=" margin-left:auto; margin-right:auto; display: block;" onclick="window.open('https://github.com/djonczak/Muerto')"><a>Repository</a></button></p>
 				</div>
 		</div>
-	</div>
-  </body>
+ </body>
 </html>
