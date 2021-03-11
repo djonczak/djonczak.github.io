@@ -250,7 +250,6 @@ a:focus {
     to   { opacity: 0.0; }
   }
 
-
 /* ---------------------------------------------------
     GALLERY main page Hobby
 ----------------------------------------------------- */
@@ -591,7 +590,6 @@ figure img {
 	margin-top: 54%;
 	height: 100%;
 	list-style: none;
-	color: var(--white-1);
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -606,6 +604,7 @@ figure img {
 
 .card-back li p {
 	color:white;
+	background-color: #6bae76;
 }
 
 .card-back li:nth-child(2n) {
@@ -624,7 +623,7 @@ figure img {
 	padding: 9px 20px;
 	border: 1px solid var(--grey);
 	border-radius: 1000px;
-	background: transparent;
+	background: hsla(var(--hue), 50%, 60%, 1);
 	transition: .3s;
 	cursor: pointer;
 }
