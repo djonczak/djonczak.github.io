@@ -8,7 +8,9 @@ html{
 body {
     font-family: 'Poppins', sans-serif;
     background-color:rgb(240, 240, 240);
-	height: 100%;
+	min-height: 100vh;
+	display: flex;
+    flex-direction: column;
 }
 
 p {
@@ -16,6 +18,18 @@ p {
     font-weight: 300;
     line-height: 1.7em;
     color: rgb(120, 120, 120);
+}
+
+
+li{
+	font-size: 1.1em;
+    font-weight: 300;
+    line-height: 1.7em;
+    color: rgb(120, 120, 120);
+}
+
+ul{
+	padding-bottom: 20px;
 }
 
 a,
@@ -73,6 +87,51 @@ a:focus {
 }
 
 
+/*----------------------------------------------------
+	Toast
+------------------------------------------------------*/
+
+#snackbar {
+  visibility: hidden;
+  min-width: 250px;
+  margin-left: -125px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 2px;
+  padding: 16px;
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  bottom: 30px;
+  font-size: 17px;
+}
+
+#snackbar.show {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+  from {bottom: 0; opacity: 0;} 
+  to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+  from {bottom: 30px; opacity: 1;} 
+  to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}
 
 /* ---------------------------------------------------
     Social experience card
@@ -83,6 +142,7 @@ a:focus {
     position: absolute;
     display: flex;
     justify-content: space-between;
+	margin-bottom: auto;
 }
 
 .social-card-container .social-card {
@@ -265,7 +325,7 @@ a:focus {
 	flex-wrap: wrap;
 	/* Compensate for excess margin on outer gallery flex items */
 	margin: -1rem -1rem;
-	margin-bottom: 5px;
+	margin-bottom: 100px;
 }
 
 .gallery-item {
@@ -285,9 +345,6 @@ a:focus {
 	transition: transform 200ms ease-out;
 }
 
-.gallery-image:hover {
-	transform: scale(1.1);
-}
 
 
 /* ---------------------------------------------------
@@ -296,7 +353,10 @@ a:focus {
 
 #content {
 	padding-top:13px;
-    position: absolute;
+    position: relative;
+	min-height: 100vh;
+	display: flex;
+    flex-direction: column;
     right: 0;
 	overflow: hidden;
 	width: 100%;
@@ -304,6 +364,7 @@ a:focus {
 
 #content-main{
 	padding: 40px;	
+	margin-bottom: 200px;
 }
 
 #content-narrow{
@@ -345,25 +406,86 @@ a:focus {
 }
 
 /* ---------------------------------------------------
-    PSN Account Image
+Modal
 ----------------------------------------------------- */
 
-.psnCard{
-	margin-left: auto;
-	margin-right: auto; 
-	padding-top:15px; 
-	width: 100%;   
-	display: block;
-	text-align: center;
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+	border-color: red;
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+	border-color: black;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+.modal-content img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 20%;
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header {
+    padding: 2px 16px;
+    background-color: #9784BA;
+	border-color: black;
+    color: white;
+}
+
+.modal-body {padding: 2px 16px;}
 
 /* ---------------------------------------------------
     Gallery
 ----------------------------------------------------- */
 
-.gallery-image:hover {
-	transform: scale(1.1);
-}
 /* Slideshow container */
 .slideshow-container {
   max-width: 1300px;
@@ -429,10 +551,50 @@ a:focus {
   transition: background-color 0.6s ease;
 }
 
+/* ---------------------------------------------------
+   Modal Button Big
+----------------------------------------------------- */
+
+.grid-job{
+   display: flex; /* equal height of the children */
+}
+
+.collumn {
+  flex: 1; /* additionally, equal width */
+  padding: 0.5em;
+}
+
+
+.modal-button{
+  background-color: #6bae76;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  transition: 0.4s;
+  width: auto;
+  height: 320px;
+}
+
+.modal-button img {
+position: relative;
+max-width: 100%;
+}
+
+.modal-button p{
+	font-size: 1.1em;
+    font-weight: 300;
+    line-height: 1.4em;
+	color: white;
+}
+
+.modal-button:hover {
+  background-color: rgba(59, 52, 73);
+}
 
 /* ---------------------------------------------------
-   ACCORDION
+    Accordion
 ----------------------------------------------------- */
+/*   */
 
 .accordion {
   background-color: #6bae76;
@@ -440,11 +602,7 @@ a:focus {
   cursor: pointer;
   padding: 18px;
   width: 100%;
-  text-align: left;
-  outline: none;
-  font-size: 15px;
   transition: 0.4s;
-  padding-bottom: 15px;
 }
 
 .accordion:hover {
@@ -452,18 +610,12 @@ a:focus {
 }
 
 .accordion:after {
-  content: '\002B';
+  width: 100%;
   color: rgba(59, 52, 73);
-  font-weight: bold;
-  float: right;
-  margin-left: 5px;
-}
-
-.accordion.active:after {
-  content: "\2212";
 }
 
 .field {
+  width: 100%;
   padding: 0 18px;
   background: rgba(0, 0, 0, 1);
   max-height: 0;
@@ -473,6 +625,9 @@ a:focus {
   border: 2px solid #6bae76;
 }
 
+/* ---------------------------------------------------
+    Slider
+----------------------------------------------------- */
 /*   */
 .slide{
 	width: 100%;
@@ -480,6 +635,7 @@ a:focus {
     left: 0px;
     right: 0px;
 }
+
 
 .w3-animate-fading{animation:fading 10s infinite}@keyframes fading{0%{opacity:0}50%{opacity:1}100%{opacity:0}}
 
@@ -629,7 +785,7 @@ figure img {
 }
 .card-back a:hover,	.card-back a:focus {
 	color: var(--primary);
-	background: hsla(var(--hue), 50%, 60%, .2);
+	background: hsla(var(--hue), 50%, 60%, 1);
 	border-color: currentColor;
 }
 
@@ -726,126 +882,16 @@ figcaption {
 }
 
 /* ---------------------------------------------------
-    PROGRESS BAR
------------------------------------------------------ */
-
-.col {
-    width: 95%;
-}
-
-#skill {
-    list-style: none;
-    padding-top: 30px;
-}
-
-#skill li {
-    margin-bottom: 70px;
-    background: #666666;
-    height: 10px;
-    border-radius: 3px;
-    border-left: 2px solid #111;
-    border-top: 2px solid #111;
-    border-right: 2px solid #333;
-    border-bottom: 2px solid #333;
-}
-
-.expand {
-    height: 4px;
-    background: #ff9900;
-    position: absolute;
-    box-shadow: 0px 0px 10px 1px #804d00;
-}
-
-.c {
-    width: 55%;
-    -moz-animation: c 2s ease-out;
-    -webkit-animation: c 2s ease-out;
-}
-
-.git {
-    width: 45%;
-    -moz-animation: git 2s ease-out;
-    -webkit-animation: git 2s ease-out;
-}
-
-.unity {
-    width: 70%;
-    -moz-animation: unity 2s ease-out;
-    -webkit-animation: unity 2s ease-out;
-}
-
-.pixel {
-    width: 60%;
-    -moz-animation: pixel 2s ease-out;
-    -webkit-animation: pixel 2s ease-out;
-}
-
-@-moz-keyframes c {
-    0% {
-        width: 0px;
-    }
-
-    100% {
-        width: 55%;
-    };
-}
-
-@-moz-keyframes git {
-    0% {
-        width: 0px;
-    }
-
-    100% {
-        width: 45%;
-    };
-}
-
-@-moz-keyframes unity {
-    0% {
-        width: 0px;
-    }
-
-    100% {
-        width: 60%;
-    };
-}
-
-@-moz-keyframes pixel {
-    0% {
-        width: 0px;
-    }
-
-    100% {
-        width: 70%;
-    };
-}
-
-@keyframes load {
-    0%{
-        opacity: 0.08;
-/*         font-size: 10px; */
-/* 				font-weight: 400; */
-				filter: blur(5px);
-				letter-spacing: 3px;
-        }
-    100%{
-/*         opacity: 1; */
-/*         font-size: 12px; */
-/* 				font-weight:600; */
-/* 				filter: blur(0); */
-        }
-}
-
-/* ---------------------------------------------------
     Footer
 ----------------------------------------------------- */
 
 footer{
-	margin-top:50px;
+	position: absolute;
+	overflow: hidden;
 	height:300px;
 	width:100%;
 	bottom:0;
-	z-index:-1;
+	display: block;
 	background: rgba(59, 52, 73);
 }
 
@@ -862,20 +908,6 @@ footer a{
 footer a:hover,
 a:focus {
     color: #ffb84d;
-}
-
-.footer-wrapper{
-	width:100%;
-	height:100%;
-	margin: 0 auto;
-	position: absolute;
-	overflow: hidden;
-}
-
-.single-footer{
-	width: 33%;
-	float:left;
-	text-align:center;
 }
 /* ---------------------------------------------------
     Header
