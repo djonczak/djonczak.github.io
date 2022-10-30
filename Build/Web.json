@@ -1,11 +1,11 @@
 {
 "companyName": "Dawid Jonczak",
-"productName": "Project Muerto",
-"productVersion": "1.0",
-"dataUrl": "Web.data.unityweb",
-"asmCodeUrl": "Web.asm.code.unityweb",
-"asmMemoryUrl": "Web.asm.memory.unityweb",
-"asmFrameworkUrl": "Web.asm.framework.unityweb",
+"productName": "Day Of The Dead",
+"productVersion": "1.1",
+"dataUrl": "Muerto.data.unityweb",
+"asmCodeUrl": "Muerto.asm.code.unityweb",
+"asmMemoryUrl": "Muerto.asm.memory.unityweb",
+"asmFrameworkUrl": "Muerto.asm.framework.unityweb",
 "TOTAL_MEMORY": 268435456,
 "graphicsAPI": ["WebGL 2.0","WebGL 1.0"],
 "webglContextAttributes": {"preserveDrawingBuffer": false},
@@ -13,5 +13,5 @@
 "backgroundColor": "#231F20",
 "developmentBuild": false,
 "multithreading": false,
-"unityVersion": "2019.2.0b10"
+"unityVersion": "2019.3.5f1"
 }
