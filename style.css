@@ -673,7 +673,6 @@ max-width: 100%;
 	--dark: hsl(var(--hue), 25%, 10%);
 	--grey: hsl(0, 0%, 50%);
 
-	width: 410px;
 	height: 600px;
 	perspective: 1000px;
 }
@@ -957,6 +956,8 @@ h3 {
 	margin: 5px 2px;
 	}
 
+.info-button{
+	padding-top: 25px;
 /* ---------------------------------------------------
     Video full screen
 ----------------------------------------------------- */

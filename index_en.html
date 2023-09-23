@@ -15,9 +15,20 @@
 	<!-- Social Icon -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"crossorigin="anonymous">
 	<script src="js/Carousel.js" defer></script>
+	<script src="js/Accordion.js" defer></script>
+		<script>
+	function ShowSnicker() {
+	var x = document.getElementById("snackbar");
+	x.className = "show";
+	setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+	}
+	
+	
+	
+</script>
 </head>
-<body>
-    
+<body onLoad="ShowSnicker()">
+<div id="snackbar">Last update 23/09/2023</div>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
@@ -35,6 +46,7 @@
 	</nav>
         <!-- Page Content  -->	
 	<div id="content">
+
 		<div class="w3-content">
 			<img class="slide w3-animate-fading" src="img/GameLevel/horrorLevel7.webp">
 			<img class="slide w3-animate-fading" src="img/Rabbit/Rabbits9.webp">
@@ -45,35 +57,44 @@
 		<div id="content-main">
 		<h2 id="about_me">About me</h2>
 		<div class="clearfix">
-			Hi! I'm Dawid, I have recently graduated from Collegium Da Vinci, where I studied computer science with specialization "Game design". I made my thesis "Designing and implementation of cooperative top-down shooter game", in team of 3 people, where I was responsible for programming, level and game design. Currently focused on gaining my first work experience in IT industry or game dev. In the meantime I’m working on improving my C#, Unity and Pixel Art skillset.
-		<div id="experience"></div>
+			Hi! I'm Dawid, I have graduated from university Collegium Da Vinci, where I studied computer science with specialization "Game design". In team of 3 people, I made my thesis "Designing and implementation of cooperative top-down shooter game", where I was responsible for programming, level and game design. Currently working as Unity VR Developer at EHS VR, where I'm creating VR EHS training applications. From February 2020 I had worked on 8 projects(scroll down for more info). 
+			In the meantime I’m working on improving my C#, Unity and Pixel Art skillset, by creating my hobby projects(currently enjoying on <a target="_blank" href="dungeon_en.html" style="color:#9784BA; font-weight: bold;">Dungeon</a>).
+		<section id="experience"></section>
 		</div>
 		
 		<h2>Work experience</h2>
 		<ul class="list-unstyled">
 			<li class="media">
-			<img src="img/MainPage/monstercouch.webp" class="align-self-center mr-3" alt="..." style=" padding:1px;	border:1px solid #021a40; border-radius: 8px;  width: 150px;">
+			<img src="img/MainPage/monstercouch.webp" class="align-self-start mr-3" alt="..." style=" padding:1px;	border:1px solid #021a40; border-radius: 8px;  width: 150px;">
 				<div class="media-body">
 				<h5 class="mt-0"><p><a target="_blank" href="http://monstercouch.com/" style="color: #6bae76; font-weight: bold;">Monster Couch</a></p></h5>
 				<p>May - June 2018 </p>
+				<p>Apprenticeships</p>
 				<div id="portfolio"></div>
-				<p>Testing the game "Die For Valhalla", programming in C# ( project to pass ), recording of promotional materials and enemy design.</p>
+				<p>Game testing for <a target="_blank" href="http://dieforvalhalla.com/" style="color:#9784BA; font-weight: bold;">Die for Valhalla</a>, programming in C# ( project to pass practice), recording of promotional materials and enemy design.</p>
 				</div>
-			</li>
 			
 			<li class="media my-4">
-			<img src="img/MainPage/ehsvr.webp" class="align-self-center mr-3" alt="..." style=" padding:1px;	border:1px solid #021a40; border-radius: 8px;  width: 150px;">
+			<img src="img/MainPage/ehsvr.webp" class="align-self-start mr-3" alt="..." style=" padding:1px;	border:1px solid #021a40; border-radius: 8px;  width: 150px;">
 				<div class="media-body">
-				<h5 class="mt-0"><p><a target="_blank" href="https://ehsvr.com/" style="color: #6bae76; font-weight: bold;">EHS VR</a></p></h5>
-				<p>February 2020 - now </p>
+				<h5 class="mt-0"><p><a target="_blank" href="https://www.ehsvr.com/" style="color: #6bae76; font-weight: bold;">EHS VR</a></p></h5>
+				<p>Luty 2020 - now </p>
+				<p>Unity VR Developer</p>
 				<div id="portfolio"></div>
-				<p>Programming in C #, creating VR applications for EHS training. </p>
-				</div>
-			  </li>
-			
-		</ul>
+				<p>I'm currently working on VR training applications/games with occupational health and safety gol. The aim of the courses is to teach proper habits in situations such as: a fire in a building or flats, helping a burnt person, teaching how to use an AED and how to jump into a  rescue cushion.
+				The main platforms for which I develop are Oculus Quest and Oculus Quest 2, all interactions in the game are made thanks to hand tracking technology. I work on projects mainly alone, during work I am responsible for:</p>
+				<ul>
+				<li> Visual: scene lighting, creating simple shaders, particle effects, selecting models from Unity Asset Stora, cooperation with a 3D/2D Artist</li>
+				<li> Sound: selecting music, sound effects, cutting and modyfing them </li>
+				<li> Level design (designing scenes and setting up object on it), designing mechanics between the player and the game world </li>
+				<li> Programming game mechanic </li>
+				<li> Application/game optimization </li>
+				</ul>
+				<p>In Unity I use the animation engine <a target="_blank" href="http://dotween.demigiant.com/" style="color:#9784BA; font-weight: bold;">DOTween</a> for moving, rotating and various "animations" of objects and <a target="_blank" href="http://obi.virtualmethodstudio.com/manual/6.2/ropesetup.html" style="color:#9784BA; font-weight: bold;">ObiRopa</a> an engine based on a particle system used to simulate ropes), which is used to make hoses for fire hydrant or fire extinguisher.
+				I also used it recently <a target="_blank" href="https://wit.ai/" style="color:#9784BA; font-weight: bold;">Wit.AI</a> for voice interaction between the player an NPC or a walkie-talkie.</p>
+		    </li>
 
-		<h2>Projects</h2>
+		<h2>Personal projects</h2>
 		<div class="grid-container">
 <div class="flip-card-container" style="--hue: 220">
 	<div class="flip-card">
@@ -167,7 +188,7 @@
 				<span class="design design--8"></span>
 			</div>		
 			<ul>
-			<li><p>My minor project, which will be a detective game with a gameplay model from Hyper Light Drifter.</p></li>
+			<li><p>My minor project, where player play as bounty hunter, gameplay is "borrowed" from Hyper Light Drifter.</p></li>
 			<li><div class="color-block" style="background-color: #ff4d4d;">unity </div> 
 			<div class="color-block" style="background-color: #79ff4d;">c# </div> 
 			<div class="color-block" style="background-color: #c266ff;">pixel art </div>
@@ -219,7 +240,7 @@
 		<div class="card-front">
 			<figure>
 				<div class="img-bg"></div>
-				<img src="img/GameLevel/horrorLevel7.webp" alt="csspoints" />
+				<img src="img/GameLevel/GameLevelCard.webp" alt="csspoints" />
 				<figcaption>3D</figcaption>
 			</figure>
 		</div>
@@ -275,7 +296,7 @@
 				<span class="design design--8"></span>
 			</div>		
 			<ul>
-			<li><p>The game is based on the Moonlighter game. Instead of a store, we run an inn, where we collect information from customers and set off on an adventure.</p></li>
+			<li><p>The game is based on the Moonlighter game. Instead of a store, we run an Inn, where we collect information from customers and set off on an adventure.</p></li>
 			<li><div class="color-block" style="background-color: #ff4d4d;">unity </div>
 					<div class="color-block" style="background-color: #79ff4d;"> c# </div>
 					<div class="color-block" style="background-color: #8c1aff;"> game design </div>
@@ -286,6 +307,7 @@
 </div>
 
 </div>
+<!-- 
 		<h2>Some extra stuff</h2>			
 			<div class="gallery">
 				<div class="gallery-item">
@@ -300,7 +322,7 @@
 					<img class="gallery-image" src="img/MainPage/Art.webp">
 				</div>
 			</div>	
-		
+		-->
 		<h2>Hobby</h2>			
 			<div class="gallery">
 				<div class="gallery-item">
@@ -318,7 +340,7 @@
 				<div class="gallery-item">
 					<img class="gallery-image" src="img/MainPage/warframe.gif">
 				</div>	
-				<div id="foot"></div>
+				<section id="foot"></section>
 			</div>	
 		</div>
 		<footer>
@@ -377,7 +399,6 @@
 			</div>
 		 </div>
 		</footer>
-	     </div>
+		</div>
 </body>
-
 </html>
