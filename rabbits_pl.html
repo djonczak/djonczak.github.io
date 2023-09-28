@@ -18,6 +18,7 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
 	<script src="js/Gallery.js" defer></script>
+	<script src ="js/Accordion.js" defer></script>
 	<style>
 
 	@font-face {
@@ -93,21 +94,22 @@
 			<div class="bigHeaderFont">From The Tower It Comes</div>
 			<div style="text-align: center;">
 
-				<b>Status projektu </b> <p>    Zakończony</p>
+				<b>Status projektu </b> <p>   Zakończony</p>
 				<b>Typ projektu </b> <p>    Studia / zespołowy (4 osoby)</p>
-				<b>Czas trwania </b> <p>  ~dwa miesiące </p></li>
-				<b>Użyte oprogramowanie </b> <p>  Unity Engine, Audacity</p>
-				<b>Główne role </b> <p>  Programista / Level designe</p>
+									<p> Teraz / solo </p>
+				<b>Czas trwania </b> <p>  ~dwa miesiące (studia/2017) </p>
+									 <p>  ~lipiec 2020 - listopad 2022 </p>
+				<b>Użyte oprogramowanie </b> <p>  Unity Engine, Audacity, Gimp</p>
+				<b>Główne role 2017</b> <p>  Programista / Level designer / Combat Designer</p>
+				<b>Główne role 2020/2022</b> <p> Tak </p>
 			</div>
 			<div class="smallHeaderFont">O From The Tower It Comes</div>
-				<p>Projekt ten rozpoczął się na drugim roku w Collegium Da Vinci. W projekcie brało udział trzech programistów oraz grafik. Celem było stworzenie gry łaczącej ze sobą gatunku platformer, top-down oraz endless runnera. Jest to mój pierwszy projekt w Unity Engine, dzięki któremu nauczyłem się mnóstwo rzeczy o Unity i C#. </p>
+				<p>Projekt ten rozpoczął się na drugim roku w Collegium Da Vinci. W projekcie brało udział trzech programistów oraz grafik. Celem było stworzenie gry łaczącej ze sobą gatunku platformer, top-down oraz endless runnera. Jest to mój pierwszy projekt w Unity Engine, dzięki któremu nauczyłem się mnóstwo rzeczy o Unity i C#. 
+				W lipcu 2020 postanowiłem dopracować projekt, poprzez dodanie wielu brakujących rzeczy np: animacji dla postaci, dopracowanie głównych mechanik oraz poprawa wizualia. Pierwsze prace rozpocząłem od przepisania wszystkich skryptów, a następnie dodałem szablon Universal Render Pipeline. </p>
 				<div class="smallHeaderFont">Rzeczy, które zrobiłem:</div>
 				<ul style="float:left; width:50%;">
 					<li>
 						<p>mechaniki dla poziomów w top-down</p>
-					</li>
-					<li>
-						<p>skok i poślizg na poziomie "Endless run"</p>
 					</li>
 					<li>
 						<p>object pooling dla pocisków gracza oraz bossa</p>
@@ -140,53 +142,184 @@
 					<li>
 						<p>współpraca z zespołem</p>
 					</li>
-					<li>
-						<p>lecząca marchew</p>
-					</li>
-
 				</ul>
-				<div class="smallHeaderFont">Gallery</div>
+				
+				<div class="smallHeaderFont">2020 - 2022 opis:</div>
+				<p> Krótki opis zmienionych rzeczy. Na dole znajduje się galeria z porównaniami oraz pomniejsze opisy pomiędzy zdjeciami.</p>
+				<p> Odświeżenie postanowiłem rozpocząć od dodania URP i wykorzystaniu 2D Light do budowy ośwetlenia i klimaty scen. Postanowiłem też porzucić poziomy platformowe na rzecz skupienia się top-down oraz endless run-owych poziomów. Wszystkie poziomy 
+				top-down zostały zrobione od nowa oraz powiększone, by dać możliwość eksploracji poziomów. Większość 2D artów została przerysowana lub całkowicie stworzona od nowa. Na scenach porozmieszczane są różne obiekty z którymi można wejść interakcje np: z drewnianych beczek, po ich zniszczeniu wyskakuje losowa ilość monet, które można wykorzystać do handlu
+				, krzewy, które oświetlają środowisko, poruszają się gdy w nie wejdziemy i zostanie odpalony particle effect wraz z dźwiękiem. Stan beczek, barier lub skrzynek, zostaje zapisany po przejściu do innego poziomu i po powrocie są przesuwane lub dezaktywowane, w zależności od tego co zrobiliśmy z nimi wcześniej.
+				Dodałem też "sianko", które stanowi odpowiednik save pointów, do którego wracamy po śmierci. Stworzyłem też AudioManager, które zadaniem jest płynna zmiana dźwięków w zależności od sytuacji, inny dźwięk będzie podczas biegu w lesie lub ucieczki, całkowicie inny uruchamia się podczas rozpoczęcia walki. Wszystkie dźwięki występujące w środowisku
+				zostały przerobione na spatial 3D, byśmy mogli je słyszeć z lewej lub prawej strony. </p>
+				
+				<div class="gallery">
+				
+					<div class="gallery-item">
+						<img class="gallery-image" src="img/Rabbit/NewVersion/firstLevel.webp">
+					</div>
+					
+					<div class="gallery-item">
+						<img class="gallery-image" src="img/Rabbit/NewVersion/plants.webp">
+					</div>
+					
+					<div class="gallery-item">
+						<img class="gallery-image" src="img/Rabbit/NewVersion/spawnPoint.webp">
+					</div>
+				</div>
+				
+					<button class="accordion">  Wybuchowa beczka </button>
+						<div class="field">
+						<p> Particle effect wybuchu </p>
+							<img src="img/Rabbit/NewVersion/explosion.gif" style="width: 70%;display: block; margin-left: auto; margin-right: auto;">
+							
+							<p> Jeden z efektów podczas wybuchu beczki jeśli uda nam się pokonam przeciwnika, odlatują one wtedy do boków ekranu i dodatkowo na gif-ie nie widać leci wraz z nimi czarny dym.</p>
+							<img src="img/Rabbit/NewVersion/flying.gif" style="width: 70%;display: block; margin-left: auto; margin-right: auto;">
+			
+						</div>
+				<p> Podstawowy przeciwnik królik został całkowicie przerobiony, otrzymał swoje animacje dla dwóch ataków, particle effecty oraz dźwięki. Przeciwnicy są podzieleni na grupy, jeśli gracz zaalarmuje jednego przeciwnika ten wtedy zaalarmuje resztę z swojej grupy. Z niektórych przeciwników wypadają "Evil Carrotine", która ucieka przed nami lub wykona atak dystansowy przeciwko nam. Jeśli uda nam się ją zabić dostaniemy dodatkowe monety do wykorzystania w sklepie.
+				Dodałem też kolejnego przeciwnika "Celery", który ma dwa ataki z bliska, a jak oddalimy się od niego za daleko, wtedy zaczyna się turlać w naszym kierunku, gdy zbijemy mu 75% życia, wtedy zaczyna migać i przyspiesza, wokół niego pojawia się obszar wybuchu. Mamy wtedy kilka sekund, by pokonać zanim wybuchnie. Każdy z przeciwników ma swoją małą cutscenkę wprowadzającą. Są też pomieszczenia, gdzie poruszają się "Carrotine"-s, które gdy się do nich zbliżymy,
+				poruszają się za nami i możemy im wydawać rozkazy. Dodatkowo przy przejściu do innego poziomu zapisywany jest stan przeciwników, więc gdy pokonamy przeciwników w jednym poziomie i wrócimy do niego z innego, to oni nie pojawią się, dopiero po śmierci gracza następuje restart i pojawiają się od nowa.
+				Przeciwnicy otrzymali także pathfinding (<a target="_blank" href="https://arongranberg.com/astar/" style="color:#9784BA; font-weight: bold;">A* Pathfinding Project</a>), wcześniej poruszali się po linii prostej do gracza bez omijania jakichkolwiek przeszkód. </p>
+				<div class="gallery">
+				
+					<div class="gallery-item">
+						<img class="gallery-image" src="img/Rabbit/NewVersion/enemyChase.webp">
+					</div>
+					
+					<div class="gallery-item">
+						<img class="gallery-image" src="img/Rabbit/NewVersion/carrotines.webp">
+					</div>
+					
+					<div class="gallery-item">
+						<img class="gallery-image" src="img/Rabbit/NewVersion/evilCarrot.webp">
+					</div>
+
+				</div>
+				
+				<p> Kolejnym krokiem było rozwinięcie walki z głównym bossem. Został on całkowicie przerobiony, dostał animacje i dodatkowe efekty dźwiękowe. Posiada teraz trzy fazy, każda z nich prowadza dodatkowe ataki, a trzecia rozpoczyna się bullet hellem,
+				który należy przetrwać. Na arenie znajdują się cztery leczące marchewki oraz cztery skrzynie w każdym rogu areny, gdzie można się ukryć i odetchnąć, aż do trzeciej fazy, gdzie zostają spalone. Przed areną ustawiony jest też spawn point aka bonfire, gdzie po porażce możemy wrócić szybciej do walki.</p>
+				
+				<div class="gallery">
+				
+					<div class="gallery-item">
+						<img class="gallery-image" src="img/Rabbit/NewVersion/bossTornado.webp">
+					</div>
+					
+					<div class="gallery-item">
+						<img class="gallery-image" src="img/Rabbit/NewVersion/bulletHell1.webp">
+					</div>
+					
+					<div class="gallery-item">
+						<img class="gallery-image" src="img/Rabbit/NewVersion/bulletHell2.webp">
+					</div>
+
+				</div>
+				
+				<div class="smallHeaderFont"> Galeria 2017 - 2022 </div>
 				<div class="w3-content w3-display-container" style="border: 2px solid #6bae76;">
 
 					<div class="w3-display-container mySlides">
 					  <img src="img/Rabbit/Rabbits4.webp" style="width:100%">
 					   <div class="w3-display-top w3-large w3-container w3-padding-16 w3-black">
-						Bieg w lesie
+						Bieg w lesie - 2017
+					  </div>
+					</div>
+					
+					<div class="w3-display-container mySlides">
+					  <img src="img/Rabbit/NewVersion/Gallery/NewRabbit1.webp" style="width:100%">
+					   <div class="w3-display-top w3-large w3-container w3-padding-16 w3-black">
+						Bieg w lesie - 2022
 					  </div>
 					</div>
 					
 					<div class="w3-display-container mySlides">
 					  <img src="img/Rabbit/Rabbits7.webp" style="width:100%">
 					   <div class="w3-display-top w3-large w3-container w3-padding-16 w3-black">
-						Poziom top-down
+						Poziom top-down - 2017
+					  </div>
+					</div>
+					
+					<div class="w3-display-container mySlides">
+					  <img src="img/Rabbit/NewVersion/Gallery/NewRabbit2.webp" style="width:100%">
+					   <div class="w3-display-top w3-large w3-container w3-padding-16 w3-black">
+						Poziom top-down 1 - 2022
+					  </div>
+					</div>
+					
+					<div class="w3-display-container mySlides">
+					  <img src="img/Rabbit/NewVersion/Gallery/NewRabbit5.webp" style="width:100%">
+					   <div class="w3-display-top w3-large w3-container w3-padding-16 w3-black">
+						Poziom top-down 2 - 2022
+					  </div>
+					</div>
+					
+					<div class="w3-display-container mySlides">
+					  <img src="img/Rabbit/NewVersion/Gallery/NewRabbit6.webp" style="width:100%">
+					   <div class="w3-display-top w3-large w3-container w3-padding-16 w3-black">
+						Poziom top-down 3 - 2022
 					  </div>
 					</div>
 
 					<div class="w3-display-container mySlides">
 					  <img src="img/Rabbit/Rabbit3.webp" style="width:100%">
 					   <div class="w3-display-top w3-large w3-container w3-padding-16 w3-black">
-						Platformowy poziom
+						Platformowy poziom - 2017
 					  </div>
 					</div>
 
 					<div class="w3-display-container mySlides">
 					  <img src="img/Rabbit/Rabbits8.webp" style="width:100%">
 					   <div class="w3-display-top w3-large w3-container w3-padding-16 w3-black">
-						Horda królików
+						Horda królików - 2017
 					  </div>
 					</div>
 
 					<div class="w3-display-container mySlides">
 					  <img src="img/Rabbit/Rabbits9.webp" style="width:100%">
 					   <div class="w3-display-top w3-large w3-container w3-padding-16 w3-black">
-						Walka z bossem
+						Walka z bossem - 2017
 					  </div>
 					</div>
 
 					<div class="w3-display-container mySlides">
 					  <img src="img/Rabbit/Rabbits5.webp" style="width:100%">
 					   <div class="w3-display-top w3-large w3-container w3-padding-16 w3-black">
-						Królik strażnik
+						Strażnik - 2017
+					  </div>
+					</div>
+					
+					<div class="w3-display-container mySlides">
+					  <img src="img/Rabbit/NewVersion/Gallery/NewRabbit7.webp" style="width:100%">
+					   <div class="w3-display-top w3-large w3-container w3-padding-16 w3-black">
+						Chungus(wcześniej Strażnik) - 2022
+					  </div>
+					</div>
+					
+					<div class="w3-display-container mySlides">
+					  <img src="img/Rabbit/NewVersion/Gallery/NewRabbit8.webp" style="width:100%">
+					   <div class="w3-display-top w3-large w3-container w3-padding-16 w3-black">
+						Spowalniająca pajęczyna - 2022
+					  </div>
+					</div>
+					
+					<div class="w3-display-container mySlides">
+					  <img src="img/Rabbit/NewVersion/Gallery/NewRabbit3.webp" style="width:100%">
+					   <div class="w3-display-top w3-large w3-container w3-padding-16 w3-black">
+						Wprowadzenie dla przeciwnika - 2022
+					  </div>
+					</div>
+					
+					<div class="w3-display-container mySlides">
+					  <img src="img/Rabbit/NewVersion/Gallery/NewRabbit9.webp" style="width:100%">
+					   <div class="w3-display-top w3-large w3-container w3-padding-16 w3-black">
+						Sklep - 2022
+					  </div>
+					</div>
+					
+					<div class="w3-display-container mySlides">
+					  <img src="img/Rabbit/NewVersion/Gallery/NewRabbit4.webp" style="width:100%">
+					   <div class="w3-display-top w3-large w3-container w3-padding-16 w3-black">
+						Carrotines - 2022
 					  </div>
 					</div>
 
@@ -196,10 +329,16 @@
 
 				</div>
 				<div class="info-button">
-					<p><button type="button" class="btn btn-secondary btn-block" style=" margin-left:auto; margin-right:auto; display: block;" onclick="window.open('https://drive.google.com/open?id=1_1pvhQliotKDM24PZev_yAqvKTxyrBD6')">Build</button></p>
+					<p><button type="button" class="btn btn-secondary btn-block" style=" margin-left:auto; margin-right:auto; display: block;" onclick="window.open('https://drive.google.com/open?id=1_1pvhQliotKDM24PZev_yAqvKTxyrBD6')">Build z 2017</button></p>
 				</div>
-        </div>
-
+				
+				<div class="info-button">
+					<p><button type="button" class="btn btn-secondary btn-block" style=" margin-left:auto; margin-right:auto; display: block;" onclick="window.open('https://drive.google.com/file/d/1dSLAJd1F4bTlteYG-CtdTN6J6ukj8Qpl/view?usp=sharing')">Build z 2022</button></p>
+				</div>	
+					
+			</div>
+			
+			
 
 </body>
 
