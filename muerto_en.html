@@ -147,14 +147,14 @@
 						<div style="text-align: center;">
 							<b>Playable WebGL build</b>
 						</div>
-								 <canvas id="unity-canvas" width=960 height=600 style="width: 960px; height: 600px; background: #231F20"></canvas>
+					 <canvas id="unity-canvas" width=960 height=600 style="width: 960px; height: 600px; background: #231F20; display: block; margin-left: auto; margin-right: auto;"></canvas>
 						<script src="Build/Muerto.asm.loader.js"></script>
 							<script>
 								createUnityInstance(document.querySelector("#unity-canvas"), {
-								dataUrl: "Build/Muerto.data.gz",
-								frameworkUrl: "Build/Muerto.asm.framework.js.gz",
-								codeUrl: "Build/Muerto.asm.js.gz",
-								memoryUrl: "Build/Muerto.asm.mem.gz",
+								dataUrl: "Build/Muerto.data",
+								frameworkUrl: "Build/Muerto.asm.framework.js",
+								codeUrl: "Build/Muerto.asm.js",
+								memoryUrl: "Build/Muerto.asm.mem",
 								streamingAssetsUrl: "StreamingAssets",
 								companyName: "Dawid Jonczak",
 								productName: "Day Of The Dead",
