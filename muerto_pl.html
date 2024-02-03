@@ -21,10 +21,6 @@
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
-    <script src="Build/UnityLoader.js"></script>
-    <script>
-      UnityLoader.instantiate("unityContainer", "Build/Web.json");
-    </script>
 	<style>
 	
 	@font-face {
@@ -104,7 +100,7 @@
 			<div style="text-align: center;">
 					<b>Status projektu </b> <p> Zakończony</p>
 					<b>Typ projektu </b> <p> Solo   </p>
-					<b>Czas trwania </b> <p>  ~ miesiąc </p></li>
+					<b>Czas trwania </b> <p>  ~ miesiąc - 11.2020 </p> <p>  ~ Version 1.1 - 23.09.2023 </p> <p>  ~ Version 1.2 - 03.02.2024 </p>  </li>
 					<b>Użyte oprogramowanie </b> <p>  Unity Engine, GIMP, Photoshop</p>
 			</div>
 				<div class="smallHeaderFont">O grze</div>
@@ -145,9 +141,22 @@
 						<div style="text-align: center;">
 							<b>Grywalny build WebGL</b>
 						</div>
-						<div class="containerUnity">
-							<div id="unityContainer"></div>
-						</div>
+					 <canvas id="unity-canvas" width=960 height=600 style="width: 960px; height: 600px; background: #231F20"></canvas>
+						<script src="Build/Muerto.asm.loader.js"></script>
+							<script>
+								createUnityInstance(document.querySelector("#unity-canvas"), {
+								dataUrl: "Build/Muerto.data.gz",
+								frameworkUrl: "Build/Muerto.asm.framework.js.gz",
+								codeUrl: "Build/Muerto.asm.js.gz",
+								memoryUrl: "Build/Muerto.asm.mem.gz",
+								streamingAssetsUrl: "StreamingAssets",
+								companyName: "Dawid Jonczak",
+								productName: "Day Of The Dead",
+								productVersion: "1.2",
+								// matchWebGLToCanvasSize: false, // Uncomment this to separately control WebGL canvas render size and DOM element size.
+								// devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
+							});
+							</script>
 
 				<div class="info-button">
 					<p><button type="button" class="btn btn-secondary btn-block" style=" margin-left:auto; margin-right:auto; display: block;" onclick="window.open('https://github.com/djonczak/Muerto')"><a>Repository</a></button></p>
