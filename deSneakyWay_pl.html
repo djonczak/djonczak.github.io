@@ -77,6 +77,7 @@
 						</a>
 						<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
 							<a class="dropdown-item" href="criticalVector_en.html"><i class="fas fa-battery-half"></i>Critical Vector</a>
+							<a class="dropdown-item" href="muerto_pl.html"><img src="img/Muerto/luchador.webp" style="width:22px; margin-right:10px;"></i>Day Of The Dead</a>
 							<a class="dropdown-item" href="rabbits_en.html"><img src="img/Rabbit/carrot-solid.svg" style="width:22px; margin-right:10px;"></i>From The Tower It Comes</a>
 						</div>
 					</div>
@@ -102,7 +103,7 @@
 
 			<p>Gra "De Sneaky Way" to projekt stworzony na zaliczenie zajęć z programowania, zadaniem było stworzenie prostej gry skradankowej. W obecnej wersji dostępny jest jeden poziom "Doki", w którym gracz musi przedostać się przez patrolujących okolicę strażników do kontenerowca. W planach były jeszcze dwa poziomy, rozgrywające się wewnątrz kontenerowca oraz w magazynie.
 			Gracz ma możliwość poruszania się z różną prędkością - im szybciej się porusza, tym większe jest ryzyko wykrycia przez przeciwników. Dodatkowo, w różnych miejscach na mapie znajdują się puszki, które gracz może wykorzystać do odwrócenia uwagi strażników.
-			Gra jest przedstawiona z perspektywy top-down (widok z góry), jednak wszystkie elementy na scenie są trójwymiarowe i posiadają nałożone tekstury typu "Sprite Renderer".</p>
+			Gra jest przedstawiona z perspektywy top-down, jednak wszystkie elementy na scenie są trójwymiarowe i posiadają nałożone tekstury typu "Sprite Renderer".</p>
 			
 			<div class="gallery">			
 					<div class="gallery-item">
@@ -117,9 +118,9 @@
 
 			<p>Przeciwniy poruszają się poo wyznaczonych trasach za pomocą komponentu "Nav Mesh Agent". Po dotarciu do końca ścieżki, rozglądają się po okolicy, oświetlając swój obszar widzenia latarką. W przypadku zauważenia gracza, przeciwnik staje się bardziej czujny, zwiększa się jego zasięg widzenia oraz prędkość poruszania.
 			Dodatkowo, zmienia się również muzyka w tle. Po zbliżeniu się do gracza, przeciwnik ogłusza go, co skutkuje koniecznością rozpoczęcia rozgrywki od nowa.</p>
-
+			
 			<p>Na mapie znajdują się również puszki, które gracz może podnosić i rzucać. Po upadku lub uderzeniu w inny obiekt, puszka generuje falę dźwiękową, która może zwrócić uwagę strażnika. Strażnik, usłyszawszy hałas, podchodzi do puszki i zaczyna się rozglądać.
-			Należy jednak pamiętać, że puszka jest bronią obosieczną - jeśli gracz na nią nadepnie, również wyda dźwięk, który może zaalarmować strażnika..</p>
+			Należy jednak pamiętać, że puszka jest bronią obosieczną - jeśli gracz na nią nadepnie, również wyda dźwięk, który może zaalarmować strażnika.</p>
 			
 			<p>Aby umożliwić oświetlenie"Sprite Renderer"-ów, zmieniłem renderer projektu na URP (Universal Render Pipeline) i stworzyłem specjalny shader, który umożliwia dynamiczne oświetlanie tych elementów przez źródła światła. Dla "Sprite Renderer"-a wody, stworzyłem kolejny shader, który dodaje efekt zniekształcenia tekstury wody, aby uczynić ją bardziej realistyczną.
 			Aby uniknąć wyświetlania trójwymiarowych obiektów, kamera renderuje tylko te elementy, które znajdują się na warstwie "Pixel", gdzie umieszczone są wszystkie "Sprite Renderery".</p>

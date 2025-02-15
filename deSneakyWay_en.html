@@ -77,12 +77,13 @@
 						</a>
 						<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
 							<a class="dropdown-item" href="criticalVector_en.html"><i class="fas fa-battery-half"></i>Critical Vector</a>
+							<a class="dropdown-item" href="muerto_en.html"><img src="img/Muerto/luchador.webp" style="width:22px; margin-right:10px;"></i>Day Of The Dead</a>
 							<a class="dropdown-item" href="rabbits_en.html"><img src="img/Rabbit/carrot-solid.svg" style="width:22px; margin-right:10px;"></i>From The Tower It Comes</a>
 						</div>
 					</div>
 				</div>
 			</div>
-			<a href="deSneakyWay_en.html" style="float:right;"><img width="35" height="35" src="img/en.png"></a>
+			<a href="deSneakyWay_pl.html" style="float:right;"><img width="35" height="35" src="img/pl.png"></a>
 		</nav>
 
         <!-- Page Content  -->
@@ -92,17 +93,17 @@
         <div id="content-narrow">
 			<div class="bigHeaderFont">De Sneaky Way</div>
 			<div style="text-align: center;">
-				<b>Status projektu </b> <p>    Ukończony</p>
-				<b>Typ projektu </b> <p>   Solo</p>
-				<b>Czas trwania </b> <p>  ~ podstawowa wersja - 05.2018</p>  <p>  ~ Wersja 1.0 - 14.02.2025 </p></li>
-				<b>Użyte oprogramowanie </b> <p>  Unity Engine, GIMP</p>
+				<b>Project Status </b> <p>    Finished</p>
+				<b>Project Type </b> <p>  Individual</p>
+				<b>Project Duration </b> <p>  ~ first version - 05.2018</p>  <p>  ~ Version 1.0 - 14.02.2025 </p></li>
+				<b>Software Used  </b> <p>  Unity Engine, GIMP</p>
 			</div>
 
-			<div class="smallHeaderFont">O De Sneaky Way</div>
+			<div class="smallHeaderFont">About De Sneaky Way</div>
 
-			<p>Gra "De Sneaky Way" to projekt stworzony na zaliczenie zajęć z programowania, zadaniem było stworzenie prostej gry skradankowej. W obecnej wersji dostępny jest jeden poziom "Doki", w którym gracz musi przedostać się przez patrolujących okolicę strażników do kontenerowca. W planach były jeszcze dwa poziomy, rozgrywające się wewnątrz kontenerowca oraz w magazynie.
-			Gracz ma możliwość poruszania się z różną prędkością - im szybciej się porusza, tym większe jest ryzyko wykrycia przez przeciwników. Dodatkowo, w różnych miejscach na mapie znajdują się puszki, które gracz może wykorzystać do odwrócenia uwagi strażników.
-			Gra jest przedstawiona z perspektywy top-down (widok z góry), jednak wszystkie elementy na scenie są trójwymiarowe i posiadają nałożone tekstury typu "Sprite Renderer".</p>
+			<p>The game "The Sneaky Way" is a project created for a programming class assignment, the task was to create a simple stealth game. There is one level available, "Docks", in which the player has to get through the guards patrolling the area to the container ship. There were plans for two more levels, taking place inside the container ship and in the warehouse.
+			The player has the ability to move at different speeds - the faster he moves, the greater the risk of being detected by enemies. In addition, there are cans in various places on the map that the player can use to distract the guards.
+			The game is presented from a top-down perspective, but all elements on the scene are three-dimensional and have "Sprite Renderer" type textures applied.</p>
 			
 			<div class="gallery">			
 					<div class="gallery-item">
@@ -110,19 +111,19 @@
 					</div>
 			</div>
 			
-			<div class="smallHeaderFont">2025 opis zmian:</div>
+			<div class="smallHeaderFont">2025 changes:</div>
 
-			<p>Na początku 2025 roku postanowiłem udoskonalić projekt "De Sneaky Way". Rozpocząłem od przepisania całego kodu i uporządkowania sceny. Wszystkie collidery zostały precyzyjnie dopasowane do elementów widocznych przez kamerę, a ścieżki poruszania się przeciwników zostały poprawione i zoptymalizowane.
-			Dodatkowo, zaimplementowałem funkcje, których nie udało mi się dodać w 2018 roku z powodu braku doświadczenia i czasu. Poniżej znajduje się krótki opis wprowadzonych zmian i ulepszeń.</p>
+			<p>In early 2025, I decided to improve the "De Sneaky Way" project. I started by rewriting the entire code and organizing the scene. All colliders were precisely matched to the elements visible to the camera, and the enemies' movement paths were corrected and optimized.
+			Additionally, I implemented functions that I was unable to add in 2018 due to lack of experience and time. Below is a brief description of the changes and improvements made.</p>
 
-			<p>Przeciwniy poruszają się poo wyznaczonych trasach za pomocą komponentu "Nav Mesh Agent". Po dotarciu do końca ścieżki, rozglądają się po okolicy, oświetlając swój obszar widzenia latarką. W przypadku zauważenia gracza, przeciwnik staje się bardziej czujny, zwiększa się jego zasięg widzenia oraz prędkość poruszania.
-			Dodatkowo, zmienia się również muzyka w tle. Po zbliżeniu się do gracza, przeciwnik ogłusza go, co skutkuje koniecznością rozpoczęcia rozgrywki od nowa.</p>
+			<p>Enemies move along designated paths using the "Nav Mesh Agent" component. Upon reaching the end of a path, they look around, illuminating their field of vision with a flashlight. If the player is spotted, the enemy becomes more alert, their field of vision and movement speed increase.
+			When player is chased, the background music also changes. Upon approaching the player, the enemy stuns them, resulting in the need to restart the game.</p>
 
-			<p>Na mapie znajdują się również puszki, które gracz może podnosić i rzucać. Po upadku lub uderzeniu w inny obiekt, puszka generuje falę dźwiękową, która może zwrócić uwagę strażnika. Strażnik, usłyszawszy hałas, podchodzi do puszki i zaczyna się rozglądać.
-			Należy jednak pamiętać, że puszka jest bronią obosieczną - jeśli gracz na nią nadepnie, również wyda dźwięk, który może zaalarmować strażnika..</p>
+			<p>There are also cans on the map that the player can pick up and throw. Upon falling or hitting another object, the can generates a sound wave that can attract the guard's attention. The guard, hearing the noise, approaches the can and begins to look around.
+			However, it should be remembered that the can is a double-edged sword - if the player steps on it, it will also make a sound that can alert the guard.</p>
 			
-			<p>Aby umożliwić oświetlenie"Sprite Renderer"-ów, zmieniłem renderer projektu na URP (Universal Render Pipeline) i stworzyłem specjalny shader, który umożliwia dynamiczne oświetlanie tych elementów przez źródła światła. Dla "Sprite Renderer"-a wody, stworzyłem kolejny shader, który dodaje efekt zniekształcenia tekstury wody, aby uczynić ją bardziej realistyczną.
-			Aby uniknąć wyświetlania trójwymiarowych obiektów, kamera renderuje tylko te elementy, które znajdują się na warstwie "Pixel", gdzie umieszczone są wszystkie "Sprite Renderery".</p>
+			<p>To enable lighting for "Sprite Renderers," I changed the project's rendering pipeline to URP (Universal Render Pipeline) and created a special shader that allows these elements to be dynamically illuminated by light sources. For the water's "Sprite Renderer," I created another shader that adds a water texture distortion effect to make it more realistic.
+			To avoid displaying 3D objects, the camera only renders elements that are on the "Pixel" layer, where all the "Sprite Renderers" are located.</p>
 			
 			<div class="gallery">			
 					<div class="gallery-item">
@@ -134,10 +135,10 @@
 					</div>
 			</div>
 			
-			<p>"De Sneaky Way" to krótka, ale wciągająca przygoda, która z pewnością dostarczy ci wiele emocji. Wypróbuj swoje umiejętności skradania i przekonaj się, czy uda ci się ukończyć misję!</p>
+			<p>"De Sneaky Way" is a short but engaging adventure that is sure to give you a lot of excitement. Test your stealth skills and see if you can complete the mission!</p>
 			
 			<div style="text-align: center;">
-				<b>Grywalny WebGL build</b>
+				<b>Playable WebGL build</b>
 			</div>
   
   
