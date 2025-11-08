@@ -19,14 +19,19 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
 	<script src="js/Gallery.js" defer></script>	
 	<style>
-	ul{ 
+	
+	ul
+	{ 
 	 list-style-image: url(img/Dungeon/beerUl.webp);
+     list-style-type: none;
+
 	} 
 	
 	li{
     margin-top: 10px;
 	border:1px solid;
 	border-color : transparent;
+	
 	}
 
 
@@ -82,68 +87,25 @@
 		</nav>
 
         <!-- Page Content  -->
-        <div id="content">
+        <div id="content-narrowBig">		
 		<div id="content-main">
 			<h1>Dungeon</h1>
 			<div style="text-align: center;">
-					<b>Status projektu </b> <p>    Kontynuowane</p>
+					<b>Status projektu </b> <p>    Wstrzymane</p>
 					<b>Typ projektu </b> <p> Zespołowy / (2 osobowy)   </p>
 					<b>Czas trwania </b> <p>  ~ 2 miesiące </p></li>
 					<b>Użyte oprogramowanie </b> <p>  Unity Engine</p>
 					<b>Główne role </b> <p>  Lead programmer / Level designe / Game design</p>
 			</div>
-				<h2>O grze</h2>
-				<p>Wkrótce więcej informacji ( teraz zajmuję się refaktoryzacją kodu ).</p>
-					<h2>Rzeczy, które zrobiłem:</h2>
-					<div class="lista" style="height:225px;">
-					<ul style="float:left; width:50%;">
-						<li>
-							<p>sterowanie postacią przy pomocy nowego Unity Input System</p>
-						</li>
-						<li>
-							<p>programowanie AI przeciwników oraz klientów i wykorzystanie w Animator Controller State Machine</p>
-						</li>
-						<li>
-							<p>implementacja animacji z Mixamo oraz wykorzystanie Animation Event wraz z Blend Tree</p>
-						</li>
-						<li>
-							<p>implementacja wszystkich mechanik</p>
-						</li>
-					</ul>
-					<ul style="float:right; width:50%;">
-						<li>
-							<p>Zadania poboczne wykonane przy użyciu ScriptableObject</p>
-						</li>
-						<li>
-						 <p>Gameplay, Level and Enemy design </p></li>
-						<li>
-						<p>implementacja UI</p>
-						</li>
+				<div class="smallHeaderFont">O grze</div>
+				<p>Gra polega na zarządzaniu karczmą oraz walce z przeciwekami podczas ekspedycji. Karczma jest wzorowana na mechanice Moonlighter-a w której zarządzamy sklepem. W dowolnym momencie wcielamy się w karczmarza, którego głównym zadaniem jest szybka i efektywna obsługa gości. Będziemy musieli serwować trunków i jedzenia na czas, by zapewnić klientom zadowolenie i wysoki dochód. 
+				Dodatkowym elementem w tej fazie jest podsłuchiwanie ich rozmów, czyli zbieranie plotek i informacji, które stanowią paliwo dla naszej drugiej głównej działalności. Po zamknięciu karczmy, gdy gracz zgromadzi wystarczającą wiedzę, możemy zmienić strój w zbroję i wyruszyć w przygody jako poszukiwacz. Na przykład usłyszymy, że na bagnach ktoś zakopał skarb. 
+				Po wyjściu z karczmy gracz znajduje się w mieście, gdzie może zaopatrzyć się w zapasy lub przyjąć nowe zlecenie.
+				A gdy przekroczy mury miasta aktywuje się mapa, na której wybiera się cel podróży. W semi-otwartych lokacjach gracz walczy przeciwnikami,wykorzystując miecz oraz kuszę. Eksploruje teren w poszukiwaniu celów zlecenia, które często kończą się potyczkami z bossami.</p>	
 
-					</ul></div>
-					<!--
-					<button class="accordion"> Maszyna stanów przeciwników </button>
-						<div class="field">
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-						</div>
-
-						<button class="accordion">System walki (wręcz, dystansowa)</button>
-						<div class="field">
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-						</div>
-
-						<button class="accordion"> Interfejs użytkownika </button>
-						<div class="field">
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-						</div>
-
-						<button class="accordion"> Blendowanie animacji gracza </button>
-						<div class="field">
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-						</div>
-						-->
-				<h2>Galeria</h2>
-
+				<p>Odpowiadam za wszystko oprócz robienia modeli oraz tekstur</p>
+				
+			<div class="smallHeaderFont">Galeria</div>
 				<div class="w3-content w3-display-container" style="border: 2px solid #6bae76;">
 
 					<div class="w3-display-container mySlides">
