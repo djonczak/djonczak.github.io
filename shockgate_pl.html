@@ -82,6 +82,7 @@
 							Projekty 3D
 						</a>
 						<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+							<a class="dropdown-item" href="criticalVector_pl.html"><i class="fas fa-battery-half"></i>Critical Vector</a>
 							<a class="dropdown-item" href="horrorLevel_pl.html"><i class="fas fa-map-signs"></i>Poziom</a>
 							<a class="dropdown-item" href="dungeon_pl.html"><i class="fas fa-dungeon"></i>Dungeon</a>
 						</div>
@@ -91,7 +92,6 @@
 							Projekty 2D
 						</a>
 						<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-							<a class="dropdown-item" href="criticalVector_pl.html"><i class="fas fa-battery-half"></i>Critical Vector</a>
 							<a class="dropdown-item" href="muerto_pl.html"><img src="img/Muerto/luchador.webp" style="width:22px; margin-right:10px;"></i>Day Of The Dead</a>
 							<a class="dropdown-item" href="deSneakyWay_pl.html"><img src="img/DeSneakyWay/DeWayIcon.png" style="width:22px; margin-right:10px;"></i>De Sneaky Way</a>
 							<a class="dropdown-item" href="rabbits_pl.html"><img src="img/Rabbit/carrot-solid.svg" style="width:22px; margin-right:10px;"></i>From The Tower It Comes</a>
@@ -109,7 +109,7 @@
 			<div style="text-align: center;">
 
 				<b>Status projektu </b> <p>    Wstrzymany</p>
-				<b>Typ projektu </b> <p>    Studia / zespołowy (3 osoby)</p>
+				<b>Typ projektu </b> <p>    Studia / zespołowy (3 osoby)</p> <p>    2023  / Solo</p>
 				<b>Czas trwania </b> <p>  ~październik 2019 - luty 2020 </p>
 				<p> ~maj 2023 - wrzesień 2023 </p>
 				<b>Użyte oprogramowanie </b> <p>  Unity Engine, Audacity</p>
@@ -118,10 +118,10 @@
 			<div class="smallHeaderFont">O Shock;Gate</div>
 				<p>Shock;Gate jest projektem inżynierskim rozpoczętym pod koniec trzeciego roku w Collegium Da Vinci. Zespół składał się z dwóch programistów oraz grafika 3D. Byłem odpowiedzialny za implementacje wszystkich funkcjonalności gry oraz za tworzenie poziomów w Unity Engine.
 				Jest to mój pierwszy "profesjonalny" projekt w Unity, który pomógł mi rozwinąć umiejętności w Unity oraz C#.</p>
-				<p>W grę można zagrać samodzielnie lub z drugim gracza, można rozegrać 3 różne misje, a ukończenie ostatniej odblokowuje dwie nowe bronie. Dodatkowo jest strzelnia, gdzie można przetestować wszystkie dostępne w grze bronie. W grze można napotkać 6 rodzajów przeciwników.</p>
-				<p>W maju 2023 postanowiłem poprawić projekt, pracę rozpocząłem poprzez przepisanie całego kodu, co pomogło w optymalizacji doświadczenia oraz naprawiłem wiele błędów. Wszystkie sceny mają teraz wypalone oświetlenie oraz poprawione kolizje dla checkpointów misji oraz otoczenia.
-				Dodałem także po śmierci gracza ekran śmierci, wcześniej był uruchamiany ekran pauzy,a po pomyślnym zakończeniu misji zobaczymy podsumowanie, które pokazuje nasze statystyki(ilość zabójstw, strzałów, użyć umiejętności oraz uników). Przerobiłem także cały panel wyboru broni, na bardziej czytelniejszy oraz pokazujący
-				co aktualnie posiada gracz.</p>
+				<p>W grę można zagrać samodzielnie lub z drugim gracza (obsługiwana jest klawiatura + myszka oraz kontroler od Xboxa), można zagrać 3 różne misje, a ukończenie ostatniej odblokowuje dostęp do dwóch nowych broni. Dodatkowo można skorzystać z strzelnicy, która umożliwia przetestowanie wszystkich dostępnych broni w grze.</p>
+				<p>Zaprojektowałem i zaprogramowałem 6 różnych rodzajów przeciwników plus walka z bossem, który ma zaprojektowane trzy fazy ataków. Każdy z nich różni się rodzajami broni od pistoletów, karabinów, snajperek do minigun-ów. Dodatkowo znajduje się motor, jako pojazd na którego możemy wejść pod koniec drugiej misji, który miał zostać wykorzystany w "oryginalnej" trzeciej misji, gdzie gracz miał przedostać się przez autostradę do budynku. Była też piąta misja, bardziej otwarta, gdzie gracz miałby kilka celów do zrobienia.</p>
+				<p>W maju 2023 postanowiłem poprawić projekt, pracę rozpocząłem poprzez przepisanie całego kodu, co pomogło w optymalizacji oraz naprawiłem wiele błędów. Wszystkie sceny mają teraz wypalone oświetlenie oraz poprawione kolizje dla checkpointów misji oraz otoczenia. Wprowadziłem także parę poprawek dla dashowania gracza oraz samego gameplayu.
+				Dodatkowo dodałem także ekran śmierci, który pozwala uruchomić ponownie poziom. Teraz też po pomyślnym ukończeniu misji zobaczymy ekran z naszymi statystykami, które pokazują ilość zabójstw, strzałów, użyć umiejętności oraz uników). Przerobiłem także cały panel wyboru broni, na bardziej czytelniejszy oraz pokazujący co aktualnie posiada gracz.</p>
 				<div class="smallHeaderFont">Rzeczy, które zrobiłem:</div>
 				<ul style="float:left; width:50%;">
 					<li>
@@ -174,19 +174,19 @@
 							<img src="img/ShockGate/SG1.webp" style="width: 70%;">
 							<p>Jak widać na załączonym obrazku przeciwnicy posiadąją dwie sfery, pierwsza <a style="color: #006600;"> zielona </a> pokazuje zasięg widzenia przeciwnika, a druga <a style="color: #e6b800;"> żółta </a> przedstawia zasięg broni przeciwnika.
 							Dodatkowo przeciwnik ma kąt widzenia, pokazany przez dwie <a style="color: red;"> czerwone </a> linie. Gdy gracz wejdzie w zasięg widzenia ten sprawdza najpierw czy jest on w kącie widzenia przeciwnika, a następnie używa raycasta, by sprawdzić czy pomiędzy nim, a graczem nie znajduje się
-							żaden element otoczenia. Następnie jeśli nic nie zasłania gracza przechodzi on w stan "Follow". Przeciwnicy mają cztery stany:</p>
+							żadna przeszkoda. Następnie jeśli nic nie zasłania gracza, przechodzi on w kolejny stan. Przeciwnicy mają cztery stany:</p>
 							<ul>
 								<li>
 									<p> Patrol - stoją w miejscu lub patrolują okolice, kolor Boxa na ich plecach jest wtedy zielony.</p>
 								</li>
 								<li>
-									<p> Follow - w momencie zauważenia gracza, zbliżaja się do niego aż nie będzie w zasiegu broni. Kolor wskaznika zmienia się wtedy na żółty.</p>
+									<p> Follow - w momencie zauważenia gracza, zbliżaja się do niego, aż nie będzie on w zasiegu broni. Kolor wskaznika zmienia się wtedy na żółty.</p>
 								</li>
 								<li>
-									<p> Fight - gdy gracz znajduje się w zasiegu broni, przeciwnik się zatrzymuje i zaczyna strzelać, ewentualnie może rzucić też granatem. Gdy wracz wyjdzie poza zasięg, przechodzi on wtedy w Follow. Kolor wskaznika zmienia się na czerwony.</p>
+									<p> Fight - gdy gracz znajduje się w zasiegu broni, przeciwnik się zatrzymuje i zaczyna strzelać, ewentualnie niektórzy mogą też rzucić granatem. Gdy gracz wyjdzie poza zasięg, przeciwnik przechodzi wtedy w Follow. Kolor wskaznika zmienia się na czerwony.</p>
 								</li>
 								<li>
-									<p> Alarmed - przeciwnik dostał sygnał od swojego kolegi z drużyna i zmierza w miejsce w którym zauważono gracza. Kolor wskaznika pomarańczowy.</p>
+									<p> Alarmed - przeciwnik dostał sygnał od swojego kolegi z drużyna, który mógł zauważyć gracza lub być trafiony i zmierza w miejsce w którym zauważono gracza. Kolor wskaznika pomarańczowy.</p>
 								</li>
 							</ul>
 							<div class="smallHeaderFont">Alarm</div>
@@ -208,22 +208,22 @@
 						<button class="accordion">Gameplay mechanics</button>
 						<div class="field">
 							<div class="smallHeaderFont">Dash</div>
-							<p>Jest z jedną z mechanik, która pozwala ci uniknąć pocisków, granatów oraz przeciwników.</p>
+							<p>Jest jedną z mechanik, które pozwalają graczowi uniknąć pocisków, granatów oraz przeciwników.</p>
 							<img src="img/ShockGate/dash.gif" style="width: 70%;">
 							<div class="smallHeaderFont">Zdalne wysadzenie granatu</div>
-							<p>Możesz także zdetonować granat szybciej, zamiast czekać aż minie czas do wybuchu.</p>
+							<p>Gracz może także zdetonować granat szybciej, zamiast czekać aż minie czas do wybuchu(wciskając ten sam przycisk, którym rzuca granat.</p>
 							<img src="img/ShockGate/grenadeAuto.gif" style="width: 70%;">
 							<div class="smallHeaderFont">Wskrzeszanie drugiego gracza</div>
-							<p>Gdy gracz polegnie podczas gry, można do niego podejść i wskrzecić go, ale trzeba uważać bo zajmuje to trochę czasu.</p>
+							<p>Gdy gracz polegnie podczas gry, drigi może do niego podejść i wskrzecić go, ale trzeba uważać bo zajmuje to trochę czasu.</p>
 							<img src="img/ShockGate/revive.gif" style="width: 70%;">
 							<div class="smallHeaderFont">Leczenie drugiego gracza</div>
-							<p>Możesz także przekazać drugiemu graczowi, część swojego zdrowia, aby go wyleczyć. Nie możesz przekazać swoje zdrowie, gdy masz mniej niż 50% punktów życia.</p>
+							<p>Można także przekazać drugiemu graczowi, część swojego zdrowia, aby go wyleczyć. Przekazywanie zdrowia, jest możliwe tylko, gdy mamy więcej niż 50% punktów życia.</p>
 							<img src="img/ShockGate/healShell.gif" style="width: 70%;">
 							<div class="smallHeaderFont">Skrzynka z amunicją</div>
-							<p>Gdy zabraknie ci amunicji możesz podejść do skrzynki, by uzupełnić swoją amunicję.</p>
+							<p>Gdy zabraknie amunicji, gracz może podejść do skrzynki, by uzupełnić swoją amunicję. Ma też ona swój własny pasek, który pokazuej ile zostało jeszcze amunicji wewnątrz niej.</p>
 							<img src="img/ShockGate/ammorBox.gif" style="width: 70%;">
-							<div class="smallHeaderFont">Dopalacze</div>
-							<p>Podczas rozgrywki z przeciwników mogą wybaść dopalacze, które np. zwiększą twoją szybkość poruszania się, obrażenia, odnowią granaty lub tarczę. W przypadku gifa gracz uzyskał zwiększone obrażenia.</p>
+							<div class="smallHeaderFont">Wzmocnienia</div>
+							<p>Podczas rozgrywki z przeciwników mogą wypaść wzmacniacze, które np. zwiększą twoją szybkość poruszania się, obrażenia, odnowią granaty lub tarczę. W przypadku gifa gracz uzyskał zwiększone obrażenia.</p>
 							<img src="img/ShockGate/powerUp.gif" style="width: 70%;">
 							<div class="smallHeaderFont">Poruszanie się motocyklem</div>
 							<p>W drugiej misji znajdują się dwa motory dla graczy. Motor posiada dwa tryby, pierwszy pozwala motorowi celować i strzelać, ale kosztem prędkości. Drugi tryb zwiększa prędkość, ale jest mniej zwrotny i nie można celować.</p>
@@ -356,7 +356,7 @@
 					<div class="w3-display-container mySlides">
 					  <img src="img/ShockGate/unfinishedMission.webp" style="width:100%">
 					  <div class="w3-display-top w3-large w3-container w3-padding-16 w3-black">
-						Niedokończona misja
+						Niedokończona piąta misja
 					  </div>
 					</div>
 					

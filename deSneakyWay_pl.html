@@ -60,15 +60,16 @@
 			<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
 				<div class="navbar-nav">
 					<a class="nav-item nav-link active" style="border-right: 2px solid black;"><img src="img/DeSneakyWay/DeWayIcon.png" style="width:22px;">De Sneaky Way<span class="sr-only">(current)</span></a>
-					<a class="nav-item nav-link" href="index_en.html"><i class="fas fa-home"></i> Main page</a>
+					<a class="nav-item nav-link" href="index_pl.html"><i class="fas fa-home"></i> Strona główna</a>
 					<div class="nav-item dropdown">
 						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 							Projekty 3D
 						</a>
-						<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-							<a class="dropdown-item" href="shockgate_en.html"><i class="fas fa-memory"></i>Shock;Gate</a>
-							<a class="dropdown-item" href="horrorLevel_en.html"><i class="fas fa-map-signs"></i>Game Level</a>
-							<a class="dropdown-item" href="dungeon_en.html"><i class="fas fa-dungeon"></i>Dungeon</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">			
+							<a class="dropdown-item" href="criticalVector_pl.html"><i class="fas fa-battery-half"></i>Critical Vector</a>
+							<a class="dropdown-item" href="shockgate_pl.html"><i class="fas fa-memory"></i>Shock;Gate</a>
+							<a class="dropdown-item" href="horrorLevel_pl.html"><i class="fas fa-map-signs"></i>Game Level</a>
+							<a class="dropdown-item" href="dungeon_pl.html"><i class="fas fa-dungeon"></i>Dungeon</a>
 						</div>
 					</div>
 					<div class="nav-item dropdown">
@@ -76,9 +77,8 @@
 							Projekty 2D
 						</a>
 						<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-							<a class="dropdown-item" href="criticalVector_en.html"><i class="fas fa-battery-half"></i>Critical Vector</a>
 							<a class="dropdown-item" href="muerto_pl.html"><img src="img/Muerto/luchador.webp" style="width:22px; margin-right:10px;"></i>Day Of The Dead</a>
-							<a class="dropdown-item" href="rabbits_en.html"><img src="img/Rabbit/carrot-solid.svg" style="width:22px; margin-right:10px;"></i>From The Tower It Comes</a>
+							<a class="dropdown-item" href="rabbits_pl.html"><img src="img/Rabbit/carrot-solid.svg" style="width:22px; margin-right:10px;"></i>From The Tower It Comes</a>
 						</div>
 					</div>
 				</div>
@@ -101,7 +101,7 @@
 
 			<div class="smallHeaderFont">O De Sneaky Way</div>
 
-			<p>Gra "De Sneaky Way" to projekt stworzony na zaliczenie zajęć z programowania, zadaniem było stworzenie prostej gry skradankowej. W obecnej wersji dostępny jest jeden poziom "Doki", w którym gracz musi przedostać się przez patrolujących okolicę strażników do kontenerowca. W planach były jeszcze dwa poziomy, rozgrywające się wewnątrz kontenerowca oraz w magazynie.
+			<p>Projekt stworzony na zaliczenie zajęć z programowania w Unity, zadaniem było stworzenie prostej gry skradankowej. W obecnej wersji dostępny jest jeden poziom "Doki", w którym gracz musi przedostać się przez patrolujących okolicę strażników do kontenerowca. W planach były jeszcze dwa poziomy, rozgrywające się wewnątrz kontenerowca oraz w magazynie.
 			Gracz ma możliwość poruszania się z różną prędkością - im szybciej się porusza, tym większe jest ryzyko wykrycia przez przeciwników. Dodatkowo, w różnych miejscach na mapie znajdują się puszki, które gracz może wykorzystać do odwrócenia uwagi strażników.
 			Gra jest przedstawiona z perspektywy top-down, jednak wszystkie elementy na scenie są trójwymiarowe i posiadają nałożone tekstury typu "Sprite Renderer".</p>
 			
@@ -116,7 +116,7 @@
 			<p>Na początku 2025 roku postanowiłem udoskonalić projekt "De Sneaky Way". Rozpocząłem od przepisania całego kodu i uporządkowania sceny. Wszystkie collidery zostały precyzyjnie dopasowane do elementów widocznych przez kamerę, a ścieżki poruszania się przeciwników zostały poprawione i zoptymalizowane.
 			Dodatkowo, zaimplementowałem funkcje, których nie udało mi się dodać w 2018 roku z powodu braku doświadczenia i czasu. Poniżej znajduje się krótki opis wprowadzonych zmian i ulepszeń.</p>
 
-			<p>Przeciwniy poruszają się poo wyznaczonych trasach za pomocą komponentu "Nav Mesh Agent". Po dotarciu do końca ścieżki, rozglądają się po okolicy, oświetlając swój obszar widzenia latarką. W przypadku zauważenia gracza, przeciwnik staje się bardziej czujny, zwiększa się jego zasięg widzenia oraz prędkość poruszania.
+			<p>Przeciwnicy poruszają się po wyznaczonych trasach za pomocą komponentu "Nav Mesh Agent". Po dotarciu do końca ścieżki, rozglądają się po okolicy, oświetlając swój obszar widzenia latarką. W przypadku zauważenia gracza, przeciwnik staje się bardziej czujny, zwiększa się jego zasięg widzenia oraz prędkość poruszania.
 			Dodatkowo, zmienia się również muzyka w tle. Po zbliżeniu się do gracza, przeciwnik ogłusza go, co skutkuje koniecznością rozpoczęcia rozgrywki od nowa.</p>
 			
 			<p>Na mapie znajdują się również puszki, które gracz może podnosić i rzucać. Po upadku lub uderzeniu w inny obiekt, puszka generuje falę dźwiękową, która może zwrócić uwagę strażnika. Strażnik, usłyszawszy hałas, podchodzi do puszki i zaczyna się rozglądać.
