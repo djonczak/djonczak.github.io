@@ -15,6 +15,7 @@
 	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 	<!-- Social Icon -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"crossorigin="anonymous">
+    <script src ="js/Accordion.js" defer></script>
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
@@ -82,15 +83,38 @@
 			<div class="bigHeaderFont">Critical Vector</div>
 			<div style="text-align: center;">
 					<b>Status projektu </b> <p> Cooking</p>
-					<b>Typ projektu </b> <p> 2 osoby wraz z <a target="_blank" href="https://www.artstation.com/padmoch" style="color:#9784BA; font-weight: bold;">Patrykiem Dmochem</a> </p>
-					<b>Czas trwania </b> <p>  ~3 tygodnie </p>
-					<b>Użyte oprogramowanie </b> <p>  Unity Enqine, Gimp</p>
+					<b>Typ projektu </b> <p> 2018 - solo</p>
+					<p> Teraz - wraz z <a target="_blank" href="https://www.artstation.com/padmoch" style="color:#9784BA; font-weight: bold;">Patrykiem Dmochem</a>, który odpowiada za modele, tekstury oraz sprity sheety </p>
+					<b>Czas trwania </b> <p> 2018 ~3 tygodnie </p>
+					<p> 2025 ~ maj - do teraz </p>
+					<b>Użyte oprogramowanie </b> <p> 2018 -Unity Enqine, Gimp, Visual Studio</p>
+					<p> 2025 -Unity Enqine, Visual Studio</p>
 			</div>
 				<div class="smallHeaderFont">O grze</div>
-				<p>Projekt chwilowo wstrzymany, zostanie on zakończony po ukończeniu <a target="_blank" href="rabbits_pl.html" style="color:#9784BA; font-weight: bold;">From The Tower It Comes</a> oraz <a target="_blank" href="dungeon_pl.html" style="color:#9784BA; font-weight: bold;">Dungeon</a>. Gra wzorowana jest na <a target="_blank" href="https://heartmachine.com/hyper-light" style="color:#9784BA; font-weight: bold;">Hyper Light Drifter</a> z której postanowiłem
-				"pożyczyć" mechaniki walki. Gra była projektem na zaliczenie zajęcia, początkowo gra miała być w klimacie fantasy (przeciwnicy w tle to pozostałości, które nie zdążyłem przerobić), ale zdecydowałem zmienić stylistykę na cyberpunk, gdzie akcja będzie dziać się w mieście Arkpolis podczas zimy, gdzie będziemy kierować łowcą nagród Cyrox-em.</p>
-				<button type="button" class="btn btn-secondary btn-block" style=" margin-left:auto; margin-right:auto; display: block;" onclick="window.open('https://drive.google.com/open?id=1U4_OXoQsusWLQTcZPbky8YC8_pqNTpb2')">Build</button>
-				<button type="button" class="btn btn-secondary btn-block" style=" margin-left:auto; margin-right:auto; display: block;" onclick="window.open('https://github.com/djonczak/CriticalVector')">Repozytorium</button>
+				<p>oryginalna wersja była wzorowana na <a target="_blank" href="https://heartmachine.com/hyper-light" style="color:#9784BA; font-weight: bold;">Hyper Light Drifter</a> z której postanowiłem
+				"pożyczyć" mechaniki walki. Gra była projektem na zaliczenie zajęcia, początkowo gra miała być w klimacie fantasy (przeciwnicy z którymni walczymy to pozostałości po fantasy), ale zdecydowałem zmienić stylistykę na cyberpunk, gdzie akcja będzie dziać się w mieście Arkpolis podczas zimy, gdzie będziemy kierować łowcą nagród Cyrox-em.</p>
+				
+				<div class="smallHeaderFont">2025 - teraz:</div>
+				<p>W 2025 postanowiłem wrócić do tego projektu i go dokończyć. Wraz z powrotem zdecydowałem, zmienić koncept gry, zamiast łowcy nagród, będziemy jak jako prywatny detektyw. Dostaje on zlecenie na rozwikłanie tajemnicy seryjnego mordercy, który celuje w członków zamożnych, wpływowych rodów. Charakterystyczną cechą zbrodni jest pozostawianie ofiar w artystycznych i teatralnych pozach. </p>
+				<p>Gracz porusza postacią za pomocą "Point And Click", będzie możliwość wchodzenia w interakcji z przedmiotami oraz dialogi z postaciami. Walka będzie wzorowana na tej z "Baldur Gate 3" czy serii X-COM(XCOM). Gra będzie posiadała kilka otwartych poziomów oferując graczowi znaczną swobodę w prowadzeniu śledztwa i odkrywaniu prawdy.</p>
+				<p>Więcej informacji oraz materiałów wraz z postępem prac.</p>
+				
+					<button class="accordion"> Kilka urywków z wczesnych prac</button>
+						<div class="field" style="text-align: center;">
+								<div class="smallHeaderFont">Jedna z opcji poruszania kamery podczas walki</div>
+									<video width="60%" controls>
+										<source src="img/CriticalVector/CameraMovement.mp4" type="video/mp4">
+									</video>
+								<div class="smallHeaderFont">poruszanie się postaci + podczas walki rysowanie lini</div>
+									<video width="60%" controls>
+										<source src="img/CriticalVector/MovementNormal.mp4" type="video/mp4">
+									</video>
+									
+										<video width="60%" controls>
+										<source src="img/CriticalVector/MovementCombat.mp4" type="video/mp4">
+									</video>
+						</div>
+				<button type="button" class="btn btn-secondary btn-block" style=" margin-left:auto; margin-right:auto; display: block;" onclick="window.open('https://drive.google.com/open?id=1U4_OXoQsusWLQTcZPbky8YC8_pqNTpb2')">Build 2019</button>
         </div>
 </body>
 </html>
