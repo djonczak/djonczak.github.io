@@ -72,6 +72,14 @@ a:focus {
     margin: 40px 0;
 }
 
+.videoWrapper {
+	margin-left: 37%;
+	padding-bottom: 56px; /* 16:9 */
+	padding-top: 60px;
+
+}
+
+
 /* ---------------------------------------------------
     Work experience card
 ----------------------------------------------------- */
