@@ -72,11 +72,15 @@ a:focus {
     margin: 40px 0;
 }
 
-.videoWrapper {
-	margin-left: 37%;
-	padding-bottom: 56px; /* 16:9 */
-	padding-top: 60px;
-
+.iframe-container {
+  min-height: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+.iframe-container iframe {
+  display: block;
 }
 
 
