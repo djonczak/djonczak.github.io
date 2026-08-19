@@ -41,12 +41,12 @@
 	}
 	
 	p{
-	font-size:28px;
+	font-size:32px;
 	color: white;
 	}
 	
 	a{
-	font-size:25px;
+	font-size:32px;
 	}
 	
 	b{
@@ -97,22 +97,36 @@
         <div id="content-narrow">
 			<div class="bigHeaderFont">Day Of The Dead</div>
 			<div style="text-align: center;">
-					<b>Status projektu </b> <p> Zakończony</p>
+					<b>Status projektu </b> <p> Będzie aktualizowany</p>
 					<b>Typ projektu </b> <p> Solo   </p>
-					<b>Czas trwania </b> <p>  ~ miesiąc - 11.2020 </p> <p>  ~ Version 1.1 - 23.09.2023 </p> <p>  ~ Version 1.2.1 - 05.02.2024 </p>   <p>  ~ Version 1.3.0 - 12.12.2025 </p> </li>
+					<b>Czas trwania </b> <p>  ~ tydzień - oryginalna wersja - 04.2018 </p> <p>  ~ miesiąc - dodanie areny - 11.2020 </p> <p>  ~ Version 1.1 - 23.09.2023 </p> <p>  ~ Version 1.2.1 - 05.02.2024 </p>   <p>  ~ Version 1.3 - 12.12.2025 </p> <p>  ~ Version 1.4 - 19.08.2026 </p> </li>
 					<b>Użyte oprogramowanie </b> <p>  Unity Engine, GIMP</p>
 			</div>
 				<div class="smallHeaderFont">O grze</div>
-				<p>Projekt początkowo był tworzony na zajęcia z Grafiki 2D, gdzie celem było ukazanie meksykańskiego święto Día de Muertos (Dzień Zmarłych), które zostało przedstawione w trybie Story. Dodatkowo stworzyłem drugi tryb Areny, wzorowany był na grze <a target="_blank" href="https://pietro-ferrantelli.itch.io/mobs-inc" style="color:#9784BA; font-weight: bold;"> Mobs Inc</a>. 
-				W tym trybie gracz ma przetrwać 14 fal przeciwników, walcząc z 4 różnymi typami przeciwników, by na końcu zmierzyć się z bossem, który posiada przeróżne ataki oraz fazy. Gramy w nim Luchadorem, który posiada atak podstawowy oraz dwa ataki specjalne, które można odblokować po uzyskaniu odpowiedniego poziomu postaci. Po pokonaniu bossa zostaje odblokowany dodatkowego skin Luchadora, który możemy wykorzystać w tym trybie.</p>
+				<p>Projekt powstawał pierwotnie na zajęcia z Grafiki 2D, a jego celem było przedstawienie meksykańskiego święta<a target="_blank" style="color:#9784BA; font-weight: bold;"> Día de Muertos (Dnia Zmarłych)</a>. Oprawę wizualną zdecydowałem się przygotować w stylu pixel art. Akcja toczy się w trzech scenach: w domu głównej bohaterki, w mieście podczas świętowania oraz na cmentarzu. Główny wątek związany ze świętem przedstawia tryb Story.</p>
+				
+				<p>W 2020 roku dodałem tryb Areny, wzorowany na grze <a target="_blank" href="https://pietro-ferrantelli.itch.io/mobs-inc" style="color:#9784BA; font-weight: bold;"> Mobs Inc</a>. 
+				WW tym trybie gracz ma za zadanie przetrwać 14 fal przeciwników, walcząc z 4 różnymi typami przeciwników, by na końcu zmierzyć się z bossem, który posiada przeróżne ataki oraz dwie fazy walki. Podstawowo gramy Luchadorem, który posiada jeden atak podstawowy oraz dwie umiejętności specjalne, które można odblokować po uzyskaniu odpowiedniego poziomu postaci.
+				Umożliwiają one poradzenie sobie z coraz większymi grupami przeciwników. Po ukończonie trybu Story lub Areny gracz może odblokować dodatkowe postacie do trybu Areny. Różnią się one umiejętnościami, animacjiami oraz efektami dźwiękowymi.</p>
+				
+				<p>Na 2027 rok planuję ostatnią aktualizację. Rozbuduję w niej starcie z bossem i dodam cutscenkę po jego pokonaniu. Ponadto wprowadzę statystyki gracza, takie jak liczba pokonanych przeciwników czy częstotliwość użycia poszczególnych umiejętności.</p>
 
-				<button class="accordion"><a> 1.3.0</a></button>
+				<button class="accordion"><a> 1.3</a></button>
 						<div class="field" style="text-align: center;">
 								<p> - dodanie nowych efektów dźwiękowych w Story Mode</p>
 								<p> - dodanie particle effectów dla kociołka oraz drzew w Story Mode</p>
 								<p> - przebudowanie menu, dodanie animacji oraz efektów dźwiękowych</p>
 								<p> - dodanie nowej postaci do trybu Areny</p>
 								<p> - oraz wiele innych poprawek</p>
+						</div>
+				<button class="accordion"><a> 1.4</a></button>
+						<div class="field" style="text-align: center;">
+								<p> - adding a button to the menu to clear PlayerPrefs</p>
+								<p> - dodanie innych animacji postaci podczas wybory w trybie Areny</p>
+								<p> - dostosowanie efektów dźwiękowych w Story Mode</p>
+								<p> - nowe umiejętności oraz animacje dla postaci Ricardo !</p>
+								<p> - dodanie dodatkowych efektów do niektórych ataków przeciwników w trybie Areny</p>
+								<p> - mniejsze poprawki oraz optymalizacja</p>
 						</div>
 
 				<button class="accordion"><a> Niektóre Pixel Art-y</a></button>
@@ -207,7 +221,7 @@
         codeUrl: buildUrl + "/Muerto.wasm",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "Dawid Jonczak",
-		 productVersion: "1.3.2",
+		 productVersion: "1.4",
         showBanner: unityShowBanner,
   
       };
