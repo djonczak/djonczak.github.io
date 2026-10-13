@@ -41,7 +41,7 @@
 	
 	body 
 	{	
-	background-image: url(img/pong/pongBackground.webp);
+	background-image: url(img/Pong/pongBackground.webp);
 	background-size: cover; /* Resize the background image to cover the entire container */
 	}
 	
@@ -67,7 +67,7 @@
 			</button>
 			<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
 				<div class="navbar-nav">
-					<a class="nav-item nav-link active"><i class="fas fa-battery-half"></i> Pong Project <span class="sr-only">(current)</span></a>
+					<a class="nav-item nav-link active" style="border-right: 2px solid black;"><img src="img/Pong/circle.svg" style="width:18px;">  Pong Project <span class="sr-only">(current)</span></a>
 					<a class="nav-item nav-link" href="index_pl.html"><i class="fas fa-home"></i> Strona główna</a>
 					<div class="nav-item dropdown">
 						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -77,7 +77,7 @@
 							<a class="dropdown-item" href="shockgate_pl.html"><i class="fas fa-memory"></i>Shock;Gate</a>
 							<a class="dropdown-item" href="horrorLevel_pl.html"><i class="fas fa-map-signs"></i>Poziom</a>
 							<a class="dropdown-item" href="dungeon_pl.html"><i class="fas fa-dungeon"></i>Dungeon</a>
-							<a class="dropdown-item" href="criticalVector_pl.html"><i class="fas fa-dungeon"></i>CriticalVector</a>
+							<a class="dropdown-item" href="criticalVector_pl.html"><i class="fas fa-battery-half"></i>CriticalVector</a>
 						</div>
 					</div>
 					<div class="nav-item dropdown">
@@ -99,19 +99,20 @@
 			<div class="bigHeaderFont">Pong Project</div>
 			<div style="text-align: center;">
 					<b>Status projektu </b> <p> Ukończony </p>
-					<b>Typ projektu </b> <p> 2014 - solo</p> <p> 05.10.2026 - 11.10.2026 - solo</p>
+					<b>Typ projektu </b> <p> 2013 - solo</p> <p> 2026 - solo</p>
 					<b>Czas trwania </b> <p> 2026 - tydzień </p>
-					<b>Użyte oprogramowanie </b> <p> 2026 ~ Unity Enqine 6.3 LTS, Gimp, Visual Studio</p>
+					<b>Użyte oprogramowanie </b> <p> 2013 - Unity Engine 3.4</p><p> 2026 - Unity Enqine 6.3 LTS, Gimp, Visual Studio</p>
 			</div>
-				<div class="smallHeaderFont">O grze</div>
-				<p>Oryginalna wersja była inspirowana grą <a target="_blank" href="https://www.heartmachine.com/hyper-light-drifter" style="color:#9784BA; font-weight: bold;">Hyper Light Drifter</a>, z której postanowiłem zaadaptować mechaniki walki. Projekt powstał jako praca zaliczeniowa. Początkowo gra utrzymana była w klimacie fantasy (przeciwnicy, z którymi walczymy, stanowią pozostałość po tej koncepcji), ale ostatecznie zdecydowałem się zmienić stylistykę na cyberpunk. Akcja gry rozgrywa się zimą w mieście Arkpolis, a gracz wciela się w łowcę nagród o imieniu Cyrox.</p>
-				
-				<div class="smallHeaderFont">2026</div>
-				<p>W 2025 roku postanowiłem wrócić do zawieszonego projektu. Po przemyśleniach postanowiłem przebudować zamysł gry, celując w bardziej mroczną i gęstą atmosferę kina noir. Wcielamy się w postać Kaela, zmęczonego życiem prywatnego detektywa. Przyjmuje on zlecenie na rozwikłanie tajemnicy seryjnego mordercy, który celuje w członków wpływowych rodów. Charakterystyczną cechą zbrodni jest pozostawianie ofiar w artystycznych i teatralnych pozach. </p>
-				<p>Gracz porusza postacią za pomocą "Point And Click", będzie możliwość wchodzenia w interakcji z przedmiotami oraz dialogi z postaciami. Walka będzie wzorowana na tej z "Baldur Gate 3" czy serii X-COM(XCOM). Gra będzie posiadała kilka otwartych poziomów oferując graczowi znaczną swobodę w prowadzeniu śledztwa i odkrywaniu prawdy.</p>
-				<p>Więcej informacji oraz materiałów wraz z postępem prac.</p>
-  
+				<div class="smallHeaderFont">O projekcie</div>
+				<p>To mój pierwszy projekt w Unity, który wykonałem w wolnym czasie jeszcze w technikum jako swój pierwszy krok w świecie gamedevu. Powstał on dzięki filmom szkoleniowym twórcy Brackeys, które pozwoliły mi zapoznać się z działaniem silnika Unity, podstawami programowania oraz procesem budowania gier. Gra została pierwotnie stworzona w wersji Unity 3.4, gdy silnik obsługiwał jeszcze skrypty w języku JavaScript. 
+				W oryginale był to tytuł przeznaczony wyłącznie dla dwóch graczy, oferujący dwa tryby rozgrywki: zwykły oraz hardcore, w którym piłka poruszała się dwa razy szybciej.</p>
+
+				<div class="smallHeaderFont">Odświeżenie 2026</div>
+				<p>W 2026 roku odnalazłem ten projekt na jednym ze swoich dysków i postanowiłem go odświeżyć, aby stworzyć ciekawy dodatek do mojego portfolio. Zdecydowałem się przenieść całą strukturę na Unity Engine 6 i przetestować shader <a target="_blank" href="https://cyangamedev.wordpress.com/2020/09/10/retro-crt-shader-breakdown/" style="color:#9784ba; font-weight: bold;">CRT</a>,
+				który odwzorowuje oprawę wizualną starych telewizorów kineskopowych, nadając całości retro klimat. Przejście między menu a areną zostało zrealizowane poprzez kodową zmianę wartości CullingMask w kamerze, co pozwala dynamicznie ukrywać i wyświetlać odpowiednie elementy bez konieczności przeładowywania scen, a także poprzez odpowiednie modyfikacje parametrów shadera.
+				W nowej wersji gracze mają do wyboru dwa warianty rozgrywki: tryb dla jednego gracza przeciwko prostemu AI, które śledzi ruch piłki, gdy ta leci w jego stronę, oraz tryb dla dwóch graczy z obsługą sterowania opartą na New Input System. Sam gameplay opiera się na klasycznych zasadach ponga, z dodatkowym urozmaiceniem w postaci piłki przyspieszającej co kilka sekund wraz z upływem czasu. </p>
 		
+		<div class="smallHeaderFont">Grywalny build</div>
 	   <canvas id="unity-canvas" width=960 height=600 style="width: 960px; height: 600px; background: #231F20; display: block; margin-left: auto; margin-right: auto;"></canvas>
       <div id="unity-loading-bar">
         <div id="unity-logo"></div>
